@@ -153,6 +153,94 @@
       .faq-item.active .faq-icon {
         transform: rotate(45deg);
       }
+
+      @media (max-width: 768px) {
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { width: 100%; overflow-x: hidden; }
+
+        nav {
+          padding-left: 16px;
+          padding-right: 16px;
+          height: 64px;
+          min-height: 64px;
+        }
+        nav .desktop-nav { display: none !important; }
+        nav .menu-toggle { display: inline-flex !important; }
+        nav .nav-actions > button:not(#menuToggle) { display: none !important; }
+
+        #menuToggle {
+          display: inline-flex !important;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border: 1.5px solid #C5D0D9;
+          border-radius: 6px;
+          background: #fff;
+          cursor: pointer;
+          padding: 0;
+        }
+
+        #mobileMenu {
+          top: 64px;
+          left: 0;
+          right: 0;
+          width: 100%;
+          max-height: calc(100vh - 64px);
+          overflow-y: auto;
+          transform: translateX(100%);
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #mobileMenu.open {
+          transform: translateX(0);
+          display: flex !important;
+        }
+        #mobileMenuOverlay {
+          display: none;
+        }
+        #mobileMenuOverlay.open { display: block !important; }
+        body.menu-open { overflow: hidden; }
+
+        #hero-carousel { height: 460px; }
+        #hero-carousel .slide-content-text,
+        #hero-carousel .relative.z-10 { padding-left: 16px !important; padding-right: 16px !important; }
+        #hero-carousel h1 {
+          font-size: 2rem !important;
+          line-height: 2.35rem !important;
+          margin-bottom: 0.75rem !important;
+        }
+        #hero-carousel p {
+          font-size: 1rem !important;
+          line-height: 1.5rem !important;
+          margin-bottom: 1rem !important;
+        }
+        #hero-carousel .hero-cta-btn {
+          width: 100%;
+          max-width: 100%;
+          padding: 0.9rem 1rem;
+          font-size: 0.95rem;
+        }
+        #hero-carousel #prev-slide-btn,
+        #hero-carousel #next-slide-btn { width: 2.75rem; height: 2.75rem; left: 0.75rem; right: 0.75rem; }
+        #hero-carousel #next-slide-btn { right: 0.75rem; left: auto; }
+
+        section, footer { overflow-x: hidden; }
+        section.py-section-gap, footer { padding-top: 56px !important; padding-bottom: 56px !important; }
+        .px-margin-desktop { padding-left: 16px !important; padding-right: 16px !important; }
+
+        #services-grid .grid { gap: 16px !important; }
+        #services-grid .group .relative { height: 260px !important; }
+        #services-grid h3, #services-grid p { text-align: left; }
+
+        #inspiration-grid .flex.justify-between { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+        #inspiration-grid .grid { display: grid !important; grid-template-columns: 1fr !important; grid-template-rows: none !important; height: auto !important; gap: 16px !important; }
+        #inspiration-grid .grid > div { grid-column: auto !important; grid-row: auto !important; min-height: 220px; }
+        #inspiration-grid .grid > div img { min-height: 220px; }
+
+        .animate-marquee { animation-duration: 18s; }
+        .faq-item { overflow: hidden; }
+      }
+
     </style>
 </head>
 <body class="bg-background text-text-primary font-body-md overflow-x-hidden">
@@ -162,7 +250,7 @@
             <a class="font-display-lg text-title-lg font-bold text-[#0D0D0D] tracking-tight hover:scale-105 transition-transform" href="index.html">
                 Hanswal <span class="text-[#405B73]">Interiors</span>
             </a>
-            <div class="hidden lg:flex gap-6 items-center">
+            <div class="desktop-nav hidden lg:flex gap-6 items-center">
                 <a class="font-label-md text-label-md text-[#0D0D0D] border-b-2 border-[#405B73] pb-1 font-semibold" href="index.html">Home</a>
                 <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_projects.html">Projects</a>
                 <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_storeLocator.html">Store Locator</a>
@@ -170,12 +258,30 @@
                 <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_contactUs.html">Contact Us</a>
             </div>
         </div>
-        <div class="flex items-center gap-4">
+        <div class="nav-actions flex items-center gap-4">
+            <button id="menuToggle" type="button" aria-label="Toggle navigation menu" class="menu-toggle hidden rounded-lg border border-[#C5D0D9] bg-white p-3 text-[#0D0D0D] shadow-sm hover:bg-[#F2F2F2] lg:hidden">
+                <span class="material-symbols-outlined text-[24px]">menu</span>
+            </button>
             <button class="bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#7B92A6] hover:border-[#405B73] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html', '_self')">
                 Book free consultation
             </button>
         </div>
     </nav>
+
+    <div id="mobileMenu" class="fixed left-0 right-0 top-20 z-40 hidden flex-col gap-2 border-b border-[#C5D0D9] bg-white/95 px-4 py-4 shadow-md backdrop-blur lg:hidden">
+
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D] hover:bg-[#F2F2F2] font-label-md" href="index.html">Home</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#F2F2F2] font-label-md" href="a_projects.html">Projects</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#F2F2F2] font-label-md" href="a_storeLocator.html">Store Locator</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#F2F2F2] font-label-md" href="a_aboutUs.html">About Us</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#F2F2F2] font-label-md" href="a_contactUs.html">Contact Us</a>
+
+        <button class="bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#7B92A6] hover:border-[#405B73] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html', '_self')">
+                Book free consultation
+        </button>
+
+    </div>
+    <div id="mobileMenuOverlay" class="fixed inset-0 z-30 hidden bg-black/30 backdrop-blur-[1px] lg:hidden"></div>
 
     <!-- Hero Section -->
     <section class="relative h-[618px] w-full overflow-hidden group" id="hero-carousel">
@@ -284,7 +390,7 @@
     </section>
 
     <!-- Main Services -->
-    <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+    <section id="services-grid" class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
 
         <div class="py-8 justify-center flex flex-col text-center">
             <h2 class="font-headline-md text-headline-md text-[#0D0D0D] mb-2">Our Services</h2>
@@ -330,7 +436,7 @@
     </section>
 
     <!-- Inspiration Grid -->
-    <section class="bg-[#F2F2F2] py-section-gap border-t border-b border-[#C5D0D9]">
+    <section id="inspiration-grid" class="bg-[#F2F2F2] py-section-gap border-t border-b border-[#C5D0D9]">
         <div class="px-margin-desktop max-w-container-max mx-auto">
             <div class="flex justify-between items-end mb-10">
                 <div>
@@ -954,6 +1060,38 @@
             }
         }
 
+       // Mobile nav drawer
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('hidden');
+            requestAnimationFrame(() => mobileMenu.classList.add('open'));
+            if (mobileMenuOverlay) mobileMenuOverlay.classList.add('open');
+            document.body.classList.add('menu-open');
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('open');
+            document.body.classList.remove('menu-open');
+            setTimeout(() => {
+                if (!mobileMenu.classList.contains('open')) mobileMenu.classList.add('hidden');
+            }, 300);
+        }
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('open')) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            });
+        }
+        
         // Sticky Nav logic - slight shadow on scroll
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
@@ -985,8 +1123,7 @@
                 observer.observe(section);
             });
         });
-
-
     </script>
+
 </body>
 </html>
