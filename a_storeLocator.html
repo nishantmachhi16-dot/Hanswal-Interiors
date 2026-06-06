@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Store Locator | Hanswal Interiors - Find an Experience Centre Near You</title>
+  <meta name="description"
+    content="Find a Hanswal Interiors Experience Centre near you. Visit our showrooms to explore modular kitchens, wardrobes, and full home interiors in person." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="./images/faviconImage.png">
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "text-secondary": "#0D0D0D",
+            "secondary": "#7B92A6",
+            "surface-container-high": "#C5D0D9",
+            "surface-tint": "#405B73",
+            "surface-container-low": "#F2F2F2",
+            "inverse-primary": "#C5D0D9",
+            "on-tertiary": "#0D0D0D",
+            "inverse-surface": "#0D0D0D",
+            "tertiary-fixed-dim": "#7B92A6",
+            "on-error": "#0D0D0D",
+            "surface": "#F2F2F2",
+            "on-tertiary-fixed-variant": "#0D0D0D",
+            "surface-container-lowest": "#FFFFFF",
+            "primary-fixed-dim": "#C5D0D9",
+            "on-background": "#0D0D0D",
+            "secondary-fixed-dim": "#C5D0D9",
+            "border-light": "#C5D0D9",
+            "primary": "#405B73",
+            "outline": "#7B92A6",
+            "primary-container": "#C5D0D9",
+            "on-secondary-container": "#0D0D0D",
+            "on-primary-container": "#0D0D0D",
+            "on-primary": "#0D0D0D",
+            "secondary-fixed": "#C5D0D9",
+            "on-secondary-fixed-variant": "#0D0D0D",
+            "surface-dim": "#C5D0D9",
+            "surface-container": "#F2F2F2",
+            "on-secondary-fixed": "#0D0D0D",
+            "on-error-container": "#0D0D0D",
+            "on-surface": "#0D0D0D",
+            "inverse-on-surface": "#F2F2F2",
+            "tertiary-container": "#C5D0D9",
+            "error-container": "#C5D0D9",
+            "on-secondary": "#0D0D0D",
+            "error": "#405B73",
+            "primary-fixed": "#C5D0D9",
+            "outline-variant": "#C5D0D9",
+            "tertiary-fixed": "#C5D0D9",
+            "on-surface-variant": "#0D0D0D",
+            "surface-container-highest": "#C5D0D9",
+            "on-primary-fixed": "#0D0D0D",
+            "background": "#F2F2F2",
+            "text-primary": "#0D0D0D",
+            "on-primary-fixed-variant": "#0D0D0D",
+            "surface-bright": "#F2F2F2",
+            "secondary-container": "#C5D0D9",
+            "on-tertiary-container": "#0D0D0D",
+            "surface-variant": "#C5D0D9",
+            "tertiary": "#7B92A6",
+            "on-tertiary-fixed": "#0D0D0D",
+            "surface-white": "#FFFFFF"
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem"
+          },
+          spacing: {
+            "margin-desktop": "48px",
+            "margin-mobile": "16px",
+            "section-gap": "80px",
+            unit: "8px",
+            "container-max": "1280px",
+            gutter: "24px"
+          },
+          fontFamily: {
+            "title-lg": ["Work Sans"],
+            "display-lg-mobile": ["Work Sans"],
+            "label-md": ["Work Sans"],
+            "body-lg": ["Work Sans"],
+            "display-lg": ["Work Sans"],
+            "headline-sm": ["Work Sans"],
+            "headline-md": ["Work Sans"],
+            "body-md": ["Work Sans"],
+            "label-sm": ["Work Sans"]
+          },
+          fontSize: {
+            "title-lg": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "display-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+            "headline-md": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* FAQ Accordion Transitions */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-item.active .faq-answer {
+      padding-top: 1rem;
+      padding-bottom: 1.25rem;
+    }
+
+    .faq-icon {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-text-primary font-body-md overflow-x-hidden">
+  <!-- TopNavBar (identical to index.html) -->
+  <nav
+    class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-white border-b border-[#C5D0D9] shadow-sm">
+    <div class="flex items-center gap-10">
+      <a class="font-display-lg text-title-lg font-bold text-[#0D0D0D] tracking-tight hover:scale-105 transition-transform"
+        href="index.html">
+        Hanswal <span class="text-[#405B73]">Interiors</span>
+      </a>
+      <div class="hidden lg:flex gap-6 items-center">
+        <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all"
+          href="index.html">Home</a>
+        <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all"
+          href="a_projects.html">Projects</a>
+        <a class="font-label-md text-label-md text-[#0D0D0D] border-b-2 border-[#405B73] pb-1 font-semibold"
+          href="a_storeLocator.html">Store Locator</a>
+        <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_aboutUs.html">About Us</a>
+        <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_contact.html">Contact Us</a>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+      <button
+        class="bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#7B92A6] hover:border-[#405B73] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html','_self')">
+        Book free consultation
+      </button>
+    </div>
+  </nav>
+
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative h-[500px] w-full overflow-hidden" id="store-hero">
+      <div class="absolute inset-0">
+        <img alt="Hanswal Interiors Experience Centre - Premium Showroom" class="w-full h-full object-cover"
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent"></div>
+      </div>
+      <div class="relative z-10 h-full w-full flex items-center px-margin-desktop max-w-container-max mx-auto">
+        <div class="max-w-xl p-8 md:p-12">
+          <h1 class="font-display-lg text-display-lg text-white mb-6 leading-tight">
+            Find the best interior designers
+          </h1>
+          <p class="font-body-lg text-body-lg text-white/80 mb-10">
+            Visit a Hanswal Interiors Experience Centre near you and explore stunning designs in person.
+          </p>
+          <button
+            class="bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-8 py-4 rounded-lg font-label-md text-title-lg shadow-lg hover:bg-[#7B92A6] hover:translate-y-[-2px] transition-all active:scale-95 duration-150">
+            Book Free Consultation
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Search Section -->
+    <section class="py-section-gap bg-white border-b border-[#C5D0D9]" id="location-search">
+      <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+          <div>
+            <h2 class="font-headline-md text-headline-md text-[#0D0D0D] mb-2">Find us here</h2>
+            <p class="text-[#0D0D0D]/70 font-body-md">Locate us in your city and drop in! We'd love to meet you.</p>
+          </div>
+          <a class="mt-4 md:mt-0 text-[#0D0D0D] font-label-md flex items-center gap-1 hover:border-b-2 hover:border-[#405B73] pb-1 transition-all"
+            href="#">
+            Let's Connect <span class="material-symbols-outlined text-[#405B73]">arrow_forward</span>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+          <!-- Filter Sidebar -->
+          <div class="lg:col-span-1">
+            <div class="bg-white border border-[#C5D0D9] rounded-2xl p-6 sticky top-28 shadow-sm">
+              <label class="block font-title-lg text-title-lg text-[#0D0D0D] mb-4">Select Location</label>
+              <select id="city-select"
+                class="w-full border border-[#C5D0D9] rounded-xl px-4 py-3 text-[#0D0D0D] font-body-md focus:ring-2 focus:ring-[#405B73] focus:border-[#405B73] bg-[#F2F2F2]">
+                <option>Bengaluru</option>
+                <option>Mumbai</option>
+                <option>Delhi</option>
+                <option>Hyderabad</option>
+                <option>Pune</option>
+                <option>Chennai</option>
+              </select>
+              <div class="mt-6 flex items-center gap-2 text-[#0D0D0D]/70">
+                <span class="material-symbols-outlined text-[#405B73] text-[20px]">location_on</span>
+                <p class="font-body-md">165 Experience Centres</p>
+              </div>
+              <div class="mt-4 p-4 bg-[#F2F2F2] rounded-xl border border-[#C5D0D9]/50">
+                <p class="font-label-md text-label-md text-[#0D0D0D]/70 mb-2">Need help choosing?</p>
+                <button
+                  class="w-full bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-4 py-2.5 rounded-lg font-label-md hover:bg-[#7B92A6] transition-all active:scale-95 duration-150">
+                  Talk to us
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- EC Listings -->
+          <div class="lg:col-span-2 space-y-6">
+            <!-- EC Card 1 -->
+            <div
+              class="bg-white border border-[#C5D0D9]/60 rounded-2xl p-6 hover:shadow-md hover:border-[#7B92A6]/50 transition-all duration-300"
+              id="ec-card-sarjapur">
+              <div class="flex flex-col md:flex-row justify-between">
+                <div class="flex-1">
+                  <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Sarjapur Road, Bengaluru</h3>
+                  <p class="text-[#0D0D0D]/70 font-body-md mb-4 leading-relaxed">
+                    Hanswal Interiors - Modular Kitchens &amp; Wardrobes - Ground Floor, SY. No. 70/3, Sarjapur Road,
+                    Sulikunte Village, Bengaluru, Karnataka 560099
+                  </p>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-[#405B73] text-[20px] mt-0.5">schedule</span>
+                      <div>
+                        <p class="font-label-md text-label-md text-[#0D0D0D] font-semibold">Timings</p>
+                        <p class="text-[#0D0D0D]/70 font-body-md">Mon – Sat | 10 AM – 8 PM</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-[#405B73] text-[20px] mt-0.5">event</span>
+                      <div>
+                        <p class="font-label-md text-label-md text-[#0D0D0D] font-semibold">Appointments</p>
+                        <p class="text-[#0D0D0D]/70 font-body-md">EC Tour (30m), Consultation (60m)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-3 border-t border-[#C5D0D9]/50 pt-4">
+                <button
+                  class="bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-5 py-2.5 rounded-lg font-label-md hover:bg-[#7B92A6] transition-all active:scale-95 duration-150">
+                  Schedule Visit
+                </button>
+                <button
+                  class="border border-[#C5D0D9] text-[#0D0D0D] px-5 py-2.5 rounded-lg font-label-md hover:bg-[#F2F2F2] transition-all flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[18px] text-[#405B73]">call</span> Call
+                </button>
+                <button
+                  class="border border-[#C5D0D9] text-[#0D0D0D] px-5 py-2.5 rounded-lg font-label-md hover:bg-[#F2F2F2] transition-all flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[18px] text-[#405B73]">chat</span> WhatsApp
+                </button>
+                <a class="ml-auto text-[#0D0D0D] font-label-md flex items-center gap-1 hover:border-b-2 hover:border-[#405B73] pb-1 transition-all"
+                  href="#">
+                  Explore <span class="material-symbols-outlined text-[#405B73] text-[18px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Props Section -->
+    <section class="py-section-gap bg-[#F2F2F2] border-b border-[#C5D0D9]" id="value-props">
+      <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div class="text-center mb-16">
+          <h2 class="font-headline-md text-headline-md text-[#0D0D0D] mb-2">What can I expect at the Experience Centres?
+          </h2>
+          <p class="text-[#0D0D0D]/70 font-body-md">Experience endless options for everything interiors</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+          <!-- Card 1 -->
+          <div
+            class="group bg-white rounded-2xl overflow-hidden border border-[#C5D0D9]/40 shadow-sm hover:shadow-md transition-all duration-300">
+            <div class="relative overflow-hidden h-[220px]">
+              <img alt="Feel our products at the Experience Centre"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-title-lg text-title-lg text-[#0D0D0D] mb-2">Get a feel of our products</h3>
+              <p class="text-[#0D0D0D]/70 font-body-md leading-relaxed">Discover handpicked goodness that will transform
+                the way you live. Seeing is believing.</p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="group bg-white rounded-2xl overflow-hidden border border-[#C5D0D9]/40 shadow-sm hover:shadow-md transition-all duration-300">
+            <div class="relative overflow-hidden h-[220px]">
+              <img alt="Stunning interior design styles"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?fm=jpg&q=60&w=800&auto=format&fit=crop" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-title-lg text-title-lg text-[#0D0D0D] mb-2">Stunning styles for every room</h3>
+              <p class="text-[#0D0D0D]/70 font-body-md leading-relaxed">Walk through beautifully designed bedrooms,
+                living rooms, and kitchens.</p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="group bg-white rounded-2xl overflow-hidden border border-[#C5D0D9]/40 shadow-sm hover:shadow-md transition-all duration-300">
+            <div class="relative overflow-hidden h-[220px]">
+              <img alt="Material and finish options"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-title-lg text-title-lg text-[#0D0D0D] mb-2">Material and finish options</h3>
+              <p class="text-[#0D0D0D]/70 font-body-md leading-relaxed">Pick from a wide range of material finishes,
+                wallpapers, and upholstery.</p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="group bg-white rounded-2xl overflow-hidden border border-[#C5D0D9]/40 shadow-sm hover:shadow-md transition-all duration-300">
+            <div class="relative overflow-hidden h-[220px]">
+              <img alt="Expert design consultation"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" />
+            </div>
+            <div class="p-6">
+              <h3 class="font-title-lg text-title-lg text-[#0D0D0D] mb-2">Expert design consultation</h3>
+              <p class="text-[#0D0D0D]/70 font-body-md leading-relaxed">Meet skilled designers to curate your home as
+                per your taste and budget.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sneak Peek Gallery -->
+    <section class="py-section-gap bg-white border-b border-[#C5D0D9]" id="gallery">
+      <div class="max-w-container-max mx-auto px-margin-desktop">
+        <h2 class="font-headline-md text-headline-md text-center text-[#0D0D0D] mb-12">A sneak-peek into the projects we delivered</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="relative overflow-hidden rounded-xl group border border-[#C5D0D9]/50 h-64">
+            <img alt="Experience Centre View"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=800&q=80" />
+            <div class="absolute bottom-4 left-4 z-10">
+              <span
+                class="bg-[#F2F2F2]/90 backdrop-blur border border-[#C5D0D9] text-[#0D0D0D] px-3 py-1 rounded-full text-label-sm font-semibold shadow-sm">Living
+                Room</span>
+            </div>
+          </div>
+          <div class="relative overflow-hidden rounded-xl group border border-[#C5D0D9]/50 h-64">
+            <img alt="Experience Centre Kitchen"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80" />
+            <div class="absolute bottom-4 left-4 z-10">
+              <span
+                class="bg-[#F2F2F2]/90 backdrop-blur border border-[#C5D0D9] text-[#0D0D0D] px-3 py-1 rounded-full text-label-sm font-semibold shadow-sm">Kitchen</span>
+            </div>
+          </div>
+          <div class="relative overflow-hidden rounded-xl group border border-[#C5D0D9]/50 h-64">
+            <img alt="Experience Centre Dining"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=800&q=80" />
+            <div class="absolute bottom-4 left-4 z-10">
+              <span
+                class="bg-[#F2F2F2]/90 backdrop-blur border border-[#C5D0D9] text-[#0D0D0D] px-3 py-1 rounded-full text-label-sm font-semibold shadow-sm">Dining</span>
+            </div>
+          </div>
+          <div class="relative overflow-hidden rounded-xl group border border-[#C5D0D9]/50 h-64">
+            <img alt="Experience Centre Bedroom"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80" />
+            <div class="absolute bottom-4 left-4 z-10">
+              <span
+                class="bg-[#F2F2F2]/90 backdrop-blur border border-[#C5D0D9] text-[#0D0D0D] px-3 py-1 rounded-full text-label-sm font-semibold shadow-sm">Bedroom</span>
+            </div>
+          </div>
+          <div class="relative overflow-hidden rounded-xl group border border-[#C5D0D9]/50 h-64">
+            <img alt="Experience Centre Setup"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" />
+            <div class="absolute bottom-4 left-4 z-10">
+              <span
+                class="bg-[#F2F2F2]/90 backdrop-blur border border-[#C5D0D9] text-[#0D0D0D] px-3 py-1 rounded-full text-label-sm font-semibold shadow-sm">Wardrobe</span>
+            </div>
+          </div>
+          <div class="relative overflow-hidden rounded-xl group border border-[#C5D0D9]/50 h-64">
+            <img alt="Experience Centre Materials"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" />
+            <div class="absolute bottom-4 left-4 z-10">
+              <span
+                class="bg-[#F2F2F2]/90 backdrop-blur border border-[#C5D0D9] text-[#0D0D0D] px-3 py-1 rounded-full text-label-sm font-semibold shadow-sm">Materials</span>
+            </div>
+          </div>
+        </div>
+       </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-section-gap bg-[#F2F2F2] border-b border-[#C5D0D9]" id="reviews">
+      <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div
+          class="bg-white p-10 rounded-2xl border border-[#C5D0D9] shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
+          <div class="text-center md:text-left">
+            <h2 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Hanswal Interiors Design Reviews</h2>
+            <p class="text-[#0D0D0D]/70 font-body-md">These reviews motivate us to provide top-quality experiences.</p>
+          </div>
+          <div class="flex items-center gap-6 bg-[#F2F2F2] p-6 rounded-xl border border-[#C5D0D9]/50">
+            <div class="font-display-lg text-[48px] font-bold text-[#0D0D0D] leading-none">4.8</div>
+            <div>
+              <div class="flex text-[#405B73] mb-1">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+              <p class="text-label-sm text-[#0D0D0D]/70 font-semibold">122,237 reviews</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Price Estimator Section -->
+    <section class="py-section-gap bg-white border-b border-[#C5D0D9]" id="price-estimator">
+      <div class="max-w-container-max mx-auto px-margin-desktop p-8 border border-[#C5D0D9]/60 rounded-lg hover:shadow-lg hover:border-[#7B92A6]/50 transition-all duration-300 ">
+        <div class="text-center mb-16 ">
+          <h2 class="font-headline-md text-headline-md text-[#0D0D0D] mb-2">Hanswal Interiors Price Estimator</h2>
+          <p class="text-[#0D0D0D]/70 font-body-md">Calculate the approximate cost of doing up your home interiors.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          <!-- Estimator 1 -->
+          <div
+            class="group bg-white p-8 text-center">
+            <div
+              class="w-16 h-16 bg-[#C5D0D9] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#405B73] transition-colors">
+              <span
+                class="material-symbols-outlined text-[32px] text-[#405B73] group-hover:text-white transition-colors">home</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-4">Full Home Interior</h3>
+            <p class="text-[#0D0D0D]/70 font-body-md mb-8">Know the estimate price for your full home interiors</p>
+          </div>
+          <!-- Estimator 2 -->
+          <div
+            class="group bg-white p-8 text-center">
+            <div
+              class="w-16 h-16 bg-[#C5D0D9] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#405B73] transition-colors">
+              <span
+                class="material-symbols-outlined text-[32px] text-[#405B73] group-hover:text-white transition-colors">countertops</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-4">Kitchen</h3>
+            <p class="text-[#0D0D0D]/70 font-body-md mb-8">Get an approximate costing for your kitchen interior.</p>
+            <a class="text-[#0D0D0D] font-label-md inline-flex items-center gap-1 hover:border-b-2 hover:border-[#405B73] pb-1 transition-all"
+              href="#">
+              Calculate <span class="material-symbols-outlined text-[#405B73] text-[18px]">arrow_forward</span>
+            </a>
+          </div>
+          <!-- Estimator 3 -->
+          <div
+            class="group bg-white p-8 text-center">
+            <div
+              class="w-16 h-16 bg-[#C5D0D9] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#405B73] transition-colors">
+              <span
+                class="material-symbols-outlined text-[32px] text-[#405B73] group-hover:text-white transition-colors">checkroom</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-4">Wardrobe</h3>
+            <p class="text-[#0D0D0D]/70 font-body-md mb-8">Our rough math for your wardrobe</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-section-gap bg-[#F2F2F2] border-b border-[#C5D0D9]" id="faq">
+      <div class="px-margin-desktop max-w-[800px] mx-auto">
+        <h2 class="font-headline-md text-headline-md text-center text-[#0D0D0D] mb-12">Store Locator FAQs</h2>
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div
+            class="faq-item group border border-[#C5D0D9]/60 rounded-xl bg-[#F2F2F2]/30 hover:bg-[#F2F2F2]/50 hover:border-[#7B92A6]/50 transition-all duration-300">
+            <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none"
+              onclick="toggleFaq(this)" id="faq-btn-1">
+              <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">I am looking for an interior designer
+                near me, help!</span>
+              <div
+                class="faq-icon w-8 h-8 rounded-full border border-[#7B92A6] flex items-center justify-center text-[#405B73] group-hover:bg-[#405B73] group-hover:text-white transition-all flex-shrink-0 ml-4">
+                <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+              </div>
+            </button>
+            <div class="faq-answer px-6">
+              <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">
+                Yes, absolutely! Meeting interior designers has never been this easy. Our Experience Centres give you
+                the opportunity to meet our team of skilled interior designers. We are present in Bengaluru, Mumbai,
+                Pune, Hyderabad, and many more cities.
+              </p>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div
+            class="faq-item group border border-[#C5D0D9]/60 rounded-xl bg-[#F2F2F2]/30 hover:bg-[#F2F2F2]/50 hover:border-[#7B92A6]/50 transition-all duration-300">
+            <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none"
+              onclick="toggleFaq(this)" id="faq-btn-2">
+              <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">How long does a tour inside the
+                Experience Centre take?</span>
+              <div
+                class="faq-icon w-8 h-8 rounded-full border border-[#7B92A6] flex items-center justify-center text-[#405B73] group-hover:bg-[#405B73] group-hover:text-white transition-all flex-shrink-0 ml-4">
+                <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+              </div>
+            </button>
+            <div class="faq-answer px-6">
+              <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">
+                We recommend a 30-minute tour to get a feel of the designs and an additional 60 minutes if you wish to
+                have a detailed design consultation.
+              </p>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div
+            class="faq-item group border border-[#C5D0D9]/60 rounded-xl bg-[#F2F2F2]/30 hover:bg-[#F2F2F2]/50 hover:border-[#7B92A6]/50 transition-all duration-300">
+            <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none"
+              onclick="toggleFaq(this)" id="faq-btn-3">
+              <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">What is the cost of home interiors
+                near me?</span>
+              <div
+                class="faq-icon w-8 h-8 rounded-full border border-[#7B92A6] flex items-center justify-center text-[#405B73] group-hover:bg-[#405B73] group-hover:text-white transition-all flex-shrink-0 ml-4">
+                <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+              </div>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="text-[#0D0D0D]/80 font-body-md leading-relaxed">
+                <p class="mb-2">Typical starting costs (modular only):</p>
+                <ul class="list-disc ml-5 space-y-1">
+                  <li>2 BHK – Starting at ₹3.57L*</li>
+                  <li>3 BHK – Starting at ₹4.23L*</li>
+                  <li>Modular Kitchen – Starting at ₹1.37L*</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-section-gap bg-[#405B73]" id="cta-section">
+      <div class="max-w-xl mx-auto px-margin-desktop text-center">
+        <h2 class="font-headline-md text-headline-md text-white mb-4">Your dream home is just a click away</h2>
+        <p class="text-white/70 font-body-lg mb-10">Book a free consultation with our design experts today.</p>
+        <button
+          class="bg-[#C5D0D9] border-2 border-white/30 text-[#0D0D0D] px-10 py-4 rounded-lg font-label-md text-title-lg shadow-lg hover:bg-white hover:translate-y-[-2px] transition-all active:scale-95 duration-150">
+          Get Started
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════════════  FOOTER  ══════════════════════════ -->
+
+<footer class="bg-surface-container w-full border-t border-outline-variant mt-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-section-gap py-section-gap px-margin-desktop max-w-container-max mx-auto">
+
+<!-- hanswal Interiors footer -->
+
+<div>
+    <a class="font-title-lg text-title-lg font-bold text-[#0D0D0D] mb-6 block" href="/">
+        Hanswal <span class="text-[#405B73]">Interiors</span>
+    </a>
+    <p class="text-[#0D0D0D]/70 font-body-md mb-8">End-to-end home interior solutions for your home. Design, execution and delivery.</p>
+<div class="flex gap-5" style="display: flex; justify-content:left;">
+    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
+</div>
+</div>
+
+
+<!-- Offerings -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Offerings</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Modular Interiors</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Full Home Interiors</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Luxury Vinciago</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Price Calculators</a></li>
+</ul>
+</div>
+
+
+<!-- Get Inspired -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Get Inspired</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Design Ideas</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Kitchen Designs</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Living Room Ideas</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Magazine</a></li>
+</ul>
+</div>
+
+
+<!-- Company -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">About Us</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Careers</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Contact</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+
+
+<div class="border-t border-outline-variant py-8 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant font-label-sm">
+<span>© 2026 Hanswal Interiors. All rights reserved.</span>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+
+  <script>
+    // FAQ Accordion logic (same as index.html)
+    function toggleFaq(button) {
+      const currentItem = button.closest('.faq-item');
+      const answer = currentItem.querySelector('.faq-answer');
+      const allItems = document.querySelectorAll('.faq-item');
+
+      // Close other items if opened
+      allItems.forEach(item => {
+        if (item !== currentItem && item.classList.contains('active')) {
+          item.classList.remove('active');
+          const otherAnswer = item.querySelector('.faq-answer');
+          otherAnswer.style.maxHeight = null;
+        }
+      });
+
+      // Toggle current item
+      const isActive = currentItem.classList.toggle('active');
+      if (isActive) {
+        answer.style.maxHeight = answer.scrollHeight + "10px";
+      } else {
+        answer.style.maxHeight = null;
+      }
+    }
+
+    // Sticky Nav - slight shadow on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 20) {
+        nav.classList.add('shadow-md');
+      } else {
+        nav.classList.remove('shadow-md');
+      }
+    });
+
+            // Smooth reveal on scroll interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+
+  </script>
+</body>
+
+</html>

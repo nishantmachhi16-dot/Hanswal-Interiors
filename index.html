@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Hanswal Interiors | Home Interior Design, Kitchen &amp; Wardrobes</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+    <link rel="icon" type="image/png" href="./images/faviconImage.png">
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "text-secondary": "#0D0D0D",
+              "secondary": "#7B92A6",
+              "surface-container-high": "#C5D0D9",
+              "surface-tint": "#405B73",
+              "surface-container-low": "#F2F2F2",
+              "inverse-primary": "#C5D0D9",
+              "on-tertiary": "#0D0D0D",
+              "inverse-surface": "#0D0D0D",
+              "tertiary-fixed-dim": "#7B92A6",
+              "on-error": "#0D0D0D",
+              "surface": "#F2F2F2",
+              "on-tertiary-fixed-variant": "#0D0D0D",
+              "surface-container-lowest": "#FFFFFF",
+              "primary-fixed-dim": "#C5D0D9",
+              "on-background": "#0D0D0D",
+              "secondary-fixed-dim": "#C5D0D9",
+              "border-light": "#C5D0D9",
+              "primary": "#405B73",
+              "outline": "#7B92A6",
+              "primary-container": "#C5D0D9",
+              "on-secondary-container": "#0D0D0D",
+              "on-primary-container": "#0D0D0D",
+              "on-primary": "#0D0D0D",
+              "secondary-fixed": "#C5D0D9",
+              "on-secondary-fixed-variant": "#0D0D0D",
+              "surface-dim": "#C5D0D9",
+              "surface-container": "#F2F2F2",
+              "on-secondary-fixed": "#0D0D0D",
+              "on-error-container": "#0D0D0D",
+              "on-surface": "#0D0D0D",
+              "inverse-on-surface": "#F2F2F2",
+              "tertiary-container": "#C5D0D9",
+              "error-container": "#C5D0D9",
+              "on-secondary": "#0D0D0D",
+              "error": "#405B73",
+              "primary-fixed": "#C5D0D9",
+              "outline-variant": "#C5D0D9",
+              "tertiary-fixed": "#C5D0D9",
+              "on-surface-variant": "#0D0D0D",
+              "surface-container-highest": "#C5D0D9",
+              "on-primary-fixed": "#0D0D0D",
+              "background": "#F2F2F2",
+              "text-primary": "#0D0D0D",
+              "on-primary-fixed-variant": "#0D0D0D",
+              "surface-bright": "#F2F2F2",
+              "secondary-container": "#C5D0D9",
+              "on-tertiary-container": "#0D0D0D",
+              "surface-variant": "#C5D0D9",
+              "tertiary": "#7B92A6",
+              "on-tertiary-fixed": "#0D0D0D",
+              "surface-white": "#FFFFFF"
+            },
+            "borderRadius": {
+              "DEFAULT": "0.125rem",
+              "lg": "0.25rem",
+              "xl": "0.5rem",
+              "full": "0.75rem"
+            },
+            "spacing": {
+              "margin-desktop": "48px",
+              "margin-mobile": "16px",
+              "section-gap": "80px",
+              "unit": "8px",
+              "container-max": "1280px",
+              "gutter": "24px"
+            },
+            "fontFamily": {
+              "title-lg": ["Work Sans"],
+              "display-lg-mobile": ["Work Sans"],
+              "label-md": ["Work Sans"],
+              "body-lg": ["Work Sans"],
+              "display-lg": ["Work Sans"],
+              "headline-sm": ["Work Sans"],
+              "headline-md": ["Work Sans"],
+              "body-md": ["Work Sans"],
+              "label-sm": ["Work Sans"]
+            },
+            "fontSize": {
+              "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+              "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+              "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+              "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+              "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+              "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+              "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+              "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+              "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .hide-scrollbar::-webkit-scrollbar { display: none; }
+      .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      .slide-content-text {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      .active-slide .slide-content-text {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Infinite Marquee scroller */
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        animation: marquee 35s linear infinite;
+      }
+      .animate-marquee:hover {
+        animation-play-state: paused;
+      }
+
+      /* FAQ Accordion Transitions */
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .faq-item.active .faq-answer {
+        padding-top: 1rem;
+        padding-bottom: 1.25rem;
+      }
+      .faq-icon {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .faq-item.active .faq-icon {
+        transform: rotate(45deg);
+      }
+    </style>
+</head>
+<body class="bg-background text-text-primary font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-white border-b border-[#C5D0D9] shadow-sm">
+        <div class="flex items-center gap-10">
+            <a class="font-display-lg text-title-lg font-bold text-[#0D0D0D] tracking-tight hover:scale-105 transition-transform" href="index.html">
+                Hanswal <span class="text-[#405B73]">Interiors</span>
+            </a>
+            <div class="hidden lg:flex gap-6 items-center">
+                <a class="font-label-md text-label-md text-[#0D0D0D] border-b-2 border-[#405B73] pb-1 font-semibold" href="index.html">Home</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_projects.html">Projects</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_storeLocator.html">Store Locator</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_aboutUs.html">About Us</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_contactUs.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#7B92A6] hover:border-[#405B73] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html', '_self')">
+                Book free consultation
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[618px] w-full overflow-hidden group" id="hero-carousel">
+        <!-- Slider Track -->
+        <div id="hero-slider-track" class="flex h-full w-full transition-transform duration-700 ease-in-out">
+            <!-- Slide 1 (Original Content, Left Aligned) -->
+            <div class="min-w-full h-full relative flex items-center active-slide">
+                <div class="absolute inset-0">
+                    <img alt="Hanswal Interiors Hero Image - Elegant Living Room" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0"/>
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent"></div>
+                </div>
+                <div class="relative z-10 w-full px-margin-desktop max-w-container-max mx-auto">
+                    <div class="slide-content-text p-8 md:p-12 max-w-xl">
+                        <h1 class="font-display-lg text-display-lg text-white mb-6 leading-tight">
+                            Home to beautiful interiors
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-white/80 mb-10">
+                            Experience end-to-end home interiors with India's most trusted design partner.
+                        </p>
+                        <button class="hero-cta-btn bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-8 py-4 rounded-lg font-label-md text-title-lg shadow-lg hover:bg-[#7B92A6] hover:translate-y-[-2px] transition-all active:scale-95 duration-150" onclick="window.open('a_consultancyPage.html', '_self')">
+                            Get Started
+                            </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 (Modern Kitchen, Center Aligned, Coral button) -->
+            <div class="min-w-full h-full relative flex items-center justify-center">
+                <div class="absolute inset-0">
+                    <img alt="Modern Modular Kitchen" class="w-full h-full object-cover" src="https://assets.architecturaldigest.in/photos/60083486274aca243711bdde/16:9/w_2560%2Cc_limit/Cover-1366x768.jpg"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
+                </div>
+                <div class="relative z-10 w-full px-margin-desktop max-w-container-max mx-auto text-center">
+                    <div class="slide-content-text p-8 md:p-12 max-w-3xl mx-auto">
+                        <h1 class="font-display-lg text-display-lg text-white mb-6 leading-tight">
+                            Want to know how much your kitchen interiors will cost?
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-white/80 mb-10 max-w-xl mx-auto">
+                            Get an accurate estimate for your modular kitchen in just a few clicks.
+                        </p>
+                        <button class="hero-cta-btn bg-[#C5D0D9] border-2 border-[#405B73] text-Black px-8 py-4 rounded-full font-label-md text-title-lg shadow-lg hover:bg-[#7B92A6] hover:translate-y-[-2px] transition-all active:scale-95 duration-150 uppercase tracking-wider">
+                            Show Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 (Modular Wardrobe, Left Aligned) -->
+            <div class="min-w-full h-full relative flex items-center">
+                <div class="absolute inset-0">
+                    <img alt="Smart Wardrobes and Bedrooms" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1600&q=80"/>
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent"></div>
+                </div>
+                <div class="relative z-10 w-full px-margin-desktop max-w-container-max mx-auto">
+                    <div class="slide-content-text p-8 md:p-12 max-w-xl">
+                        <h1 class="font-display-lg text-display-lg text-white mb-6 leading-tight">
+                            Modular wardrobes designed for smart storage
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-white/80 mb-10">
+                            Explore space-saving and elegant wardrobe designs customized for your home.
+                        </p>
+                        <button class="hero-cta-btn bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-8 py-4 rounded-lg font-label-md text-title-lg shadow-lg hover:bg-[#7B92A6] hover:translate-y-[-2px] transition-all active:scale-95 duration-150" onclick="window.open('a_projects.html', '_self')">
+                            Explore Projects
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 (Turnkey Design, Center Aligned) -->
+            <div class="min-w-full h-full relative flex items-center justify-center">
+                <div class="absolute inset-0">
+                    <img alt="Luxury Living Room Interiors" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=80"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
+                </div>
+                <div class="relative z-10 w-full px-margin-desktop max-w-container-max mx-auto text-center">
+                    <div class="slide-content-text p-8 md:p-12 max-w-3xl mx-auto">
+                        <h1 class="font-display-lg text-display-lg text-white mb-6 leading-tight">
+                            Turnkey home interiors delivered in 45 days
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-white/80 mb-10 max-w-xl mx-auto">
+                            From design to installation, we handle everything with a 45-day move-in guarantee.
+                        </p>
+                        <button class="hero-cta-btn bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-8 py-4 rounded-lg font-label-md text-title-lg shadow-lg hover:bg-[#7B92A6] hover:translate-y-[-2px] transition-all active:scale-95 duration-150" onclick="window.open('a_consultancyPage.html', '_self')">
+                            Book Free Consultation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button id="prev-slide-btn" class="absolute left-6 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-12 h-12 bg-white rounded-full text-[#0D0D0D] shadow-lg border border-gray-200/50 hover:bg-gray-100 transition-all active:scale-90 duration-150 select-none focus:outline-none lg:opacity-0 lg:group-hover:opacity-100 duration-300">
+            <span class="material-symbols-outlined text-[24px] font-bold">chevron_left</span>
+        </button>
+        <button id="next-slide-btn" class="absolute right-6 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-12 h-12 bg-white rounded-full text-[#0D0D0D] shadow-lg border border-gray-200/50 hover:bg-gray-100 transition-all active:scale-90 duration-150 select-none focus:outline-none lg:opacity-0 lg:group-hover:opacity-100 duration-300">
+            <span class="material-symbols-outlined text-[24px] font-bold">chevron_right</span>
+        </button>
+
+        <!-- Slide Indicators -->
+        <div id="slide-indicators" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2.5">
+            <button class="indicator-dot w-8 h-3 rounded-full bg-white transition-all duration-300" data-slide="0"></button>
+            <button class="indicator-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300" data-slide="1"></button>
+            <button class="indicator-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300" data-slide="2"></button>
+            <button class="indicator-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300" data-slide="3"></button>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+
+        <div class="py-8 justify-center flex flex-col text-center">
+            <h2 class="font-headline-md text-headline-md text-[#0D0D0D] mb-2">Our Services</h2>
+            <p class="text-[#0D0D0D]/70">personalized interiors, showcasing stunning transformations </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+
+            <!-- Modular Interiors -->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C5D0D9] hover:shadow-lg transition-all duration-300">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Modular Interiors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwkOrm-_MV-6tM2IqxLeVsIelNrMVUi2T1pr2p9RkWRIz0gs1CRtoaUDFCOCJfZz1bsh7x3lxgmKH5_T0Lcf6ySHh9AXKAjzBiT4uIGh-YxJQKF8odeUVqWs81uARGKBGVZT_d12riL4PYbhXbde6OensA4WDBGbEXcQJ7glFehVQdpzkfD0XX-75Qk3UJ1EPaYInVs1Y6qP7b2LLl7LA_adMtr5oFdYQswhn2XgsmQZ9lP6ESrQk2HIZ5WDLehCdR0n3__6bJxj8"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Modular Interiors</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Kitchens and wardrobes</p>
+            </div>
+            <!-- Full Home Interiors -->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C5D0D9] hover:shadow-lg transition-all duration-300">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Full Home Interiors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgGBNUUp4ysncaNGZcCrdreHVtRs07olIbi1QUksdTGrVVR5GjlSA0AZOC3cUM2O9HKvt3MrG0GvtYq2DjRBFHPyrxM34PfbQcCzHFDsgjYKxqFAz_B0p5OH7Oh39Q_Ck6whGP52C851UKwU2tI2M6rpIwUBym7eEe05wuRjs9C9wdwxXZ3n7PccHj35C5x4i0fB08sXLv-qZGDnvBHJeFjq2-S9OKT0H4Z_vKdh6MgR7gnB4Kf96Yg4NW55O1HXYqQzPcPuc5O0s"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Full Home Interiors</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Personalized turnkey designs</p>
+            </div>
+            <!-- Luxury Interiors -->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C5D0D9] hover:shadow-lg transition-all duration-300">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Luxury Interiors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP_ENF0gKVaLEA3VDT13EhZ0N2U5_VZi6KmvpoGS5fDSWnjuwVC6bsOqaf0CJoEa1PikIYqwYv-Xaxz6wyVsJI_tIlxgMO5c9KGn3SKzuGEtH4L_D5OS4Cz_kL9Y9-_joo5GLHtST4ro1B1EX-dmLyHoWIInPHBU_27qNsQKcgWax3HLSMbZwdTpJDLusxNsbjkpgMaDFSxv_hF3OgO45-_b2UhIHA4ZrZKB2Q0fLoVOuxmk8aa-gAy7XPaSlAk9VJODhx3S-nJzg"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Luxury Interiors</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">By award-winning designers</p>
+            </div>
+            <!-- Renovations -->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C5D0D9] hover:shadow-lg transition-all duration-300">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Renovations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc5I6L336QvUkObBsbfwgx4CGSKFjeL9_YpZ8b_pmbkSafFy1Er1PTJ1zoQeWMGhMrqtHlXbHTwU3AuUkuPXzEPDjm5klgCbDkRj_sbJoTQoFP-VymE9Cklm0j_ys8c4tcX_cVJ6eM9PjMrgii5MhvoQd7RQ6ugiTVsXLXQur03Auao04QopAucKnqX0MlhwaDBtc9n8qmArFjkY8N7qDKLVFqE8ZV22XeOgl9UPLXF2YzSjwXmt1wzhNimq4XM5t3Emy1VAObEbU"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Renovations</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Upgrade your home</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspiration Grid -->
+    <section class="bg-[#F2F2F2] py-section-gap border-t border-b border-[#C5D0D9]">
+        <div class="px-margin-desktop max-w-container-max mx-auto">
+            <div class="flex justify-between items-end mb-10">
+                <div>
+                    <h2 class="font-headline-md text-headline-md text-[#0D0D0D] mb-2">Inspiration for your home</h2>
+                    <p class="text-[#0D0D0D]/70">Handpicked designs for every corner</p>
+                </div>
+                <a class="text-[#0D0D0D] font-label-md flex items-center gap-1 hover:border-b-2 hover:border-[#405B73] pb-1 transition-all" href="a_projects.html">
+                    View all designs <span class="material-symbols-outlined text-[#405B73]">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-12 grid-rows-2 gap-4 h-[600px]">
+                <div class="col-span-3 row-span-2 relative overflow-hidden rounded-xl group border border-[#C5D0D9]/50">
+                    <img alt="Bedroom Inspiration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://www.beautifulhomes.asianpaints.com/content/dam/asianpaintsbeautifulhomes/gallery/bedroom/modern-contemporary-bedroom-with-beige-bed-and-tropical-wallpaper/tropical-bedroom-with-woven-panels.jpg.transform/bh-gallery-listing/image.webp"/>
+                    <div class="absolute bottom-4 left-4 z-10">
+                        <span class="bg-[#F2F2F2]/90 backdrop-blur border border-[#C5D0D9] text-[#0D0D0D] px-3 py-1 rounded-full text-label-sm font-semibold shadow-sm">Bedroom</span>
+                    </div>
+                </div>
+                <div class="col-span-6 row-span-1 relative overflow-hidden rounded-xl group border border-[#C5D0D9]/50">
+                    <img alt="Kitchen Inspiration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH_Sxrul6H4oOQzUKmt0J4Ys9kIqmAIVzh3w&s"/>
+                    <div class="absolute bottom-4 left-4 z-10">
+                        <span class="bg-[#F2F2F2]/90 backdrop-blur border border-[#C5D0D9] text-[#0D0D0D] px-3 py-1 rounded-full text-label-sm font-semibold shadow-sm">Kitchen</span>
+                    </div>
+                </div>
+                <div class="col-span-3 row-span-2 relative overflow-hidden rounded-xl group border border-[#C5D0D9]/50">
+                    <img alt="Wardrobe Inspiration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNvUcmWSc0odFFl501meo5bkyvLY_hYTsz2Q&s"/>
+                    <div class="absolute bottom-4 left-4 z-10">
+                        <span class="bg-[#F2F2F2]/90 backdrop-blur border border-[#C5D0D9] text-[#0D0D0D] px-3 py-1 rounded-full text-label-sm font-semibold shadow-sm">Wardrobe</span>
+                    </div>
+                </div>
+                <div class="col-span-6 row-span-1 relative overflow-hidden rounded-xl group border border-[#C5D0D9]/50">
+                    <img alt="Living Room Inspiration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="data:image/jpeg;base64,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"/>
+                    <div class="absolute bottom-4 left-4 z-10">
+                        <span class="bg-[#F2F2F2]/90 backdrop-blur border border-[#C5D0D9] text-[#0D0D0D] px-3 py-1 rounded-full text-label-sm font-semibold shadow-sm">Living Room</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-section-gap bg-white overflow-hidden border-b border-[#C5D0D9]">
+        <div class="max-w-container-max mx-auto px-margin-desktop text-center mb-10">
+            <h2 class="font-headline-md text-headline-md text-[#0D0D0D] mb-2 text-center">Why choose us</h2>
+            <p class="text-[#0D0D0D]/70 font-body-md text-center">India's most trusted home design partner</p>
+        </div>
+        <!-- Infinite scroller -->
+        <div class="relative w-full flex items-center overflow-hidden py-4">
+            <!-- Left and Right fade gradients for premium feel -->
+            <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+            
+            <div class="flex animate-marquee gap-6 whitespace-nowrap">
+                <!-- Track items (Set 1) -->
+                <div class="flex gap-6">
+                    <!-- Card 1 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <!-- SVG Blob Background -->
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M30,-40C41.2,-31.2,54.3,-24.1,60.7,-13.2C67.1,-2.4,66.8,12.3,61,24.8C55.2,37.3,44,47.7,31.2,54.3C18.4,61,4,63.9,-9.5,61.4C-23,58.8,-35.5,50.8,-45.5,39.6C-55.5,28.4,-63,14.2,-64.1,-1.1C-65.2,-16.4,-59.9,-32.8,-49.2,-41.8C-38.5,-50.8,-22.4,-52.4,-11.2,-52.1C0,-51.8,18.8,-48.8,30,-40Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">verified</span>
+                            <!-- blue badge highlight -->
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">10</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">Flat 10-year warranty¹</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M42.2,-48.1C55.3,-38.7,67.1,-27.1,70.9,-12.9C74.6,1.4,70.3,18.3,61.7,31.7C53.1,45.2,40.1,55.1,25.4,60.8C10.7,66.5,-5.8,67.9,-21.8,63.5C-37.8,59,-53.4,48.7,-61.7,34.5C-70.1,20.2,-71.4,2.1,-67.2,-14.2C-63,-30.5,-53.4,-44.9,-40.3,-54.3C-27.1,-63.7,-13.6,-68,-0.1,-67.9C13.3,-67.8,26.7,-63.3,42.2,-48.1Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">calendar_today</span>
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">45</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">45-day move-in guarantee²</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M40.1,-46.8C51.5,-37.2,60,-23.7,63.2,-8.9C66.5,5.9,64.4,22,56.7,35.2C48.9,48.4,35.4,58.8,20.6,63.4C5.7,68,-10.4,66.8,-25,60.8C-39.7,54.7,-52.8,43.9,-59.5,29.9C-66.2,15.9,-66.4,-1.2,-61.9,-16.4C-57.5,-31.6,-48.3,-44.8,-36,-54.1C-23.7,-63.4,-11.9,-68.8,1.1,-70.1C14.1,-71.4,28.2,-68.6,40.1,-46.8Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">assignment_turned_in</span>
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">✓</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">146 quality checks</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M37.3,-45C49,-35.1,59.6,-24.2,62.9,-11.3C66.3,1.7,62.3,16.7,54.9,29.4C47.4,42.2,36.5,52.8,23.3,58.3C10.1,63.7,-5.4,64,-19.9,59.3C-34.4,54.7,-47.9,45.1,-56,32.3C-64.2,19.5,-67,3.6,-64.3,-11.3C-61.7,-26.2,-53.5,-40,-41.7,-50C-29.8,-59.9,-14.9,-66,-1,-64.8C12.9,-63.6,25.7,-54.9,37.3,-45Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">favorite</span>
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">♥</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">1,00,000+ happy homes</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M43.9,-43.3C55.9,-31.6,64,-15.8,63.9,-0.1C63.8,15.6,55.5,31.2,43.5,41.2C31.5,51.2,15.8,55.7,0.3,55.3C-15.2,54.9,-30.4,49.6,-42.2,39.6C-54,29.6,-62.4,14.8,-63,0.6C-63.6,-13.6,-56.3,-27.2,-45.5,-38.9C-34.8,-50.7,-20.6,-60.7,-4.1,-56.6C12.4,-52.5,32,-55.1,43.9,-43.3Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">location_city</span>
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">100</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">100+ cities</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M37.9,-48C48.5,-38.7,56.1,-25.9,59.3,-11.9C62.5,2.1,61.4,17.4,54.8,29.9C48.2,42.4,36.2,52.2,22.3,57.1C8.4,62,-7.3,62,-21.8,56.7C-36.4,51.4,-49.7,40.7,-57.4,27C-65,13.3,-67,-3.3,-63.3,-18.2C-59.5,-33.1,-50,-46.3,-37.7,-55.1C-25.3,-63.9,-10.1,-68.3,2.4,-71.2C14.9,-74.1,27.3,-57.3,37.9,-48Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">category</span>
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">+</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">20 lakh+ catalogue products</p>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M43.7,-49.4C55.4,-39,63.1,-24.1,64.7,-8.7C66.3,6.7,61.8,22.6,53.4,35.9C45,49.2,32.7,60,18,65.3C3.3,70.5,-13.7,70.3,-28.9,64.2C-44,58.1,-57.2,46.1,-63.7,31.4C-70.1,16.7,-69.8,-0.7,-64.9,-15.8C-60.1,-30.9,-50.8,-43.7,-38.7,-54C-26.6,-64.3,-11.7,-72.1,1.9,-74.3C15.6,-76.6,29.8,-59.8,43.7,-49.4Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">palette</span>
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">+</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">2,000+ designers</p>
+                    </div>
+                </div>
+
+                <!-- Track items (Set 2 for seamless loop) -->
+                <div class="flex gap-6">
+                    <!-- Card 1 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M30,-40C41.2,-31.2,54.3,-24.1,60.7,-13.2C67.1,-2.4,66.8,12.3,61,24.8C55.2,37.3,44,47.7,31.2,54.3C18.4,61,4,63.9,-9.5,61.4C-23,58.8,-35.5,50.8,-45.5,39.6C-55.5,28.4,-63,14.2,-64.1,-1.1C-65.2,-16.4,-59.9,-32.8,-49.2,-41.8C-38.5,-50.8,-22.4,-52.4,-11.2,-52.1C0,-51.8,18.8,-48.8,30,-40Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">verified</span>
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">10</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">Flat 10-year warranty¹</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M42.2,-48.1C55.3,-38.7,67.1,-27.1,70.9,-12.9C74.6,1.4,70.3,18.3,61.7,31.7C53.1,45.2,40.1,55.1,25.4,60.8C10.7,66.5,-5.8,67.9,-21.8,63.5C-37.8,59,-53.4,48.7,-61.7,34.5C-70.1,20.2,-71.4,2.1,-67.2,-14.2C-63,-30.5,-53.4,-44.9,-40.3,-54.3C-27.1,-63.7,-13.6,-68,-0.1,-67.9C13.3,-67.8,26.7,-63.3,42.2,-48.1Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">calendar_today</span>
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">45</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">45-day move-in guarantee²</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M40.1,-46.8C51.5,-37.2,60,-23.7,63.2,-8.9C66.5,5.9,64.4,22,56.7,35.2C48.9,48.4,35.4,58.8,20.6,63.4C5.7,68,-10.4,66.8,-25,60.8C-39.7,54.7,-52.8,43.9,-59.5,29.9C-66.2,15.9,-66.4,-1.2,-61.9,-16.4C-57.5,-31.6,-48.3,-44.8,-36,-54.1C-23.7,-63.4,-11.9,-68.8,1.1,-70.1C14.1,-71.4,28.2,-68.6,40.1,-46.8Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">assignment_turned_in</span>
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">✓</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">146 quality checks</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M37.3,-45C49,-35.1,59.6,-24.2,62.9,-11.3C66.3,1.7,62.3,16.7,54.9,29.4C47.4,42.2,36.5,52.8,23.3,58.3C10.1,63.7,-5.4,64,-19.9,59.3C-34.4,54.7,-47.9,45.1,-56,32.3C-64.2,19.5,-67,3.6,-64.3,-11.3C-61.7,-26.2,-53.5,-40,-41.7,-50C-29.8,-59.9,-14.9,-66,-1,-64.8C12.9,-63.6,25.7,-54.9,37.3,-45Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">favorite</span>
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">♥</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">1,00,000+ happy homes</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M43.9,-43.3C55.9,-31.6,64,-15.8,63.9,-0.1C63.8,15.6,55.5,31.2,43.5,41.2C31.5,51.2,15.8,55.7,0.3,55.3C-15.2,54.9,-30.4,49.6,-42.2,39.6C-54,29.6,-62.4,14.8,-63,0.6C-63.6,-13.6,-56.3,-27.2,-45.5,-38.9C-34.8,-50.7,-20.6,-60.7,-4.1,-56.6C12.4,-52.5,32,-55.1,43.9,-43.3Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">location_city</span>
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">100</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">100+ cities</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M37.9,-48C48.5,-38.7,56.1,-25.9,59.3,-11.9C62.5,2.1,61.4,17.4,54.8,29.9C48.2,42.4,36.2,52.2,22.3,57.1C8.4,62,-7.3,62,-21.8,56.7C-36.4,51.4,-49.7,40.7,-57.4,27C-65,13.3,-67,-3.3,-63.3,-18.2C-59.5,-33.1,-50,-46.3,-37.7,-55.1C-25.3,-63.9,-10.1,-68.3,2.4,-71.2C14.9,-74.1,27.3,-57.3,37.9,-48Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">category</span>
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">+</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">20 lakh+ catalogue products</p>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="inline-flex flex-col items-center justify-between p-6 bg-white border border-[#C5D0D9]/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow w-[220px] h-[240px] flex-shrink-0">
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <svg class="absolute inset-0 w-full h-full text-[#F2F2F2]" viewBox="0 0 100 100" fill="currentColor">
+                                <path d="M43.7,-49.4C55.4,-39,63.1,-24.1,64.7,-8.7C66.3,6.7,61.8,22.6,53.4,35.9C45,49.2,32.7,60,18,65.3C3.3,70.5,-13.7,70.3,-28.9,64.2C-44,58.1,-57.2,46.1,-63.7,31.4C-70.1,16.7,-69.8,-0.7,-64.9,-15.8C-60.1,-30.9,-50.8,-43.7,-38.7,-54C-26.6,-64.3,-11.7,-72.1,1.9,-74.3C15.6,-76.6,29.8,-59.8,43.7,-49.4Z" transform="translate(50,50)" />
+                            </svg>
+                            <span class="material-symbols-outlined text-[36px] text-[#405B73] z-10">palette</span>
+                            <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#7B92A6] border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] font-bold z-20">+</div>
+                        </div>
+                        <p class="font-body-md text-[#0D0D0D] font-semibold text-center whitespace-normal leading-tight">2,000+ designers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+        <h2 class="font-headline-md text-headline-md text-center text-[#0D0D0D] mb-16">The Hanswal Interiors Promises</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div class="flex flex-col items-center p-6 bg-white rounded-2xl border border-[#C5D0D9]/40 shadow-sm hover:shadow-md transition-shadow hover:bg-[#7B92A6] hover:translate-y-[-2px] transition-all active:scale-95 duration-150">
+                <div class="w-16 h-16 bg-[#C5D0D9] rounded-full flex items-center justify-center text-[#405B73] mb-6">
+                    <span class="material-symbols-outlined text-[32px]">verified</span>
+                </div>
+                <h4 class="font-title-lg text-title-lg text-[#0D0D0D] mb-2">Lifetime warranty</h4>
+                <p class="text-[#0D0D0D]/70">On all modular kitchens and wardrobes, for peace of mind.</p>
+            </div>
+            <div class="flex flex-col items-center p-6 bg-white rounded-2xl border border-[#C5D0D9]/40 shadow-sm hover:shadow-md transition-shadow hover:bg-[#7B92A6] hover:translate-y-[-2px] transition-all active:scale-95 duration-150">
+                <div class="w-16 h-16 bg-[#C5D0D9] rounded-full flex items-center justify-center text-[#405B73] mb-6">
+                    <span class="material-symbols-outlined text-[32px]">schedule</span>
+                </div>
+                <h4 class="font-title-lg text-title-lg text-[#0D0D0D] mb-2">45-day move-in guarantee</h4>
+                <p class="text-[#0D0D0D]/70">We deliver your home interiors on time, every time.</p>
+            </div>
+            <div class="flex flex-col items-center p-6 bg-white rounded-2xl border border-[#C5D0D9]/40 shadow-sm hover:shadow-md transition-shadow hover:bg-[#7B92A6] hover:translate-y-[-2px] transition-all active:scale-95 duration-150">
+                <div class="w-16 h-16 bg-[#C5D0D9] rounded-full flex items-center justify-center text-[#405B73] mb-6">
+                    <span class="material-symbols-outlined text-[32px]">security</span>
+                </div>
+                <h4 class="font-title-lg text-title-lg text-[#0D0D0D] mb-2">146 Quality Checks</h4>
+                <p class="text-[#0D0D0D]/70">Unmatched precision and quality control at every step.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Delivered Projects -->
+
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto overflow-hidden py-section-gap border-t border-b border-[#C5D0D9]">
+    <div class="flex justify-between items-end mb-10">
+        <div>
+            <h2 class="font-headline-md text-headline-md text-[#0D0D0D] mb-2">Beautiful homes we delivered</h2>
+            <p class="text-[#0D0D0D]/70">Take a tour of some of our favorite real-world projects</p>
+        </div>
+        <div class="flex gap-2">
+            <button class="p-2 border border-[#7B92A6] text-[#0D0D0D] rounded-full hover:bg-[#C5D0D9] hover:border-[#405B73] transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+            <button class="p-2 border border-[#7B92A6] text-[#0D0D0D] rounded-full hover:bg-[#C5D0D9] hover:border-[#405B73] transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+        </div>
+    </div>
+    <div class="flex gap-gutter overflow-x-auto hide-scrollbar pb-6">
+        <div class="min-w-[400px] flex-shrink-0 bg-white p-4 rounded-2xl border border-[#C5D0D9]/30">
+            <img alt="Bangalore Penthouse" class="w-full aspect-[1/1] object-cover rounded-xl mb-4 " src="data:image/jpeg;base64,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"/>
+            <h4 class="font-title-lg text-title-lg text-[#0D0D0D]">Modern 4 BHK Penthouse</h4>
+            <p class="text-[#0D0D0D]/70">Bangalore</p>
+        </div>
+        <div class="min-w-[400px] flex-shrink-0 bg-white p-4 rounded-2xl border border-[#C5D0D9]/30">
+            <img alt="Noida Penthouse" class="w-full aspect-[1/1] object-cover rounded-xl mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH8lpcGhDxwaGhSFlGEF35cJKkEoizJ3EANQ&s"/>
+            <h4 class="font-title-lg text-title-lg text-[#0D0D0D]">Contemporary House Design</h4>
+            <p class="text-[#0D0D0D]/70">Noida</p>
+        </div>
+        <div class="min-w-[400px] flex-shrink-0 bg-white p-4 rounded-2xl border border-[#C5D0D9]/30">
+            <img class="w-full aspect-[1/1] object-cover rounded-xl mb-4" alt="Mumbai Apartment" src="data:image/jpeg;base64,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"/>
+            <h4 class="font-title-lg text-title-lg text-[#0D0D0D]">Urban Minimalist Retreat</h4>
+            <p class="text-[#0D0D0D]/70">Mumbai</p>
+        </div>
+    </div>
+</section>
+
+    <!-- FAQ Section -->
+    <section class="py-section-gap bg-white border-b border-[#C5D0D9]">
+        <div class="px-margin-desktop max-w-[800px] mx-auto">
+            <h2 class="font-headline-md text-headline-md text-center text-[#0D0D0D] mb-12">FAQs About Home Interior Design</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item group border border-[#C5D0D9]/60 rounded-xl bg-[#F2F2F2]/30 hover:bg-[#F2F2F2]/50 hover:border-[#7B92A6]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">1. Why do I need an interior designer?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#7B92A6] flex items-center justify-center text-[#405B73] group-hover:bg-[#405B73] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">
+                            An interior designer bring professional space planning, material expertise, and coordination skills to turn your vision into reality. Hiring a designer helps optimize your budget, coordinate contractors, select harmonized colors and materials, and save you from costly trial-and-error mistakes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item group border border-[#C5D0D9]/60 rounded-xl bg-[#F2F2F2]/30 hover:bg-[#F2F2F2]/50 hover:border-[#7B92A6]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">2. Why is Hanswal Interiors perfect for your home interior design?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#7B92A6] flex items-center justify-center text-[#405B73] group-hover:bg-[#405B73] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">
+                            Hanswal Interiors is a comprehensive one-stop destination for end-to-end interior design. We offer complete personalization, high-tech modular designs, a flat 10-year warranty, a 45-day move-in guarantee, and a rigorous 146-point quality check process. We manage everything from initial concept and site renovation to delivery and installation, ensuring a smooth, hassle-free experience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item group border border-[#C5D0D9]/60 rounded-xl bg-[#F2F2F2]/30 hover:bg-[#F2F2F2]/50 hover:border-[#7B92A6]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">3. What services are included under home interior design?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#7B92A6] flex items-center justify-center text-[#405B73] group-hover:bg-[#405B73] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">
+                            We provide comprehensive solutions covering all aspects of interior transformations, including space planning and 3D modeling, customized modular kitchens and wardrobes, civil works (flooring, tiling, painting), technical installations (plumbing, structural layout, electrical styling), custom false ceilings, custom furniture design, modular partitions, and lighting layouts.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item group border border-[#C5D0D9]/60 rounded-xl bg-[#F2F2F2]/30 hover:bg-[#F2F2F2]/50 hover:border-[#7B92A6]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">4. How much do home interiors cost?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#7B92A6] flex items-center justify-center text-[#405B73] group-hover:bg-[#405B73] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">
+                            Interior design costs are personalized to each project based on parameters like home configuration (e.g., 2BHK vs 3BHK), material specifications, finish choices (laminate, acrylic, glass), and custom furniture preferences. We offer packages that scale from essential modular setups to premium luxury designs. You can receive a detailed budget estimate based on your specific requirements during our free consultation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item group border border-[#C5D0D9]/60 rounded-xl bg-[#F2F2F2]/30 hover:bg-[#F2F2F2]/50 hover:border-[#7B92A6]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">5. What will be the timelines for my project completion?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#7B92A6] flex items-center justify-center text-[#405B73] group-hover:bg-[#405B73] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">
+                            For modular interior installations (such as kitchens and wardrobes), we offer a guaranteed 45-day move-in timeline. Full-home turnkey design projects are typically delivered and installed within 90 days. The timeline is highly dependent on design finalization, site readiness, prompt design feedback, and standard procurement of custom finishes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item group border border-[#C5D0D9]/60 rounded-xl bg-[#F2F2F2]/30 hover:bg-[#F2F2F2]/50 hover:border-[#7B92A6]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">6. What are the trending interior design styles?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#7B92A6] flex items-center justify-center text-[#405B73] group-hover:bg-[#405B73] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">
+                            Current home design trends focus on wellness, functionality, and organic elements. Popular styles include Japandi (blending Zen minimalism with Scandi warmth), curve detailing (arched structures, curved islands), multi-purpose modular furniture (flexible dividers, built-in study pods), and biophilic design with natural textures, solid woods, and warm earth tones.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Stories -->
+    <section class="bg-[#F2F2F2] py-section-gap border-t border-b border-[#C5D0D9]">
+        <div class="px-margin-desktop max-w-container-max mx-auto">
+            <h2 class="font-headline-md text-headline-md text-center text-[#0D0D0D] mb-12">What our customers say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-10 rounded-2xl border border-[#C5D0D9] shadow-sm flex flex-col md:flex-row gap-8 items-start hover:shadow-md transition-shadow">
+                    <img class="w-24 h-24 rounded-full object-cover" alt="Rohit Paul" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApzU2CzM1-XT7DpV_jvK3EbIUlyb772u_6a5mDyS9o-BIHZn2Uylh2BviBZ1v-hSBwftulATfQQ_Zqkcg9xYWs4UsrMFW0-0KCYCp5WFf3QA58ekZNW_Va_SOhbwAMzQvHcJ5-x_0iG706B824cq8ECObbRDF0nJEN3X7XxivPOKnC_EEFDREN58o3SdeOijd51HtXUStkQ0EodoKY4TZdwwW7c5qx4I8IB1B6b-Tj2jHvrp0OAibfcuyDu1xsw7i2_UYBxthTYzE"/>
+                    <div>
+                        <div class="flex text-[#405B73] mb-4">
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="italic text-[#0D0D0D]/80 mb-6 font-body-lg">"Hanswal Interiors transformed our apartment into a dream home. The design process was seamless, and the quality of finish is exceptional. Truly professional!"</p>
+                        <h5 class="font-title-lg text-title-lg text-[#0D0D0D]">Rohit Paul</h5>
+                        <p class="text-label-sm text-[#0D0D0D]/70">Bangalore</p>
+                    </div>
+                </div>
+                <div class="bg-white p-10 rounded-2xl border border-[#C5D0D9] shadow-sm flex flex-col md:flex-row gap-8 items-start hover:shadow-md transition-shadow">
+                    <img class="w-24 h-24 rounded-full object-cover" alt="Swati & Gaurav" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc01EIdEsv83i7K9FhJVub9jpjp30I0wZ1StOH6PRhANTwx2CzeyHAeWEhzmMCbsWIfybJE2W8n_G7dZv2cs8aL9zdhwYjp9KRxr72ZjthtmatI9-0M1d0HGicUbE49GnPjeMAChvYtZxTqwQ2UwYTnCRbf1Qs_g0emPQMmQFM1lQdXLbUFeBCJuapAQneWnHX2lpedH04R81YWHnbIZR9my4DB15cL4YEhD7QsC1TSOabfhUSCDnY8mlYF2g80_WyGBhoX2EtsCU"/>
+                    <div>
+                        <div class="flex text-[#405B73] mb-4">
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="italic text-[#0D0D0D]/80 mb-6 font-body-lg">"The move-in guarantee was a lifesaver. Everything was delivered and installed on time. The designers really understood our needs."</p>
+                        <h5 class="font-title-lg text-title-lg text-[#0D0D0D]">Swati &amp; Gaurav</h5>
+                        <p class="text-label-sm text-[#0D0D0D]/70">Noida</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-surface-container w-full border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-section-gap py-section-gap px-margin-desktop max-w-container-max mx-auto">
+
+<!-- hanswal Interiors footer -->
+
+<div>
+    <a class="font-title-lg text-title-lg font-bold text-[#0D0D0D] mb-6 block" href="/">
+        Hanswal <span class="text-[#405B73]">Interiors</span>
+    </a>
+    <p class="text-[#0D0D0D]/70 font-body-md mb-8">End-to-end home interior solutions for your home. Design, execution and delivery.</p>
+<div class="flex gap-5" style="display: flex; justify-content:left;">
+    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
+</div>
+</div>
+
+
+<!-- Offerings -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Offerings</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Modular Interiors</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Full Home Interiors</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Luxury Vinciago</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Price Calculators</a></li>
+</ul>
+</div>
+
+
+<!-- Get Inspired -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Get Inspired</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Design Ideas</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Kitchen Designs</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Living Room Ideas</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Magazine</a></li>
+</ul>
+</div>
+
+
+<!-- Company -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">About Us</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Careers</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Contact</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+
+
+<div class="border-t border-outline-variant py-8 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant font-label-sm">
+<span>© 2026 Hanswal Interiors. All rights reserved.</span>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+
+    <script>
+        // Hero Slider logic
+        const sliderTrack = document.getElementById('hero-slider-track');
+        const slides = Array.from(sliderTrack.children);
+        const prevBtn = document.getElementById('prev-slide-btn');
+        const nextBtn = document.getElementById('next-slide-btn');
+        const indicators = Array.from(document.querySelectorAll('.indicator-dot'));
+        const heroCarousel = document.getElementById('hero-carousel');
+        
+        let currentSlideIndex = 0;
+        let autoSlideInterval;
+        
+        function updateSlider() {
+            // Translate the track
+            sliderTrack.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            
+            // Update active state class on slides for text animation
+            slides.forEach((slide, index) => {
+                if (index === currentSlideIndex) {
+                    slide.classList.add('active-slide');
+                } else {
+                    slide.classList.remove('active-slide');
+                }
+            });
+            
+            // Update indicator dots styling
+            indicators.forEach((indicator, index) => {
+                if (index === currentSlideIndex) {
+                    indicator.classList.remove('bg-white/40', 'w-3');
+                    indicator.classList.add('bg-white', 'w-8');
+                } else {
+                    indicator.classList.remove('bg-white', 'w-8');
+                    indicator.classList.add('bg-white/40', 'w-3');
+                }
+            });
+        }
+        
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            updateSlider();
+        }
+        
+        function prevSlide() {
+            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+        
+        function startAutoSlide() {
+            stopAutoSlide();
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        }
+        
+        function stopAutoSlide() {
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval);
+            }
+        }
+        
+        // Manual sliding listeners
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            startAutoSlide(); // reset timer on manual click
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            startAutoSlide(); // reset timer on manual click
+        });
+        
+        // Indicators jump
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', (e) => {
+                const targetIndex = parseInt(e.currentTarget.getAttribute('data-slide'), 10);
+                if (targetIndex !== currentSlideIndex) {
+                    currentSlideIndex = targetIndex;
+                    updateSlider();
+                    startAutoSlide(); // reset timer on manual click
+                }
+            });
+        });
+        
+        // Autoplay play/pause on hover
+        heroCarousel.addEventListener('mouseenter', stopAutoSlide);
+        heroCarousel.addEventListener('mouseleave', startAutoSlide);
+
+        // Micro-interactions for all hero CTA buttons
+        const heroButtons = document.querySelectorAll('.hero-cta-btn');
+        heroButtons.forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                btn.style.transform = 'translateY(-4px) scale(1.02)';
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+        
+        // Initialize
+        updateSlider();
+        startAutoSlide();
+
+        // FAQ Accordion logic
+        function toggleFaq(button) {
+            const currentItem = button.closest('.faq-item');
+            const answer = currentItem.querySelector('.faq-answer');
+            const allItems = document.querySelectorAll('.faq-item');
+            
+            // Close other items if opened
+            allItems.forEach(item => {
+                if (item !== currentItem && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    const otherAnswer = item.querySelector('.faq-answer');
+                    otherAnswer.style.maxHeight = null;
+                }
+            });
+
+            // Toggle current item
+            const isActive = currentItem.classList.toggle('active');
+            if (isActive) {
+                answer.style.maxHeight = answer.scrollHeight + "10px";
+            } else {
+                answer.style.maxHeight = null;
+            }
+        }
+
+        // Sticky Nav logic - slight shadow on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+                // Smooth reveal on scroll interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+
+
+    </script>
+</body>
+</html>

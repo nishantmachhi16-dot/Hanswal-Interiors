@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Hanswal Interiors - Find an Experience Centre Near You</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+
+<link rel="icon" type="image/png" href="./images/faviconImage.png">
+
+
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .architectural-blob {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "primary": "#28445a",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "background": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#466179",
+                        "tertiary": "#38434a",
+                        "surface-container-high": "#e8e8e8",
+                        "overlay-light": "rgba(255,255,255,0.8)",
+                        "surface-dim": "#dadada",
+                        "on-primary-fixed": "#001d31",
+                        "inverse-primary": "#aecae6",
+                        "secondary": "#4a6173",
+                        "overlay-dark": "rgba(0,0,0,0.8)",
+                        "on-background": "#1a1c1c",
+                        "surface-container-low": "#f3f3f3",
+                        "secondary-container": "#cbe3f9",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#405b73",
+                        "on-tertiary-fixed": "#121d23",
+                        "surface-bright": "#f9f9f9",
+                        "outline-variant": "#c3c7cd",
+                        "on-tertiary-fixed-variant": "#3e4850",
+                        "on-secondary-fixed": "#041e2e",
+                        "surface": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "tertiary-fixed": "#d9e4ed",
+                        "secondary-fixed": "#cee5fb",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-fixed": "#cde5ff",
+                        "secondary-fixed-dim": "#b2c9df",
+                        "on-primary-container": "#b6d2ef",
+                        "surface-container": "#eeeeee",
+                        "text-primary": "#0D0D0D",
+                        "primary-fixed-dim": "#aecae6",
+                        "on-primary-fixed-variant": "#2e4961",
+                        "surface-white": "#FFFFFF",
+                        "on-surface-variant": "#43474d",
+                        "outline": "#73777d",
+                        "on-tertiary-container": "#c6d1da",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-container": "#4f6578",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#bdc8d1",
+                        "tertiary-container": "#4f5a62",
+                        "on-secondary-fixed-variant": "#33495b",
+                        "inverse-on-surface": "#f1f1f1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "section-gap": "80px",
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Work Sans"],
+                        "headline-sm": ["Work Sans"],
+                        "title-lg": ["Work Sans"],
+                        "headline-md": ["Work Sans"],
+                        "display-lg": ["Work Sans"],
+                        "body-lg": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "display-lg-mobile": ["Work Sans"],
+                        "label-md": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased selection:bg-primary-container selection:text-white">
+
+<header class="sticky top-0 w-full z-50 bg-surface-white dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none mt-section-gap">
+<!-- TopNavBar -->
+    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-white border-b border-[#C5D0D9] shadow-sm">
+        <div class="flex items-center gap-10">
+            <a class="font-display-lg text-title-lg font-bold text-[#0D0D0D] tracking-tight hover:scale-105 transition-transform" href="index.html">
+                Hanswal <span class="text-[#405B73]">Interiors</span>
+            </a>
+            <div class="hidden lg:flex gap-6 items-center">
+                <a class="font-label-md text-label-md text-[#0D0D0D] border-b-2 border-[#405B73] pb-1 font-semibold" href="index.html">Home</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_projects.html">Projects</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_storeLocator.html">Store Locator</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_aboutUs.html">About Us</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#7B92A6] hover:border-[#405B73] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html','_self')">
+                Book free consultation
+            </button>
+        </div>
+    </nav>
+</header>
+<main>
+<!-- Hero Section: How it started -->
+<section class="relative overflow-hidden pt-16 pb-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="z-10 order-2 md:order-1">
+<span class="inline-block py-1 px-3 mb-6 bg-secondary-container text-on-secondary-container rounded-full font-label-sm text-label-sm">OUR ORIGIN STORY</span>
+<h1 class="font-display-lg text-display-lg mb-6 text-text-primary">How it started</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                        It all started when college friends, Anuj Srivastava and Ramakant Sharma, set upon their journeys to design their dream homes. It didn’t take them long to realise how fragmented the industry was and how factors like identifying the right professionals, coordination of tasks, and ensuring fair price and quality were pain points faced by many.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                        Determined to fix this and offer a happier experience to homeowners, they built a much needed bridge for the industry. Founded in 2014, Hanswal Interiors is now the trusted brand for complete home design.
+                    </p>
+<div class="h-1 w-24 bg-primary-container rounded-full"></div>
+</div>
+<div class="relative order-1 md:order-2">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-surface-container-high architectural-blob opacity-50 z-0"></div>
+<div class="relative rounded-xl overflow-hidden shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-500 z-10 border border-outline-variant">
+<img alt="Corporate workspace" class="w-full h-[500px] object-cover" data-alt="A wide-angle professional architectural photograph of a bright, contemporary collaborative workspace. The design features floor-to-ceiling windows, minimalist wooden tables, and elegant slate blue ergonomic chairs. Soft natural light illuminates the clean surfaces and neutral gray walls, creating an atmosphere of architectural serenity and professional focus in a modern corporate setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmxeD7kp2dqp2JUfbof9hs4TzglbDsgPZyKAOV0KjIDInrunaZoORol5vyt4cQj_lZMmdE2j9J6Gz8swdMh4KEiUKXz9jHcqiiAxYialRuWCBJBkLw_Pu8zYpEjl4rzKppFE7sMvT9VfahQT-BboFna-_fv4CcBEBod0YyUkoeFTohiuIuIo9Bz00ubX1w4jVajggMEUl_09uveyLaPR9oDoIIALVGez9jcCZ2hvGnG8GRFvR2sUkUzowjzUj5SirWWFVfsb-MQBQ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Founders Section -->
+<section class="bg-surface-container-lowest py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-text-primary mb-4">Meet our founders</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">The visionaries who bridged the gap between homeowners and their dream spaces through logic and artistry.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Founder 1 -->
+<div class="group relative bg-white border border-outline-variant p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="w-48 h-48 flex-shrink-0 rounded-full overflow-hidden border-4 border-surface-container-high group-hover:border-primary-container transition-colors duration-300">
+<img alt="Anuj Srivastava" class="w-full h-full object-cover" data-alt="A professional, high-end portrait of a South Asian male executive with a confident and warm expression, wearing a tailored navy blazer and white shirt. The background is a blurred high-end architectural office interior with soft slate blue and gray tones. The lighting is flattering and professional, capturing a mood of corporate leadership and reliable expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB7wa9O9NHEYA1Hy0vgg9P8dfEllLXltppQVgPWZSmjHfM08n-jexOyVlP0GxhPKE6pcv-IA9crgPdgMsGHLd2-6OXb6N8HhalEYDi_mCl1jO_UHEsX80amF8-bBschzdV28ZFManzysmjhsmBKFD7tfehaQQi2gjOytviGn4J3DuE-oWm1Zxs7kV3c58-GyV-LQwGZJ7F3Xu-fDvnPJ7L6ZRg8MiCiKkrI0SnDMquEXZ5YuJbtr2lAAlRQO1oAMD811s74_CSZKI"/>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">Anuj Srivastava</h3>
+<p class="font-label-md text-label-md text-primary font-bold mb-4">Co-founder and Chairman of the Board</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<strong>A dreamer and a chess master of the startup world,</strong> Anuj always keeps you guessing about his next move. With years of experience leading worldwide product marketing functions, he uses his expertise to lead Hanswal Interiors. Previously Global Head of Product Marketing for e-commerce at Google.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Founder 2 -->
+<div class="group relative bg-white border border-outline-variant p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="w-48 h-48 flex-shrink-0 rounded-full overflow-hidden border-4 border-surface-container-high group-hover:border-primary-container transition-colors duration-300">
+<img alt="Ramakant Sharma" class="w-full h-full object-cover" data-alt="A studio portrait of a sophisticated South Asian male CEO in professional attire, leaning forward slightly to convey engagement. The lighting is sharp and detailed, emphasizing a professional and analytical personality. The backdrop consists of subtle gray textures, aligning with a corporate modern aesthetic of precision and visionary leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAArvqk3JuK0Ukf27mDgWEV0h-tVTP4gUVFNnbbR6d9yMUfiYY_O9C-D0iiOjY7Y9r9Ty-1s3DZTDbpIw61zCX-30Xu5SZ_hblGFZX103sbAUlNKUkZdhvuMsqcQu1-SU8dHtSCS-dusYqbmQ8pB5vdJ_J7McL-jFPaCzDomsDh7guO29lboiDfbKK5x7sSwlPUbAp3HaNhBiGHNIhPLq5YvfMiy90yaaRVRj0HrRZRbWoUNT5xJYkeUF1Msl_8M-TCb57dS8ESuGA"/>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">Ramakant Sharma</h3>
+<p class="font-label-md text-label-md text-primary font-bold mb-4">Co-founder and Chief Executive Officer (CEO)</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<strong>With a mind that runs on logic and data,</strong> Ramakant is the most inimitable problem solver. He brings 12 years of experience in e-commerce and internet technologies to innovate our platform. Previously core team member and VP of Engineering at Myntra.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-24 bg-primary text-white overflow-hidden relative">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg height="100%" preserveaspectratio="none" viewbox="0 0 100 100" width="100%">
+<path d="M0 100 Q 50 0 100 100" fill="none" stroke="white" stroke-width="0.5"></path>
+</svg>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-md text-headline-md mb-12">We’ll let our numbers do the talking</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="p-6">
+<div class="text-4xl md:text-5xl font-bold mb-2">1,00,000+</div>
+<div class="font-label-md text-label-md opacity-80">HOMES DESIGNED</div>
+</div>
+<div class="p-6 border-l border-white/20">
+<div class="text-4xl md:text-5xl font-bold mb-2">2,000+</div>
+<div class="font-label-md text-label-md opacity-80">EXPERT DESIGNERS</div>
+</div>
+<div class="p-6 border-l border-white/20">
+<div class="text-4xl md:text-5xl font-bold mb-2">2</div>
+<div class="font-label-md text-label-md opacity-80">COUNTRIES</div>
+</div>
+<div class="p-6 border-l border-white/20">
+<div class="text-4xl md:text-5xl font-bold mb-2">100+</div>
+<div class="font-label-md text-label-md opacity-80">CITIES REACHED</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Growth Journey Timeline -->
+<section class="py-section-gap bg-background">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">THE TIMELINE</span>
+<h2 class="font-headline-md text-headline-md text-text-primary">Our growth journey</h2>
+</div>
+<div class="text-on-surface-variant font-body-md">2014 — Present</div>
+</div>
+<!-- Vertical Timeline -->
+<div class="relative space-y-12 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-outline-variant before:to-transparent">
+<!-- 2014 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary-container bg-surface-white text-primary font-bold shadow-sm z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            14
+                        </div>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border border-outline-variant bg-white shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-title-lg text-title-lg text-primary mb-2">2014: The Foundation</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Founded by Anuj &amp; RK to disrupt the home interiors industry. Launched operations in Bangalore.</p>
+</div>
+</div>
+<!-- 2017 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary-container bg-surface-white text-primary font-bold shadow-sm z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            17
+                        </div>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border border-outline-variant bg-white shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-title-lg text-title-lg text-primary mb-2">2017: Innovation Recognition</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Awarded ‘World’s Most Innovative Company’ by Fast Company. Expanded into major Delhi NCR experience centers.</p>
+</div>
+</div>
+<!-- 2019 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary-container bg-surface-white text-primary font-bold shadow-sm z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            19
+                        </div>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border border-outline-variant bg-white shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-title-lg text-title-lg text-primary mb-2">2019: International Debut</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Went international with launch in Singapore. Conferred ‘India’s most admired home interiors brand’.</p>
+</div>
+</div>
+<!-- 2022 -->
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary text-white bg-primary font-bold shadow-lg z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            22
+                        </div>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border-2 border-primary bg-primary-container text-white shadow-lg">
+<h4 class="font-title-lg text-title-lg text-white mb-2">2022: Unicorn Status</h4>
+<p class="font-body-md text-body-md text-on-primary-container">Hanswal Interiors became a unicorn, solidifying its place as the market leader in organized home design solutions.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="relative rounded-2xl overflow-hidden bg-primary text-white p-12 md:p-24 text-center">
+<div class="absolute inset-0 z-0">
+<img alt="Luxury interior" class="w-full h-full object-cover opacity-30" data-alt="A luxurious, high-end living room interior with a perfect mix of contemporary furniture and classic architectural details. The room features a soft palette of slate blue textiles, neutral gray walls, and warm walnut wood accents. Atmospheric evening lighting creates long, soft shadows and a cozy, premium feel, illustrating the level of sophistication Hanswal Interiors brings to a home." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfYK3HMo0HG2uTaaSgI3XwKdPaIL6kLnqf7p0nSG_Pk1UtK9VVyCtMPf88WfNr3XmrYiJZmfQyGHhVGbsWSnzy0R_MxJdsn3ICAEM113ow108QUHLVCKSQUzO7_RQw-v1ROfdHSfQUDiUXkaoXmJwyiWnoo1ewxAtGtg7TCoqD5DC_1UO8PQlLfR7ehGhXhF3jX3pnlGQNdSKrp0K5XmRxJfSPtr51r4wPrByWN4OvBQBA9sTvgcLwGsOc82DBh-fLGrKi-Xwt3Bs"/>
+</div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg mb-6">Your dream home is just a click away</h2>
+<p class="font-body-lg text-body-lg mb-10 max-w-2xl mx-auto opacity-90">Start your design journey today with India's most trusted interior brand.</p>
+<button class="bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-secondary-fixed transition-colors shadow-lg active:scale-95 duration-200">
+                            GET STARTED
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+
+<!-- Footer -->
+<footer class="bg-surface-container w-full border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-section-gap py-section-gap px-margin-desktop max-w-container-max mx-auto">
+
+<!-- hanswal Interiors footer -->
+
+<div>
+    <a class="font-title-lg text-title-lg font-bold text-[#0D0D0D] mb-6 block" href="/">
+        Hanswal <span class="text-[#405B73]">Interiors</span>
+    </a>
+    <p class="text-[#0D0D0D]/70 font-body-md mb-8">End-to-end home interior solutions for your home. Design, execution and delivery.</p>
+<div class="flex gap-5" style="display: flex; justify-content:left;">
+    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
+</div>
+</div>
+
+
+<!-- Offerings -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Offerings</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Modular Interiors</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Full Home Interiors</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Luxury Vinciago</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Price Calculators</a></li>
+</ul>
+</div>
+
+
+<!-- Get Inspired -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Get Inspired</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Design Ideas</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Kitchen Designs</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Living Room Ideas</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Magazine</a></li>
+</ul>
+</div>
+
+
+<!-- Company -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">About Us</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Careers</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Contact</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+
+
+<div class="border-t border-outline-variant py-8 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant font-label-sm">
+<span>© 2026 Hanswal Interiors. All rights reserved.</span>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+        // Simple scroll reveal interaction for timeline dots
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('scale-110', 'bg-primary-container', 'text-white');
+                        entry.target.classList.remove('bg-surface-white', 'text-primary');
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.shrink-0').forEach(dot => observer.observe(dot));
+        });
+
+        
+                // Smooth reveal on scroll interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+
+
+    </script>
+</body></html>

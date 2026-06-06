@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects | Hanswal Interiors - Find an Experience Centre Near You</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+
+<link rel="icon" type="image/png" href="./images/faviconImage.png">
+
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-badge {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .organic-blob {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#cee5fb",
+                      "inverse-on-surface": "#f1f1f1",
+                      "tertiary-fixed": "#d9e4ed",
+                      "tertiary-fixed-dim": "#bdc8d1",
+                      "on-background": "#1a1c1c",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#33495b",
+                      "outline-variant": "#c3c7cd",
+                      "on-tertiary-fixed": "#121d23",
+                      "text-primary": "#0D0D0D",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#e2e2e2",
+                      "on-surface-variant": "#43474d",
+                      "background": "#f9f9f9",
+                      "surface-white": "#FFFFFF",
+                      "on-primary-container": "#b6d2ef",
+                      "on-surface": "#1a1c1c",
+                      "surface-dim": "#dadada",
+                      "primary": "#28445a",
+                      "on-secondary-fixed": "#041e2e",
+                      "surface-container": "#eeeeee",
+                      "on-tertiary-container": "#c6d1da",
+                      "surface": "#f9f9f9",
+                      "overlay-dark": "rgba(0,0,0,0.8)",
+                      "on-primary-fixed-variant": "#2e4961",
+                      "tertiary": "#38434a",
+                      "inverse-primary": "#aecae6",
+                      "error-container": "#ffdad6",
+                      "inverse-surface": "#2f3131",
+                      "surface-container-highest": "#e2e2e2",
+                      "secondary-container": "#cbe3f9",
+                      "tertiary-container": "#4f5a62",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed-variant": "#3e4850",
+                      "surface-bright": "#f9f9f9",
+                      "primary-container": "#405b73",
+                      "surface-container-high": "#e8e8e8",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#466179",
+                      "error": "#ba1a1a",
+                      "overlay-light": "rgba(255,255,255,0.8)",
+                      "on-secondary-container": "#4f6578",
+                      "surface-container-low": "#f3f3f3",
+                      "primary-fixed-dim": "#aecae6",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#cde5ff",
+                      "outline": "#73777d",
+                      "on-primary-fixed": "#001d31",
+                      "secondary": "#4a6173",
+                      "secondary-fixed-dim": "#b2c9df",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "section-gap": "80px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-desktop": "48px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Work Sans"],
+                      "display-lg": ["Work Sans"],
+                      "title-lg": ["Work Sans"],
+                      "display-lg-mobile": ["Work Sans"],
+                      "label-md": ["Work Sans"],
+                      "headline-md": ["Work Sans"],
+                      "body-lg": ["Work Sans"],
+                      "body-md": ["Work Sans"],
+                      "headline-sm": ["Work Sans"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface-white w-full sticky top-0 z-50 shadow-sm border-b border-outline-variant">
+
+    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-white border-b border-[#C5D0D9] shadow-sm">
+        <div class="flex items-center gap-10">
+            <a class="font-display-lg text-title-lg font-bold text-[#0D0D0D] tracking-tight hover:scale-105 transition-transform" href="index.html">
+                Hanswal <span class="text-[#405B73]">Interiors</span>
+            </a>
+            <div class="hidden lg:flex gap-6 items-center">
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="index.html">Home</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D] border-b-2 border-[#405B73] pb-1 font-semibold" href="a_projects.html">Projects</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_storeLocator.html">Store Locator</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_aboutUs.html">About Us</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#7B92A6] hover:border-[#405B73] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html','_self')">
+                Book free consultation
+            </button>
+        </div>
+    </nav>
+
+<main class="py-6">
+    
+</header>
+
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+
+    <!-- Breadcrumb & Title Section -->
+<section class="mb-12">
+<nav class="flex items-center gap-2 mb-4 text-on-surface-variant font-label-sm">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-semibold">Delivered Projects</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Hanswal Interiors Delivered Homes</h1>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">
+                        Explore expertly crafted, personalized interiors, showcasing stunning transformations and seamless execution for inspiring, real home makeovers.
+                    </p>
+</div>
+</div>
+</section>
+
+<!-- Filtering Section -->
+<section class="mb-gutter overflow-x-auto no-scrollbar">
+<div class="flex gap-4 pb-2">
+<button class="flex items-center gap-2 px-6 py-2 rounded-full border border-primary text-primary font-label-md bg-secondary-fixed">
+                    All Homes
+                </button>
+</div>
+</section>
+
+<!-- Main Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter mt-8">
+<!-- Card 1 -->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-64 overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpEnxNMKbxslHKA-1BLAOIgMzuVEguuuAgEt_RZkjRwVNP4b873jQ1iTsaFOakakdegwoF8OGGFNvxSyoeKEI48_g-Q9A8i2kmLfRmwF8Jndd4OSOxP9DEkEe-3lH3tAGp74qEM7sjp4AYbo1OECwSYPf5M4CULr3AvKg9I9UolnjBy7HDaK0VX9hP4POhzXcK9n1VByfifFViKE0rL7npX3qlaJQ1QyC-WsklLYsd6wP1vRTWGTLLIj-UPEd6bHMROM2Spl74nwM"/>
+<div class="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                        16 Photos
+                    </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Ivy County, Noida</h3>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-label-sm">3-BHK</span>
+</div>
+<p class="text-on-surface-variant font-label-md mb-4">Contemporary Interior Design of Villa in Mumbai</p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
+<span class="text-body-md truncate">Full Home, Kitchen, Living Room</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+<span class="text-body-md font-semibold text-primary">₹20 - 25 Lakhs</span>
+</div>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95 duration-150">
+                        Get This Design
+                    </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-64 overflow-hidden">
+<img alt="Modern Kitchen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A bright and airy contemporary kitchen with sage green cabinetry and high-end stainless steel appliances. The space is illuminated by warm under-cabinet lighting and natural sunlight streaming through a large window. The design is sleek and utilitarian, following a corporate modern aesthetic with clean tile backsplashes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUbKBMd34GdJDNl3FZH22xHsCO6gCsn0R3Kct_bP3JuHB_iLzlQguPyX44vU0B_4jhN2kbrUIa7tSmmqr6hVpjeBAyxhJ6zFBQ-8yQ_Y9gLh3mZTbvXKhHQ3h-eAUephjAZcMbRMW-oFb63Ms8wCCKSHKPF8oa_Mo2MXy_Jw62FLdHr2mu2-3kUOVhFJhhRfWB5rnrJ8nVmUc16omJf5avgew4mPyk3-E8LY35hktjebbaNAA4Y_ZIblzSzV5WFjaUs4C1RD1_REw"/>
+<div class="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                        10 Photos
+                    </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">My Fortune, Bengaluru</h3>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-label-sm">3-BHK</span>
+</div>
+<p class="text-on-surface-variant font-label-md mb-4">U-Shaped Kitchen and White Sofas Modern Design</p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
+<span class="text-body-md truncate">Kitchen, Living Room, 3 Bedrooms</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+<span class="text-body-md font-semibold text-primary">₹10 - 15 Lakhs</span>
+</div>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95 duration-150">
+                        Get This Design
+                    </button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-64 overflow-hidden">
+<img alt="Villa Living Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A spacious villa living room featuring high ceilings and a sophisticated velvet blue ottoman. The walls are finished in a muted grey-blue tone, complemented by gold-accented furniture and high-end decor pieces. The lighting is soft and layered, highlighting the premium architectural details and textures of the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_VlMcU_jrSkyJ_Rl2fBVxi_NS-pWLvlVzwqcpfOVp4iXdBmhKA_IodBCzUTLbMLe1ci-GGaPyUz6KgjN5-GBrZaqdwzEUDTIPvUq0n9rsmQ9Wqu7B25dG2qGDNnjQ-1ykZtiB8BZXBJvMr90NE_jsrVcvwrCr6THVdY2ETbzenfwI-pr_ahYADB5xLA6sdJmk5bSgj0pBbn6lOqciEeUsItw_msNz4rhPCR8c9K7Q6khPhn6WUZlXPhU6BQxeDPYkFqWniE4d1E8"/>
+<div class="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                        15 Photos
+                    </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Sri Kamadhenu, Bengaluru</h3>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-label-sm">Villa</span>
+</div>
+<p class="text-on-surface-variant font-label-md mb-4">Contemporary Villa Design with Island Kitchen</p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
+<span class="text-body-md truncate">Full Home, Island Kitchen, 3 Bedrooms</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+<span class="text-body-md font-semibold text-primary">₹15 - 20 Lakhs</span>
+</div>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95 duration-150">
+                        Get This Design
+                    </button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-64 overflow-hidden">
+<img alt="Dining Room Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stylish modern dining room with a large wooden table and elegant chairs. The background features a textured accent wall and subtle gold light fixtures. The mood is sophisticated and warm, designed with a focus on high-end residential aesthetics and professional staging." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg6FEn6oF2hpxBW2Yse7MI_6yZWTq4d47gfB2RjgNMUO3b-vrKClAGAybUG0GO9e3GdZWY9b4-EpE-cP8Snf9WFgEmqlYN6vjgTsfVnAj4PULTO5MtAj_HmNmxfZ7lyBWP-fJ6KPaJVkejtj9scmm5j0AhRFgb5D3e3aLxc130vHGEME_PmkppF0isfY2qub1whUL31fkhauCfbk_vBWFBjwxcqvgJHqa6snTcccUNTBE958-oykiOUh8p2RgW-bTMfSl7uoi8jDw"/>
+<div class="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                        24 Photos
+                    </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Hallmark Skyrena, Hyderabad</h3>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-label-sm">4-BHK</span>
+</div>
+<p class="text-on-surface-variant font-label-md mb-4">Modern Style Design with Beige Sofa &amp; Foyer</p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
+<span class="text-body-md truncate">Dining Room, Foyer, 4 Bedrooms</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+<span class="text-body-md font-semibold text-primary">₹25 - 30 Lakhs</span>
+</div>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95 duration-150">
+                        Get This Design
+                    </button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-64 overflow-hidden">
+<img alt="Bedroom Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A serene master bedroom interior with a high-end upholstered headboard and premium bed linen in soft neutral tones. Large floor-to-ceiling windows offer soft daylight, highlighting the clean lines and professional architectural finish. The mood is calm and upscale, reflecting a modern corporate luxury style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr7iy6_lQ-Jg4LnX8sdJT9QQ93v9MGTrBH99xNsiDLjp2cd2aJWvHBlKMWtH6COnx8gcXTBGfCx19uMdOQVaOzdD8xtvV0SpqMGVowWY2Du5lPrmbT92RiIM7yHf2NQhq-USv0u39Lg7GGgjDeZenrVmuP137tOw3etu7tFlFCeDbDXxAggxpaAPUk6xpuZNW8PII-Hm2v1ClQrgfLWF5KzzaAlF026v0jeKWhijOZfsxiZew5_AfLX6SXT6lzr1BUM0AhFBQwGeQ"/>
+<div class="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                        10 Photos
+                    </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Park View Spa, Gurugram</h3>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-label-sm">3-BHK</span>
+</div>
+<p class="text-on-surface-variant font-label-md mb-4">L-Shaped Layout with Modern Accents</p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
+<span class="text-body-md truncate">Master Suite, Wardrobes, Living Room</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+<span class="text-body-md font-semibold text-primary">₹25 - 30 Lakhs</span>
+</div>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95 duration-150">
+                        Get This Design
+                    </button>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-64 overflow-hidden">
+<img alt="Living Room Luxury" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated contemporary living room featuring a mix of textures—velvet, marble, and polished metal. The furniture is arranged for conversational comfort, and a large statement artwork anchors the space. Lighting is a mix of natural light and warm spotlights, creating a premium professional ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYYPmyi0FPYOH0dC9F6ZIE5BSiDm3lP2EoZsxjTzIrmLncpKqhwAzAxS6f0-Mek2BsrRiHliRcsCuCb8RWOR1_WwoBHod3SBBq77QJe8XnIzFTBjfEBIaZEzkzN1T0zytMJMYVWAEvz2UYu3_bl2zb3PRMQTtzVqxQHrGisHZ4fgYfHT0b0UP7zGpgVtsV4wjpm3HXhPGn9v3izDUQcnGvO5MfvUx-vlAsQYY12v8n-sJgeZBkKF2H6Q59eBLL642wNObH27JghiA"/>
+<div class="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                        18 Photos
+                    </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Emerald Estate, Mumbai</h3>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-label-sm">3-BHK</span>
+</div>
+<p class="text-on-surface-variant font-label-md mb-4">Modern Minimalist Design with Full Home detailing</p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
+<span class="text-body-md truncate">Full Home, Kitchen, Kids Room</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+<span class="text-body-md font-semibold text-primary">₹30+ Lakhs</span>
+</div>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95 duration-150">
+                        Get This Design
+                    </button>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Footer -->+
+<footer class="bg-surface-container w-full border-t border-outline-variant mt-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-section-gap py-section-gap px-margin-desktop max-w-container-max mx-auto">
+
+<!-- hanswal Interiors footer -->
+
+<div>
+    <a class="font-title-lg text-title-lg font-bold text-[#0D0D0D] mb-6 block" href="/">
+        Hanswal <span class="text-[#405B73]">Interiors</span>
+    </a>
+    <p class="text-[#0D0D0D]/70 font-body-md mb-8">End-to-end home interior solutions for your home. Design, execution and delivery.</p>
+<div class="flex gap-5" style="display: flex; justify-content:left;">
+    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
+</div>
+</div>
+
+
+<!-- Offerings -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Offerings</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Modular Interiors</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Full Home Interiors</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Luxury Vinciago</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Price Calculators</a></li>
+</ul>
+</div>
+
+
+<!-- Get Inspired -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Get Inspired</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Design Ideas</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Kitchen Designs</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Living Room Ideas</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Magazine</a></li>
+</ul>
+</div>
+
+
+<!-- Company -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">About Us</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Careers</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Contact</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+
+
+<div class="border-t border-outline-variant py-8 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant font-label-sm">
+<span>© 2026 Hanswal Interiors. All rights reserved.</span>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- FAB (Suppressed based on prompt logic for Details/Transactional, but enabled here for Home/Portfolio Context) -->
+<button class="fixed bottom-8 right-8 bg-primary text-on-primary w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform active:scale-95 z-40">
+<span class="material-symbols-outlined">forum</span>
+</button>
+<script>
+        // Simple micro-interaction for filter buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.add('scale-95');
+                setTimeout(() => btn.classList.remove('scale-95'), 150);
+            });
+        });
+
+        // Smooth reveal on scroll interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+
+    </script>
+</body></html>
