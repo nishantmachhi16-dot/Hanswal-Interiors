@@ -213,6 +213,32 @@
       #location-search .grid { grid-template-columns: 1fr !important; }
       #location-search .sticky { position: static !important; }
 
+      .grid {
+          grid-template-columns: 1fr !important;
+      }
+      
+      /* Make the Map responsive and smaller for mobile screens */
+      #location-search iframe {
+          width: 100% !important;
+          height: 250px !important;
+      }
+
+      /* Remove fixed width from cards and containers */
+      #location-search .w-\[600px\], 
+      #location-search .w-\[550px\] {
+          width: 100% !important;
+          max-width: 100% !important;
+      }
+
+      /* Stack buttons for better mobile ergonomics */
+      .flex.flex-wrap {
+          flex-direction: column;
+      }
+      .flex.flex-wrap > button, .flex.flex-wrap > a {
+          width: 100%;
+          justify-content: center;
+      }
+
       /* EC card buttons - stack on mobile */
       #ec-card-sarjapur .flex.flex-wrap { flex-direction: column !important; gap: 10px !important; }
       #ec-card-sarjapur .flex.flex-wrap button,
@@ -333,6 +359,7 @@
 
             </div>
           </div>
+
           <!-- EC Listings -->
           <div class="lg:col-span-2 flex justify-end">
             <!-- EC Card 1 -->
