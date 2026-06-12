@@ -24,7 +24,7 @@
             backdrop-filter: blur(8px);
         }
 
-    @media (max-width: 768px) {
+    @media (max-width: 899px) {
         *, *::before, *::after { box-sizing: border-box; }
         html, body { width: 100%; overflow-x: hidden; }
 
@@ -201,47 +201,50 @@
       </script>
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
-<!-- TopNavBar -->
-<header class="w-full sticky top-0 z-50 bg-surface-white border-b border-outline-variant shadow-sm transition-all duration-300">
-<!-- TopNavBar -->
-<header class="bg-surface-white w-full sticky top-0 z-50 shadow-sm border-b border-outline-variant">
-
-    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-white border-b border-[#C5D0D9] shadow-sm">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-white shadow-sm">
         <div class="flex items-center gap-10">
-            <a class="font-display-lg text-title-lg font-bold text-[#0D0D0D] tracking-tight hover:scale-105 transition-transform" href="index.html">
-                Hanswal <span class="text-[#405B73]">Interiors</span>
-            </a>
-            <div class="desktop-nav hidden lg:flex gap-6 items-center">
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_projects.html">Projects</a>
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_storeLocator.html">Store Locator</a>
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_aboutUs.html">About Us</a>
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_contactUs.html">Contact Us</a>
+    <div class="flex items-center gap-3">
+        <img src="./images/faviconImage.png" alt="Hanswal Interior Studio Logo" class="w-13 h-12 object-contain rounded-md">
+        <button class="font-title-lg text-title-lg font-bold text-[#0D0D0D] block text-left" onclick="window.open('index.html','_self')" style="outline: none;">
+            Hanswal <br><span style="color:#C9A227;">Interiors</span>
+        </button>
+    </div>  
+            <!-- responsive menu bar solved the desktop mode error  we must add this one to all the nav bar at end-->
+            <div class="desktop-nav hidden md:flex gap-6 items-center"> 
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="index.html">Home</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_projects.html">Projects</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_priceEstimator.html">Price Estimator</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_storeLocator.html">Store Locator</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_aboutUs.html">About Us</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_contactUs.html">Contact Us</a>
             </div>
         </div>
-        <div class="flex items-center gap-4 nav-actions">
-            <button id="menuToggle" type="button" aria-label="Toggle navigation menu"
-                class="mobile-hamburger hidden rounded-lg border border-[#C5D0D9] bg-white p-3 text-[#0D0D0D] shadow-sm hover:bg-[#F2F2F2] lg:hidden">
+        <div class="nav-actions flex items-center gap-4">
+            <button id="menuToggle" type="button" aria-label="Toggle navigation menu" class="menu-toggle hidden rounded-lg border border-[#C9A227] bg-white p-3 text-[#0D0D0D] shadow-sm hover:bg-[#C9A227]/10 lg:hidden">
                 <span class="material-symbols-outlined text-[24px]">menu</span>
             </button>
-            <button class="bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#7B92A6] hover:border-[#405B73] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html','_self')">
+            <button class="bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#C9A227]/40 hover:border-[#C9A227] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html', '_self')">
                 Book free consultation
             </button>
         </div>
     </nav>
 
-    <div id="mobileMenu" class="fixed left-0 right-0 top-20 z-40 hidden flex-col gap-2 border-b border-[#C5D0D9] bg-white/95 px-4 py-4 shadow-md backdrop-blur lg:hidden" role="dialog" aria-modal="true" aria-label="Navigation menu">
-        <a class="rounded-lg px-3 py-3 text-[#0D0D0D] hover:bg-[#F2F2F2] font-label-md" href="index.html">Home</a>
-        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#F2F2F2] font-label-md" href="a_projects.html">Projects</a>
-        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#F2F2F2] font-label-md" href="a_storeLocator.html">Store Locator</a>
-        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#F2F2F2] font-label-md" href="a_aboutUs.html">About Us</a>
-        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#F2F2F2] font-label-md" href="a_contactUs.html">Contact Us</a>
-        <button class="bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#7B92A6] hover:border-[#405B73] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html','_self')">Book free consultation</button>
+    <div id="mobileMenu" class="fixed left-0 right-0 top-20 z-40 hidden flex-col gap-2 border-b border-[#C9A227] bg-white/95 px-4 py-4 shadow-md backdrop-blur lg:hidden">
+
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D] hover:bg-[#C9A227]/10 font-label-md" href="index.html">Home</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_projects.html">Projects</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_priceEstimator.html">Price Estimator</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_storeLocator.html">Store Locator</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_aboutUs.html">About Us</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_contactUs.html">Contact Us</a>
+
+        <button class="bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#C9A227]/40 hover:border-[#C9A227] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html', '_self')">
+                Book free consultation
+        </button>
+
     </div>
     <div id="mobileMenuOverlay" class="fixed inset-0 z-30 hidden bg-black/30 backdrop-blur-[1px] lg:hidden"></div>
-
-<main class="py-6">
-
-</header>
 
 <main>
 <!-- Hero Section -->
@@ -688,6 +691,7 @@
 </div>
 </section>
 </main>
+
 <!-- Footer -->
 <footer class="bg-surface-container w-full border-t border-outline-variant">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-section-gap py-section-gap px-margin-desktop max-w-container-max mx-auto">
@@ -695,64 +699,74 @@
 <!-- hanswal Interiors footer -->
 
 <div>
-    <a class="font-title-lg text-title-lg font-bold text-[#0D0D0D] mb-6 block" href="/">
-        Hanswal <span class="text-[#405B73]">Interiors</span>
-    </a>
+    <div class="flex items-center gap-3 mb-6">
+        <img src="./images/faviconImage.png" alt="Hanswal Interior Studio Logo" class="w-13 h-12 object-contain rounded-md">
+        <button class="font-title-lg text-title-lg font-bold text-[#0D0D0D] block text-left" onclick="document.getElementById('back-to-frontpage').scrollIntoView({behavior:'smooth'})" style="outline: none;">
+            Hanswal <br><span style="color:#C9A227;">Interiors</span>
+        </button>
+    </div>
     <p class="text-[#0D0D0D]/70 font-body-md mb-8">End-to-end home interior solutions for your home. Design, execution and delivery.</p>
 <div class="flex gap-5" style="display: flex; justify-content:left;">
-    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
+    <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+    <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+    <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
 </div>
 </div>
 
-
-<!-- Offerings -->
+<!-- Our Services -->
 
 <div class="space-y-4">
-<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Offerings</h4>
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Our Services</h4>
 <ul class="space-y-2">
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Modular Interiors</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Full Home Interiors</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Luxury Vinciago</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Price Calculators</a></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Full-Home-Interiors').scrollIntoView({behavior:'smooth'})" style="outline: none;">Full Home Interiors </button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Modular-Kitchen').scrollIntoView({behavior:'smooth'})" style="outline: none;">Modular Kitchen</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Bespoke-Wardrobe-Solutions').scrollIntoView({behavior:'smooth'})" style="outline: none;">Bespoke Wardrobe Solutions</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Furniture-and-Carpentry').scrollIntoView({behavior:'smooth'})" style="outline: none;">Furniture & Carpentry</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('False-Ceiling-and-Lighting').scrollIntoView({behavior:'smooth'})" style="outline: none;">False Ceiling & Lighting</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Flooring-and-Tiling').scrollIntoView({behavior:'smooth'})" style="outline: none;">Flooring & Tiling</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Wall-Paneling-and-Decor').scrollIntoView({behavior:'smooth'})" style="outline: none;">Wall Paneling & Decor</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Project-Consultancy').scrollIntoView({behavior:'smooth'})" style="outline: none;">Project Consultancy</button></li>
 </ul>
 </div>
-
-
-<!-- Get Inspired -->
-
-<div class="space-y-4">
-<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Get Inspired</h4>
-<ul class="space-y-2">
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Design Ideas</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Kitchen Designs</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Living Room Ideas</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Magazine</a></li>
-</ul>
-</div>
-
 
 <!-- Company -->
 
 <div class="space-y-4">
-<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Company</h4>
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Company</h4>
 <ul class="space-y-2">
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">About Us</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Careers</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Contact</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_aboutUs.html">About Us</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_projects.html">Projects</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_priceEstimator.html">Price Estimator</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_storeLocator.html">Store Locator</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_contactUs.html">Contact Us</a></li>
 </ul>
 </div>
+
+<!-- Company Information-->
+<div class="space-y-4 justify-self-end">
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Contact Info</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-black">location_on</span>
+<span>Vadodara, Gujarat, India</span>
+</li>
+<li class="flex items-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-black">mail</span>
+<span>gopinathjiinterio1980@gmail.com</span>
+</li>
+<li class="flex items-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-black">call</span>
+<span>+91 99248 13074</span>
+</li>
+</ul>
+</div>
+
 </div>
 
 
 <div class="border-t border-outline-variant py-8 px-margin-desktop max-w-container-max mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant font-label-sm">
 <span>© 2026 Hanswal Interiors. All rights reserved.</span>
-<div class="flex gap-6">
-<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
-</div>
 </div>
 </div>
 </footer>
