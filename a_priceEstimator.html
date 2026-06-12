@@ -17,14 +17,14 @@
         theme: {
           extend: {
             "colors": {
-              "text-primary": "#000000",
-              "text-secondary": "#4D4D4D",
-              "primary": "#405B73",
-              "secondary": "#7B92A6",
-              "surface": "#F2F2F2",
+              "text-primary": "#0D0D0D",
+              "text-secondary": "#0D0D0D",
+              "primary": "#C9A227",
+              "secondary": "#C9A227",
+              "surface": "#FFFFFF",
               "surface-white": "#FFFFFF",
-              "border-light": "#C5D0D9",
-              "background": "#F2F2F2"
+              "border-light": "#C9A22733",
+              "background": "#FFFFFF"
             },
             "borderRadius": {
               "DEFAULT": "0.125rem",
@@ -68,7 +68,7 @@
         background-color: #F8F8F8;
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 899px) {
         *, *::before, *::after { box-sizing: border-box; }
         html, body { width: 100%; overflow-x: hidden; }
 
@@ -88,7 +88,7 @@
           justify-content: center;
           width: 40px;
           height: 40px;
-          border: 1.5px solid #C5D0D9;
+          border: 1.5px solid #C9A227;
           border-radius: 6px;
           background: #fff;
           cursor: pointer;
@@ -162,46 +162,51 @@
 </head>
 
 <body class="bg-background text-text-secondary font-body-md overflow-x-hidden">
-  <!-- TopNavBar -->
-    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-white border-b border-[#C5D0D9] shadow-sm">
+  
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-white shadow-sm">
         <div class="flex items-center gap-10">
-            <a class="font-display-lg text-title-lg font-bold text-[#0D0D0D] tracking-tight hover:scale-105 transition-transform" href="index.html">
-                Hanswal <span class="text-[#405B73]">Interiors</span>
-            </a>
-            <div class="desktop-nav hidden lg:flex gap-6 items-center">
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="index.html">Home</a>
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_projects.html">Projects</a>
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_storeLocator.html">Store Locator</a>
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_aboutUs.html">About Us</a>
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_contactUs.html">Contact Us</a>
-            
+    <div class="flex items-center gap-3">
+        <img src="./images/faviconImage.png" alt="Hanswal Interior Studio Logo" class="w-13 h-12 object-contain rounded-md">
+        <button class="font-title-lg text-title-lg font-bold text-[#0D0D0D] block text-left" onclick="window.open('index.html','_self')" style="outline: none;">
+            Hanswal <br><span style="color:#C9A227;">Interiors</span>
+        </button>
+    </div>  
+            <!-- responsive menu bar solved the desktop mode error  we must add this one to all the nav bar at end-->
+            <div class="desktop-nav hidden md:flex gap-6 items-center"> 
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="index.html">Home</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_projects.html">Projects</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D] border-b-2 border-[#C9A227] pb-1 font-semibold" href="a_priceEstimator.html">Price Estimator</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_storeLocator.html">Store Locator</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_aboutUs.html">About Us</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_contactUs.html">Contact Us</a>
             </div>
         </div>
-
         <div class="nav-actions flex items-center gap-4">
-            <button id="menuToggle" type="button" aria-label="Toggle navigation menu" class="menu-toggle hidden rounded-lg border border-[#C5D0D9] bg-white p-3 text-[#0D0D0D] shadow-sm hover:bg-[#F2F2F2] lg:hidden">
+            <button id="menuToggle" type="button" aria-label="Toggle navigation menu" class="menu-toggle hidden rounded-lg border border-[#C9A227] bg-white p-3 text-[#0D0D0D] shadow-sm hover:bg-[#C9A227]/10 lg:hidden">
                 <span class="material-symbols-outlined text-[24px]">menu</span>
             </button>
-            <button class="bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#7B92A6] hover:border-[#405B73] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html', '_self')">
+            <button class="bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#C9A227]/40 hover:border-[#C9A227] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html', '_self')">
                 Book free consultation
             </button>
         </div>
     </nav>
 
-        <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="fixed left-0 right-0 top-20 z-40 hidden flex-col gap-2 border-b border-[#C5D0D9] bg-white/95 px-4 py-4 shadow-md backdrop-blur lg:hidden">
-        <a class="font-label-md text-label-md text-[#0D0D0D] hover:text-[#0D0D0D] hover:bg-[#F2F2F2] p-3 rounded-lg transition-all" href="index.html">Home</a>
-        <a class="font-label-md text-label-md text-[#0D0D0D] hover:text-[#0D0D0D] hover:bg-[#F2F2F2] p-3 rounded-lg transition-all" href="a_projects.html">Projects</a>
-        <a class="font-label-md text-label-md text-[#0D0D0D] hover:text-[#0D0D0D] hover:bg-[#F2F2F2] p-3 rounded-lg transition-all" href="a_storeLocator.html">Store Locator</a>
-        <a class="font-label-md text-label-md text-[#0D0D0D] hover:text-[#0D0D0D] hover:bg-[#F2F2F2] p-3 rounded-lg transition-all" href="a_aboutUs.html">About Us</a>
-        <a class="font-label-md text-label-md text-[#0D0D0D] hover:text-[#0D0D0D] hover:bg-[#F2F2F2] p-3 rounded-lg transition-all" href="a_contactUs.html">Contact Us</a>
-        <div class="pt-2 border-t border-[#C5D0D9]/50">
-            <a class="font-label-md text-label-md text-[#0D0D0D] hover:text-[#0D0D0D] hover:bg-[#F2F2F2] p-3 rounded-lg transition-all" href="a_priceEstimator.html">Price Estimator</a>
-        </div>
-    </div>
+    <div id="mobileMenu" class="fixed left-0 right-0 top-20 z-40 hidden flex-col gap-2 border-b border-[#C9A227] bg-white/95 px-4 py-4 shadow-md backdrop-blur lg:hidden">
 
-    <!-- Mobile Menu Overlay -->
-    <div id="mobileMenuOverlay" class="fixed inset-0 z-30 hidden bg-black/50 backdrop-blur-sm lg:hidden"></div>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D] hover:bg-[#C9A227]/10 font-label-md" href="index.html">Home</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_projects.html">Projects</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_priceEstimator.html">Price Estimator</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_storeLocator.html">Store Locator</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_aboutUs.html">About Us</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_contactUs.html">Contact Us</a>
+
+        <button class="bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#C9A227]/40 hover:border-[#C9A227] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html', '_self')">
+                Book free consultation
+        </button>
+
+    </div>
+    <div id="mobileMenuOverlay" class="fixed inset-0 z-30 hidden bg-black/30 backdrop-blur-[1px] lg:hidden"></div>
 
 
 <main class="pt-20">
@@ -219,37 +224,38 @@
 <p class="font-body-lg text-white/90 mb-10">
                         Explore our curated packages and specialized solutions tailored to your space and style. We believe architectural integrity begins with honest communication.
                     </p>
-<button class="bg-[#C5D0D9] border-2 border-primary text-text-primary px-8 py-4 rounded-lg font-label-md text-title-lg shadow-lg hover:bg-secondary transition-all active:scale-95" onclick="window.open('a_consultancyPage.html','_self')">
+<button class="bg-black/20 border-2 border-primary text-white px-8 py-4 rounded-lg font-label-md text-title-lg shadow-lg hover:bg-black/40 hover:translate-y-[-2px] transition-all active:scale-95 duration-150 uppercase tracking-wider" onclick="window.open('a_consultancyPage.html','_self')">
                         Book Free Consultation
                     </button>
 </div>
 </div>
 </section>
+
 <!-- Section 1: Complete Home Interior Packages -->
-<section class="py-section-gap px-margin-desktop bg-surface-white">
+<section class="py-section-gap px-margin-desktop border-b border-primary bg-surface-white">
 <div class="max-w-container-max mx-auto">
 <div class="mb-12">
-<h1 class="font-headline-md text-text-primary mb-2"><strong>Complete Home Interior Packages</strong></h1>
+<h1 class="font-headline-md text-text-[#C9A227] mb-2"><strong>Complete Home Interior Packages</strong></h1>
 <p class="text-text-secondary font-body-md">Our signature turnkey solutions for a hassle-free home transformation.</p>
 </div>
-<div class="overflow-x-auto border border-border-light rounded-xl shadow-sm">
+<div class="overflow-x-auto border border-[#C9A22733] rounded-xl shadow-sm">
 <table class="w-full text-left border-collapse">
-<thead class="bg-surface border-b border-border-light">
+<thead class="bg-surface border-b border-[#C9A22733]">
 <tr>
-<th class="p-6 font-title-lg text-text-primary">Package Type</th>
-<th class="p-6 font-title-lg text-text-primary">Starting Price</th>
-<th class="p-6 font-title-lg text-text-primary">Includes</th>
+<th class="p-6 font-title-lg text-text-[#C9A227]">Package Type</th>
+<th class="p-6 font-title-lg text-text-[#C9A227]">Starting Price</th>
+<th class="p-6 font-title-lg text-text-[#C9A227]">Includes</th>
 </tr>
 </thead>
 <tbody class="table-zebra">
-<tr class="border-b border-border-light/50">
-<td class="p-6 font-bold text-text-primary text-headline-sm">2BHK Interior Package</td>
-<td class="p-6 font-bold text-primary text-title-lg">₹2.74 Lakhs*</td>
+<tr class="border-b border-[#C9A22733]/50">
+<td class="p-6 font-bold text-text-[#C9A227] text-headline-sm">2BHK Interior Package</td>
+<td class="p-6 font-bold text-[#C9A227] text-title-lg">₹2.74 Lakhs*</td>
 <td class="p-6 text-text-secondary leading-relaxed">Comprehensive design for Kitchen, Living Room, Dining, Master Bedroom, and Bedroom-1.</td>
 </tr>
 <tr>
-<td class="p-6 font-bold text-text-primary text-headline-sm">3BHK Interior Package</td>
-<td class="p-6 font-bold text-primary text-title-lg">₹4.04 Lakhs*</td>
+<td class="p-6 font-bold text-text-[#C9A227] text-headline-sm">3BHK Interior Package</td>
+<td class="p-6 font-bold text-[#C9A227] text-title-lg">₹4.04 Lakhs*</td>
 <td class="p-6 text-text-secondary leading-relaxed">Comprehensive design for Kitchen, Living Room, Dining, Master Bedroom, Bedroom-1, and Bedroom-2.</td>
 </tr>
 </tbody>
@@ -258,47 +264,47 @@
 </div>
 </section>
 <!-- Section 2: Specialized Modular Furniture (Homepage Services Style) -->
-<section class="py-section-gap px-margin-desktop bg-surface border-t border-b border-border-light">
+<section class="py-section-gap px-margin-desktop bg-surface border-b border-primary ">
 <div class="max-w-container-max mx-auto">
 <div class="mb-12">
-<h1 class="font-headline-md text-text-primary mb-2"><strong>Specialized Modular Furniture</strong></h1>
+<h1 class="font-headline-md text-text-[#C9A227] mb-2"><strong>Specialized Modular Furniture</strong></h1>
 <p class="text-text-secondary font-body-md">Manufacturing with premium materials (ISO 9001, 18mm plywood, and Marine-grade kitchen platforms).</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
 <!-- Kitchen -->
-<div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-border-light hover:shadow-lg transition-all duration-300">
+<div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A22733] hover:shadow-lg transition-all duration-300">
 <div class="relative overflow-hidden rounded-xl h-[280px] mb-4">
 <img alt="Kitchen Interiors" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./images/priceEstimator_Kitchen.png"/>
-<div class="absolute top-4 right-4 bg-surface-white/90 px-3 py-1 rounded-full text-label-sm font-bold text-text-primary border border-border-light">₹24k+</div>
+<div class="absolute top-4 right-4 bg-surface-white/90 px-3 py-1 rounded-full text-label-sm font-bold text-text-[#C9A227] border border-[#C9A22733]">₹24k+</div>
 </div>
-<h3 class="font-headline-sm text-text-primary mb-2">Kitchen Interiors</h3>
+<h3 class="font-headline-sm text-text-[#C9A227] mb-2">Kitchen Interiors</h3>
 <p class="text-text-secondary font-body-md">Lifetime warranty baskets and marine-grade platforms for durability.</p>
 </div>
 <!-- Living -->
-<div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-border-light hover:shadow-lg transition-all duration-300">
+<div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A22733] hover:shadow-lg transition-all duration-300">
 <div class="relative overflow-hidden rounded-xl h-[280px] mb-4">
 <img alt="Living Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./images/priceEstimator_LivingRoom.png"/>
-<div class="absolute top-4 right-4 bg-surface-white/90 px-3 py-1 rounded-full text-label-sm font-bold text-text-primary border border-border-light">₹86k+</div>
+<div class="absolute top-4 right-4 bg-surface-white/90 px-3 py-1 rounded-full text-label-sm font-bold text-text-[#C9A227] border border-[#C9A22733]">₹86k+</div>
 </div>
-<h3 class="font-headline-sm text-text-primary mb-2">Living Room</h3>
+<h3 class="font-headline-sm text-text-[#C9A227] mb-2">Living Room</h3>
 <p class="text-text-secondary font-body-md">TV units, L-shaped sofas, and curated coffee tables designed for modern layouts.</p>
 </div>
 <!-- Bedroom -->
-<div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-border-light hover:shadow-lg transition-all duration-300">
+<div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A22733] hover:shadow-lg transition-all duration-300">
 <div class="relative overflow-hidden rounded-xl h-[280px] mb-4">
 <img alt="Bedroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./images/priceEstimator_Bedroom.png"/>
-<div class="absolute top-4 right-4 bg-surface-white/90 px-3 py-1 rounded-full text-label-sm font-bold text-text-primary border border-border-light">₹43k+</div>
+<div class="absolute top-4 right-4 bg-surface-white/90 px-3 py-1 rounded-full text-label-sm font-bold text-text-[#C9A227] border border-[#C9A22733]">₹43k+</div>
 </div>
-<h3 class="font-headline-sm text-text-primary mb-2">Bedroom Solutions</h3>
+<h3 class="font-headline-sm text-text-[#C9A227] mb-2">Bedroom Solutions</h3>
 <p class="text-text-secondary font-body-md">King/Queen size beds, bespoke wardrobes, and optimized storage solutions.</p>
 </div>
 <!-- Dining -->
-<div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-border-light hover:shadow-lg transition-all duration-300">
+<div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A22733] hover:shadow-lg transition-all duration-300">
 <div class="relative overflow-hidden rounded-xl h-[280px] mb-4">
 <img alt="Dining" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./images/priceEstimator_Dining.png"/>
-<div class="absolute top-4 right-4 bg-surface-white/90 px-3 py-1 rounded-full text-label-sm font-bold text-text-primary border border-border-light">₹28k+</div>
+<div class="absolute top-4 right-4 bg-surface-white/90 px-3 py-1 rounded-full text-label-sm font-bold text-text-[#C9A227] border border-[#C9A22733]">₹28k+</div>
 </div>
-<h3 class="font-headline-sm text-text-primary mb-2">Dining Sets</h3>
+<h3 class="font-headline-sm text-text-[#C9A227] mb-2">Dining Sets</h3>
 <p class="text-text-secondary font-body-md">Dedicated 4-6 seater solutions that blend seamlessly with your architecture.</p>
 </div>
 </div>
@@ -308,35 +314,35 @@
 <section class="py-section-gap px-margin-desktop bg-surface-white">
 <div class="max-w-container-max mx-auto">
 <div class="mb-12">
-<h2 class="font-headline-md text-text-primary mb-2">Professional Labour &amp; Fabrication</h2>
+<h2 class="font-headline-md text-text-[#C9A227] mb-2">Professional Labour &amp; Fabrication</h2>
 <p class="text-text-secondary font-body-md">Expert fabrication and labour services based on your specific material sourcing.</p>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-section-gap">
 <!-- Table 1: Labour Rate -->
 <div>
-<h4 class="font-title-lg text-text-primary mb-6 flex items-center gap-2">
-<span class="material-symbols-outlined text-primary">construction</span> Labour Rate (Per Sq. Ft.)
+<h4 class="font-title-lg text-text-[#C9A227] mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-[#C9A227]">construction</span> Labour Rate (Per Sq. Ft.)
                         </h4>
-<div class="overflow-hidden border border-border-light rounded-xl">
+<div class="overflow-hidden border border-[#C9A22733] rounded-xl">
 <table class="w-full text-left">
-<thead class="bg-surface text-text-primary border-b border-border-light">
+<thead class="bg-surface text-text-[#C9A227] border-b border-[#C9A22733]">
 <tr>
 <th class="p-4 font-bold">Item Category</th>
 <th class="p-4 font-bold text-right">Rate</th>
 </tr>
 </thead>
 <tbody class="table-zebra">
-<tr class="border-b border-border-light/40">
+<tr class="border-b border-[#C9A22733]/40">
 <td class="p-4 text-text-secondary">General Furniture</td>
-<td class="p-4 font-bold text-text-primary text-right">₹230 – ₹240</td>
+<td class="p-4 font-bold text-text-[#C9A227] text-right">₹230 – ₹240</td>
 </tr>
-<tr class="border-b border-border-light/40">
+<tr class="border-b border-[#C9A22733]/40">
 <td class="p-4 text-text-secondary">Kitchen Furniture</td>
-<td class="p-4 font-bold text-text-primary text-right">₹340</td>
+<td class="p-4 font-bold text-text-[#C9A227] text-right">₹340</td>
 </tr>
 <tr>
 <td class="p-4 text-text-secondary">Specialized Tender Kitchen</td>
-<td class="p-4 font-bold text-text-primary text-right">₹480</td>
+<td class="p-4 font-bold text-text-[#C9A227] text-right">₹480</td>
 </tr>
 </tbody>
 </table>
@@ -344,33 +350,33 @@
 </div>
 <!-- Table 2: A-La-Carte -->
 <div>
-<h4 class="font-title-lg text-text-primary mb-6 flex items-center gap-2">
-<span class="material-symbols-outlined text-primary">inventory_2</span> A-La-Carte Fabrication
+<h4 class="font-title-lg text-text-[#C9A227] mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-[#C9A227]">inventory_2</span> A-La-Carte Fabrication
                         </h4>
-<div class="overflow-hidden border border-border-light rounded-xl">
+<div class="overflow-hidden border border-[#C9A22733] rounded-xl">
 <table class="w-full text-left">
-<thead class="bg-surface text-text-primary border-b border-border-light">
+<thead class="bg-surface text-text-[#C9A227] border-b border-[#C9A22733]">
 <tr>
 <th class="p-4 font-bold">Service</th>
 <th class="p-4 font-bold text-right">Starting Price</th>
 </tr>
 </thead>
 <tbody class="table-zebra">
-<tr class="border-b border-border-light/40">
+<tr class="border-b border-[#C9A22733]/40">
 <td class="p-4 text-text-secondary">Wardrobes (Per Unit)</td>
-<td class="p-4 font-bold text-text-primary text-right">₹300 – ₹1,250</td>
+<td class="p-4 font-bold text-text-[#C9A227] text-right">₹300 – ₹1,250</td>
 </tr>
-<tr class="border-b border-border-light/40">
+<tr class="border-b border-[#C9A22733]/40">
 <td class="p-4 text-text-secondary">Safety/Security Doors</td>
-<td class="p-4 font-bold text-text-primary text-right">₹795</td>
+<td class="p-4 font-bold text-text-[#C9A227] text-right">₹795</td>
 </tr>
-<tr class="border-b border-border-light/40">
+<tr class="border-b border-[#C9A22733]/40">
 <td class="p-4 text-text-secondary">Loft/Frame Work</td>
-<td class="p-4 font-bold text-text-primary text-right">₹225 – ₹745</td>
+<td class="p-4 font-bold text-text-[#C9A227] text-right">₹225 – ₹745</td>
 </tr>
 <tr>
 <td class="p-4 text-text-secondary">Beds (Hydraulic options)</td>
-<td class="p-4 font-bold text-text-primary text-right">₹12,000 – ₹34,999</td>
+<td class="p-4 font-bold text-text-[#C9A227] text-right">₹12,000 – ₹34,999</td>
 </tr>
 </tbody>
 </table>
@@ -382,7 +388,7 @@
 
 
     <!-- Main Services -->
-    <section id="services-grid" class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+    <section id="services-grid" class="py-section-gap bg-surface-container-low border-t border-b border-[#C9A227]  px-margin-desktop mx-auto">
 
         <div class="py-8 justify-center flex flex-col text-center">
             <h2 class="font-headline-md text-headline-md text-[#0D0D0D] mb-2">Our Services</h2>
@@ -392,7 +398,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
 
             <!-- Full Home Interiors  -->
-            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C5D0D9] hover:shadow-lg transition-all duration-300">
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Full-Home-Interiors">
                 <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
                     <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Full home Interiors" src="./images/ourServices_fullHomeInteriors.png"/>
@@ -401,7 +407,7 @@
                 <p class="text-[#0D0D0D]/70 font-body-md">Complete home design, 3D floor planning, turnkey renovation, space optimization, and interior styling.</p>
             </div>
             <!-- Modular Kitchen -->
-            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C5D0D9] hover:shadow-lg transition-all duration-300">
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Modular-Kitchen">
                 <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Modular Kitchen" src="./images/ourServices_modularKitchen.png"/>
                 </div>
@@ -409,7 +415,7 @@
                 <p class="text-[#0D0D0D]/70 font-body-md">L-shaped, U-shaped, and parallel kitchens, acrylic/laminate shutters, tandem boxes, cutlery organizers, and pantry units.</p>
             </div>
             <!-- BESPOKE WARDROBE -->
-            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C5D0D9] hover:shadow-lg transition-all duration-300">
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Bespoke-Wardrobe-Solutions">
                 <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Bespoke Wardrobe" src="./images/ourServices_BespokeWardrobe.png"/>
                 </div>
@@ -417,7 +423,7 @@
                 <p class="text-[#0D0D0D]/70 font-body-md">Sliding door wardrobes, swing-door closets, loft storage, walk-in closets, and internal shelving accessories.</p>
             </div>
             <!-- furniture And Carpentary -->
-            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C5D0D9] hover:shadow-lg transition-all duration-300">
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Furniture-and-Carpentry">
                 <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="furnitureAndCarpentary" src="./images/ourServices_furnitureAndCarpentary.png"/>
                 </div>
@@ -426,7 +432,7 @@
             </div>
 
             <!-- False ceilling and Lightning-->
-            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C5D0D9] hover:shadow-lg transition-all duration-300">
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="False-Ceiling-and-Lighting">
                 <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="False Ceiling & Lighting" src="./images/ourServices_FalseCeilingAndLighting.png"/>
                 </div>
@@ -435,7 +441,7 @@
             </div>
 
                         <!-- Flooring & Tiling-->
-            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C5D0D9] hover:shadow-lg transition-all duration-300">
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Flooring-and-Tiling">
                 <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Flooring & Tiling" src="./images/ourServices_Flooring&Tiling.png"/>
                 </div>
@@ -444,7 +450,7 @@
             </div>
 
                         <!-- Wall Paneling & Decor-->
-            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C5D0D9] hover:shadow-lg transition-all duration-300">
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Wall-Paneling-and-Decor">
                 <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Wall Paneling & Decor" src="./images/ourServices_WallPaneling&Decor.png"/>
                 </div>
@@ -453,7 +459,7 @@
             </div>
 
             <!--Project Consultancy-->
-            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C5D0D9] hover:shadow-lg transition-all duration-300">
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Project-Consultancy">
                 <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Project Consultancy" src="./images/ourServices_Project Consultancy.png"/>
                 </div>
@@ -467,111 +473,136 @@
 
 
 <!-- Why Choose Us (Trust Section Style) -->
-<section class="py-section-gap bg-surface border-t border-b border-border-light">
+<section class="py-section-gap bg-surface border-t border-b border-[#C9A22733]">
 <div class="max-w-container-max mx-auto px-margin-desktop text-center">
-<h2 class="font-headline-md text-text-primary mb-2">The Hanswal Commitment</h2>
+<h2 class="font-headline-md text-text-[#C9A227] mb-2"><strong>The Hanswal Commitment</strong></h2>
 <p class="text-text-secondary font-body-md mb-16">Unmatched precision and quality control at every step</p>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-<div class="flex flex-col items-center p-8 bg-white rounded-2xl border border-border-light/40 shadow-sm hover:shadow-md transition-all active:scale-95 duration-150">
-<div class="w-16 h-16 bg-[#C5D0D9] rounded-full flex items-center justify-center text-primary mb-6">
+<div class="flex flex-col items-center p-8 bg-white rounded-2xl border border-[#C9A22733]/40 shadow-sm hover:shadow-md transition-all active:scale-95 duration-150">
+<div class="w-16 h-16 bg-[#C9A227]/20 rounded-full flex items-center justify-center text-[#C9A227] mb-6">
 <span class="material-symbols-outlined text-[32px]">verified</span>
 </div>
-<h4 class="font-title-lg text-text-primary mb-2">Quality Assurance</h4>
+<h4 class="font-title-lg text-text-[#C9A227] mb-2">Quality Assurance</h4>
 <p class="text-text-secondary">Branded hardware and premium materials. Every square inch inspected for structural perfection.</p>
 </div>
-<div class="flex flex-col items-center p-8 bg-white rounded-2xl border border-border-light/40 shadow-sm hover:shadow-md transition-all active:scale-95 duration-150">
-<div class="w-16 h-16 bg-[#C5D0D9] rounded-full flex items-center justify-center text-primary mb-6">
+<div class="flex flex-col items-center p-8 bg-white rounded-2xl border border-[#C9A22733]/40 shadow-sm hover:shadow-md transition-all active:scale-95 duration-150">
+<div class="w-16 h-16 bg-[#C9A227]/20 rounded-full flex items-center justify-center text-[#C9A227] mb-6">
 <span class="material-symbols-outlined text-[32px]">account_balance_wallet</span>
 </div>
-<h4 class="font-title-lg text-text-primary mb-2">Transparent Process</h4>
+<h4 class="font-title-lg text-text-[#C9A227] mb-2">Transparent Process</h4>
 <p class="text-text-secondary">Structured payment plan: 40% Advance, 40% on material selection, and 20% on final handover.</p>
 </div>
-<div class="flex flex-col items-center p-8 bg-white rounded-2xl border border-border-light/40 shadow-sm hover:shadow-md transition-all active:scale-95 duration-150">
-<div class="w-16 h-16 bg-[#C5D0D9] rounded-full flex items-center justify-center text-primary mb-6">
+<div class="flex flex-col items-center p-8 bg-white rounded-2xl border border-[#C9A22733]/40 shadow-sm hover:shadow-md transition-all active:scale-95 duration-150">
+<div class="w-16 h-16 bg-[#C9A227]/20 rounded-full flex items-center justify-center text-[#C9A227] mb-6">
 <span class="material-symbols-outlined text-[32px]">architecture</span>
 </div>
-<h4 class="font-title-lg text-text-primary mb-2">Expert Craftsmanship</h4>
+<h4 class="font-title-lg text-text-[#C9A227] mb-2">Expert Craftsmanship</h4>
 <p class="text-text-secondary">Years of experience in custom carpentry and fit-outs, ensuring your home is built to last generations.</p>
 </div>
 </div>
 </div>
 </section>
-<!-- CTA Section -->
-<section class="py-section-gap bg-primary text-white">
-<div class="px-margin-desktop max-w-container-max mx-auto text-center">
-<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md mb-6">Ready to build your dream home?</h2>
-<p class="text-white/80 max-w-2xl mx-auto mb-10 font-body-lg">Connect with our design experts today for a personalized quote and a walkthrough of our premium materials.</p>
-<button class="bg-[#C5D0D9] border-2 border-white text-text-primary px-10 py-5 rounded-lg font-bold text-title-lg hover:bg-secondary transition-all active:scale-95 shadow-xl" onclick="window.open('a_consultancyPage.html','_self')">
-                    Book Free Consultation
-                </button>
-</div>
-</section>
+
+
+        <!-- CTA Section -->
+    <section class="py-section-gap bg-[#0D0D0D]" id="cta-section">
+      <div class="max-w-xl mx-auto px-margin-desktop text-center">
+        <h2 class="font-headline-md text-headline-md text-white mb-4">Your dream home is just a click away</h2>
+        <p class="text-white/70 font-body-lg mb-10">Book a free consultation with our design experts today.</p>
+        <button
+          class="bg-[#C9A227] border-2 border-white/30 text-[#0D0D0D] px-10 py-4 rounded-lg font-label-md text-title-lg shadow-lg hover:bg-white hover:translate-y-[-2px] transition-all active:scale-95 duration-150" onclick="window.open('a_consultancyPage.html','_self')">
+          Get Started With Just One Click
+        </button>
+      </div>
+    </section>
+
+
 </main>
+
+
 <!-- Footer -->
-<footer class="bg-surface-white w-full border-t border-border-light">
+<footer class="bg-surface-container w-full border-t border-outline-variant">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-section-gap py-section-gap px-margin-desktop max-w-container-max mx-auto">
+
+<!-- hanswal Interiors footer -->
+
 <div>
-<a class="font-title-lg text-title-lg font-bold text-text-primary mb-6 block" href="#">
-                    Hanswal <span class="text-primary">Interiors</span>
-</a>
-<p class="text-text-secondary font-body-md mb-8">End-to-end home interior solutions for your home. Design, execution and delivery.</p>
-<div class="flex gap-5">
-<a class="text-secondary hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-<a class="text-secondary hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-<a class="text-secondary hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
+    <div class="flex items-center gap-3 mb-6">
+        <img src="./images/faviconImage.png" alt="Hanswal Interior Studio Logo" class="w-13 h-12 object-contain rounded-md">
+        <button class="font-title-lg text-title-lg font-bold text-[#0D0D0D] block text-left" onclick="document.getElementById('back-to-frontpage').scrollIntoView({behavior:'smooth'})" style="outline: none;">
+            Hanswal <br><span style="color:#C9A227;">Interiors</span>
+        </button>
+    </div>
+    <p class="text-[#0D0D0D]/70 font-body-md mb-8">End-to-end home interior solutions for your home. Design, execution and delivery.</p>
+<div class="flex gap-5" style="display: flex; justify-content:left;">
+    <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+    <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+    <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
 </div>
 </div>
+
+<!-- Our Services -->
+
 <div class="space-y-4">
-<h4 class="font-label-md text-text-primary font-bold uppercase tracking-wider">Offerings</h4>
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Our Services</h4>
 <ul class="space-y-2">
-<li><a class="font-body-md text-text-secondary hover:text-primary transition-colors underline" href="#">Modular Interiors</a></li>
-<li><a class="font-body-md text-text-secondary hover:text-primary transition-colors underline" href="#">Full Home Interiors</a></li>
-<li><a class="font-body-md text-text-secondary hover:text-primary transition-colors underline" href="#">Luxury Interiors</a></li>
-<li><a class="font-body-md text-text-secondary hover:text-primary transition-colors underline" href="#">Price Estimator</a></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Full-Home-Interiors').scrollIntoView({behavior:'smooth'})" style="outline: none;">Full Home Interiors </button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Modular-Kitchen').scrollIntoView({behavior:'smooth'})" style="outline: none;">Modular Kitchen</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Bespoke-Wardrobe-Solutions').scrollIntoView({behavior:'smooth'})" style="outline: none;">Bespoke Wardrobe Solutions</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Furniture-and-Carpentry').scrollIntoView({behavior:'smooth'})" style="outline: none;">Furniture & Carpentry</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('False-Ceiling-and-Lighting').scrollIntoView({behavior:'smooth'})" style="outline: none;">False Ceiling & Lighting</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Flooring-and-Tiling').scrollIntoView({behavior:'smooth'})" style="outline: none;">Flooring & Tiling</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Wall-Paneling-and-Decor').scrollIntoView({behavior:'smooth'})" style="outline: none;">Wall Paneling & Decor</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Project-Consultancy').scrollIntoView({behavior:'smooth'})" style="outline: none;">Project Consultancy</button></li>
 </ul>
 </div>
+
+<!-- Company -->
+
 <div class="space-y-4">
-<h4 class="font-label-md text-text-primary font-bold uppercase tracking-wider">Get Inspired</h4>
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Company</h4>
 <ul class="space-y-2">
-<li><a class="font-body-md text-text-secondary hover:text-primary transition-colors underline" href="#">Design Ideas</a></li>
-<li><a class="font-body-md text-text-secondary hover:text-primary transition-colors underline" href="#">Kitchen Designs</a></li>
-<li><a class="font-body-md text-text-secondary hover:text-primary transition-colors underline" href="#">Living Room Ideas</a></li>
-<li><a class="font-body-md text-text-secondary hover:text-primary transition-colors underline" href="#">Magazine</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_aboutUs.html">About Us</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_projects.html">Projects</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_priceEstimator.html">Price Estimator</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_storeLocator.html">Store Locator</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_contactUs.html">Contact Us</a></li>
 </ul>
 </div>
-<div class="space-y-4">
-<h4 class="font-label-md text-text-primary font-bold uppercase tracking-wider">Contact Info</h4>
+
+<!-- Company Information-->
+<div class="space-y-4 justify-self-end">
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Contact Info</h4>
 <ul class="space-y-4">
 <li class="flex items-start gap-2 text-text-secondary">
-<span class="material-symbols-outlined text-primary">location_on</span>
-<span>Mumbai Central, Maharashtra, India</span>
+<span class="material-symbols-outlined text-black">location_on</span>
+<span>Vadodara, Gujarat, India</span>
 </li>
 <li class="flex items-center gap-2 text-text-secondary">
-<span class="material-symbols-outlined text-primary">mail</span>
-<span>hello@hanswal.com</span>
+<span class="material-symbols-outlined text-black">mail</span>
+<span>gopinathjiinterio1980@gmail.com</span>
 </li>
 <li class="flex items-center gap-2 text-text-secondary">
-<span class="material-symbols-outlined text-primary">call</span>
-<span>+91 90000 00000</span>
+<span class="material-symbols-outlined text-black">call</span>
+<span>+91 99248 13074</span>
 </li>
 </ul>
 </div>
+
 </div>
-<div class="border-t border-border-light py-8 px-margin-desktop max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-text-secondary font-label-sm">
+
+
+<div class="border-t border-outline-variant py-8 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant font-label-sm">
 <span>© 2026 Hanswal Interiors. All rights reserved.</span>
-<div class="flex gap-6">
-<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
-</div>
 </div>
 </div>
 </footer>
+
+
 <script>
         
 
-
-        
        // Mobile nav drawer
         const menuToggle = document.getElementById('menuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
