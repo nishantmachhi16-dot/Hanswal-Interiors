@@ -25,7 +25,26 @@
             border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
         }
 
-    @media (max-width: 768px) {
+
+      /* FAQ Accordion Transitions */
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .faq-item.active .faq-answer {
+        padding-top: 1rem;
+        padding-bottom: 1.25rem;
+      }
+      .faq-icon {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .faq-item.active .faq-icon {
+        transform: rotate(45deg);
+      }
+
+
+    @media (max-width: 899px) {
         *, *::before, *::after { box-sizing: border-box; }
         html, body { width: 100%; overflow-x: hidden; }
 
@@ -45,7 +64,7 @@
             justify-content: center;
             width: 40px;
             height: 40px;
-            border: 1.5px solid #C5D0D9;
+            border: 1.5px solid #C9A227;
             border-radius: 6px;
             background: #fff;
             cursor: pointer;
@@ -106,57 +125,57 @@
           theme: {
             extend: {
               "colors": {
-                      "secondary-fixed": "#cee5fb",
-                      "inverse-on-surface": "#f1f1f1",
-                      "tertiary-fixed": "#d9e4ed",
-                      "tertiary-fixed-dim": "#bdc8d1",
-                      "on-background": "#1a1c1c",
-                      "on-tertiary": "#ffffff",
-                      "on-secondary-fixed-variant": "#33495b",
-                      "outline-variant": "#c3c7cd",
-                      "on-tertiary-fixed": "#121d23",
+                      "secondary-fixed": "#C9A22733",
+                      "inverse-on-surface": "#FFFFFF",
+                      "tertiary-fixed": "#C9A22733",
+                      "tertiary-fixed-dim": "#C9A227",
+                      "on-background": "#0D0D0D",
+                      "on-tertiary": "#0D0D0D",
+                      "on-secondary-fixed-variant": "#0D0D0D",
+                      "outline-variant": "#C9A22733",
+                      "on-tertiary-fixed": "#0D0D0D",
                       "text-primary": "#0D0D0D",
-                      "on-secondary": "#ffffff",
-                      "surface-variant": "#e2e2e2",
-                      "on-surface-variant": "#43474d",
-                      "background": "#f9f9f9",
+                      "on-secondary": "#0D0D0D",
+                      "surface-variant": "#C9A22733",
+                      "on-surface-variant": "#0D0D0D",
+                      "background": "#FFFFFF",
                       "surface-white": "#FFFFFF",
-                      "on-primary-container": "#b6d2ef",
-                      "on-surface": "#1a1c1c",
-                      "surface-dim": "#dadada",
-                      "primary": "#28445a",
-                      "on-secondary-fixed": "#041e2e",
-                      "surface-container": "#eeeeee",
-                      "on-tertiary-container": "#c6d1da",
-                      "surface": "#f9f9f9",
+                      "on-primary-container": "#0D0D0D",
+                      "on-surface": "#0D0D0D",
+                      "surface-dim": "#C9A22733",
+                      "primary": "#C9A227",
+                      "on-secondary-fixed": "#0D0D0D",
+                      "surface-container": "#FFFFFF",
+                      "on-tertiary-container": "#0D0D0D",
+                      "surface": "#FFFFFF",
                       "overlay-dark": "rgba(0,0,0,0.8)",
-                      "on-primary-fixed-variant": "#2e4961",
-                      "tertiary": "#38434a",
-                      "inverse-primary": "#aecae6",
-                      "error-container": "#ffdad6",
-                      "inverse-surface": "#2f3131",
-                      "surface-container-highest": "#e2e2e2",
-                      "secondary-container": "#cbe3f9",
-                      "tertiary-container": "#4f5a62",
-                      "on-error": "#ffffff",
-                      "on-tertiary-fixed-variant": "#3e4850",
-                      "surface-bright": "#f9f9f9",
-                      "primary-container": "#405b73",
-                      "surface-container-high": "#e8e8e8",
-                      "on-error-container": "#93000a",
-                      "surface-tint": "#466179",
-                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#0D0D0D",
+                      "tertiary": "#C9A227",
+                      "inverse-primary": "#C9A22733",
+                      "error-container": "#C9A22733",
+                      "inverse-surface": "#0D0D0D",
+                      "surface-container-highest": "#C9A22733",
+                      "secondary-container": "#C9A22733",
+                      "tertiary-container": "#C9A22733",
+                      "on-error": "#0D0D0D",
+                      "on-tertiary-fixed-variant": "#0D0D0D",
+                      "surface-bright": "#FFFFFF",
+                      "primary-container": "#C9A22733",
+                      "surface-container-high": "#C9A22733",
+                      "on-error-container": "#0D0D0D",
+                      "surface-tint": "#C9A227",
+                      "error": "#C9A227",
                       "overlay-light": "rgba(255,255,255,0.8)",
-                      "on-secondary-container": "#4f6578",
-                      "surface-container-low": "#f3f3f3",
-                      "primary-fixed-dim": "#aecae6",
-                      "surface-container-lowest": "#ffffff",
-                      "primary-fixed": "#cde5ff",
-                      "outline": "#73777d",
-                      "on-primary-fixed": "#001d31",
-                      "secondary": "#4a6173",
-                      "secondary-fixed-dim": "#b2c9df",
-                      "on-primary": "#ffffff"
+                      "on-secondary-container": "#0D0D0D",
+                      "surface-container-low": "#FFFFFF",
+                      "primary-fixed-dim": "#C9A22733",
+                      "surface-container-lowest": "#FFFFFF",
+                      "primary-fixed": "#C9A22733",
+                      "outline": "#C9A227",
+                      "on-primary-fixed": "#0D0D0D",
+                      "secondary": "#C9A227",
+                      "secondary-fixed-dim": "#C9A22733",
+                      "on-primary": "#0D0D0D"
               },
               "borderRadius": {
                       "DEFAULT": "0.25rem",
@@ -200,62 +219,64 @@
     </script>
 </head>
 <body class="bg-background text-on-surface font-body-md">
-<!-- TopNavBar -->
-<header class="bg-surface-white w-full sticky top-0 z-50 shadow-sm border-b border-outline-variant">
 
-    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-white border-b border-[#C5D0D9] shadow-sm">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-white shadow-sm">
         <div class="flex items-center gap-10">
-            <a class="font-display-lg text-title-lg font-bold text-[#0D0D0D] tracking-tight hover:scale-105 transition-transform" href="index.html">
-                Hanswal <span class="text-[#405B73]">Interiors</span>
-            </a>
-            <div class="desktop-nav hidden lg:flex gap-6 items-center">
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="index.html">Home</a>
-                <a class="font-label-md text-label-md text-[#0D0D0D] border-b-2 border-[#405B73] pb-1 font-semibold" href="a_projects.html">Projects</a>
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_storeLocator.html">Store Locator</a>
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_aboutUs.html">About Us</a>
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#405B73]/50 pb-1 transition-all" href="a_contactUs.html">Contact Us</a>
+    <div class="flex items-center gap-3">
+        <img src="./images/faviconImage.png" alt="Hanswal Interior Studio Logo" class="w-13 h-12 object-contain rounded-md">
+        <button class="font-title-lg text-title-lg font-bold text-[#0D0D0D] block text-left" onclick="window.open('index.html','_self')" style="outline: none;">
+            Hanswal <br><span style="color:#C9A227;">Interiors</span>
+        </button>
+    </div>  
+            <!-- responsive menu bar solved the desktop mode error  we must add this one to all the nav bar at end-->
+            <div class="desktop-nav hidden md:flex gap-6 items-center"> 
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="index.html">Home</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D] border-b-2 border-[#C9A227] pb-1 font-semibold" href="a_projects.html">Projects</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_priceEstimator.html">Price Estimator</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_storeLocator.html">Store Locator</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_aboutUs.html">About Us</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_contactUs.html">Contact Us</a>
             </div>
         </div>
-        <div class="flex items-center gap-4 nav-actions-wrap">
-            <button id="menuToggle" type="button" aria-label="Toggle navigation menu"
-                class="mobile-hamburger hidden rounded-lg border border-[#C5D0D9] bg-white p-3 text-[#0D0D0D] shadow-sm hover:bg-[#F2F2F2] lg:hidden">
+        <div class="nav-actions flex items-center gap-4">
+            <button id="menuToggle" type="button" aria-label="Toggle navigation menu" class="menu-toggle hidden rounded-lg border border-[#C9A227] bg-white p-3 text-[#0D0D0D] shadow-sm hover:bg-[#C9A227]/10 lg:hidden">
                 <span class="material-symbols-outlined text-[24px]">menu</span>
             </button>
-            <button class="bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#7B92A6] hover:border-[#405B73] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html','_self')">
+            <button class="hidden lg:flex bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#C9A227]/40 hover:border-[#C9A227] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html', '_self')">
                 Book free consultation
             </button>
         </div>
-  
     </nav>
 
+    <div id="mobileMenu" class="fixed left-0 right-0 top-20 z-40 hidden flex-col gap-2 border-b border-[#C9A227] bg-white/95 px-4 py-4 shadow-md backdrop-blur lg:hidden">
 
-    <div id="mobileMenu" class="fixed left-0 right-0 top-20 z-40 hidden flex-col border-b border-[#C5D0D9] bg-white/95 px-4 py-4 shadow-md backdrop-blur lg:hidden" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D] hover:bg-[#C9A227]/10 font-label-md" href="index.html">Home</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_projects.html">Projects</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_priceEstimator.html">Price Estimator</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_storeLocator.html">Store Locator</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_aboutUs.html">About Us</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_contactUs.html">Contact Us</a>
 
-        <a class="rounded-lg px-3 py-3 text-[#0D0D0D] hover:bg-[#F2F2F2] font-label-md" href="index.html">Home</a>
-        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#F2F2F2] font-label-md" href="a_projects.html">Projects</a>
-        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#F2F2F2] font-label-md" href="a_storeLocator.html">Store Locator</a>
-        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#F2F2F2] font-label-md" href="a_aboutUs.html">About Us</a>
-        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#F2F2F2] font-label-md" href="a_contactUs.html">Contact Us</a>
-        <button class="bg-[#C5D0D9] border-2 border-[#405B73] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#7B92A6] hover:border-[#405B73] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html','_self')">Book free consultation</button>
+        <button class="bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#C9A227]/40 hover:border-[#C9A227] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html', '_self')">
+                Book free consultation
+        </button>
+
     </div>
     <div id="mobileMenuOverlay" class="fixed inset-0 z-30 hidden bg-black/30 backdrop-blur-[1px] lg:hidden"></div>
-
-
-    
-</header>
 
 <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 mt-section-gap">
 
     <!-- Breadcrumb & Title Section -->
 <section class="mb-12">
 <nav class="flex items-center gap-2 mb-4 text-on-surface-variant font-label-sm">
-<a class="hover:text-primary" href="#">Home</a>
+<a class="hover:text-[#C9A227] text-black" href="index.html">Home</a>
 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-<span class="text-primary font-semibold">Delivered Projects</span>
+<span class="text-black font-semibold">Delivered Projects</span>
 </nav>
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
 <div class="max-w-2xl">
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Hanswal Interiors Delivered Homes</h1>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-Black mb-4">Hanswal Interiors Delivered Homes</h1>
 <p class="text-body-lg text-on-surface-variant leading-relaxed">
                         Explore expertly crafted, personalized interiors, showcasing stunning transformations and seamless execution for inspiring, real home makeovers.
                     </p>
@@ -266,7 +287,7 @@
 <!-- Filtering Section -->
 <section class="mb-gutter overflow-x-auto no-scrollbar">
 <div class="flex gap-4 pb-2">
-<button class="flex items-center gap-2 px-6 py-2 rounded-full border border-primary text-primary font-label-md bg-secondary-fixed">
+<button class="flex items-center gap-2 px-6 py-2 rounded-full border border-primary text-[#C9A227] font-label-md bg-[#C9A22733]">
                     All Homes
                 </button>
 </div>
@@ -276,260 +297,637 @@
 <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter mt-8">
 <!-- Card 1 -->
 <div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
-<div class="relative h-64 overflow-hidden">
-<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpEnxNMKbxslHKA-1BLAOIgMzuVEguuuAgEt_RZkjRwVNP4b873jQ1iTsaFOakakdegwoF8OGGFNvxSyoeKEI48_g-Q9A8i2kmLfRmwF8Jndd4OSOxP9DEkEe-3lH3tAGp74qEM7sjp4AYbo1OECwSYPf5M4CULr3AvKg9I9UolnjBy7HDaK0VX9hP4POhzXcK9n1VByfifFViKE0rL7npX3qlaJQ1QyC-WsklLYsd6wP1vRTWGTLLIj-UPEd6bHMROM2Spl74nwM"/>
-<div class="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full text-label-sm text-primary flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">photo_camera</span>
-                        16 Photos
-                    </div>
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Kitchen1.png"/>
 </div>
 <div class="p-6">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Ivy County, Noida</h3>
-<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-label-sm">3-BHK</span>
-</div>
-<p class="text-on-surface-variant font-label-md mb-4">Contemporary Interior Design of Villa in Mumbai</p>
+<p class="text-on-surface-variant font-label-md mb-4"><strong>L-Shaped Modular Kitchen Mint Green Acrylic Finish With Dark Granite Countertop</strong></p>
 <div class="space-y-3 mb-6">
 <div class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
-<span class="text-body-md truncate">Full Home, Kitchen, Living Room</span>
-</div>
-<div class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
-<span class="text-body-md font-semibold text-primary">₹20 - 25 Lakhs</span>
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Kitchen</span>
 </div>
 </div>
-<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95 duration-150">
-                        Get This Design
-                    </button>
+
 </div>
 </div>
+
 <!-- Card 2 -->
 <div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
-<div class="relative h-64 overflow-hidden">
-<img alt="Modern Kitchen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A bright and airy contemporary kitchen with sage green cabinetry and high-end stainless steel appliances. The space is illuminated by warm under-cabinet lighting and natural sunlight streaming through a large window. The design is sleek and utilitarian, following a corporate modern aesthetic with clean tile backsplashes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUbKBMd34GdJDNl3FZH22xHsCO6gCsn0R3Kct_bP3JuHB_iLzlQguPyX44vU0B_4jhN2kbrUIa7tSmmqr6hVpjeBAyxhJ6zFBQ-8yQ_Y9gLh3mZTbvXKhHQ3h-eAUephjAZcMbRMW-oFb63Ms8wCCKSHKPF8oa_Mo2MXy_Jw62FLdHr2mu2-3kUOVhFJhhRfWB5rnrJ8nVmUc16omJf5avgew4mPyk3-E8LY35hktjebbaNAA4Y_ZIblzSzV5WFjaUs4C1RD1_REw"/>
-<div class="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full text-label-sm text-primary flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">photo_camera</span>
-                        10 Photos
-                    </div>
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Kitchen4.png"/>
 </div>
 <div class="p-6">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm text-primary">My Fortune, Bengaluru</h3>
-<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-label-sm">3-BHK</span>
-</div>
-<p class="text-on-surface-variant font-label-md mb-4">U-Shaped Kitchen and White Sofas Modern Design</p>
+<p class="text-on-surface-variant font-label-md mb-4"><strong>
+L-Shaped Steel Blue Modular Kitchen With Glass Display Cabinets And Stone Backsplash</strong></p>
 <div class="space-y-3 mb-6">
 <div class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
-<span class="text-body-md truncate">Kitchen, Living Room, 3 Bedrooms</span>
-</div>
-<div class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
-<span class="text-body-md font-semibold text-primary">₹10 - 15 Lakhs</span>
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Kitchen</span>
 </div>
 </div>
-<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95 duration-150">
-                        Get This Design
-                    </button>
+
 </div>
 </div>
+
 <!-- Card 3 -->
 <div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
-<div class="relative h-64 overflow-hidden">
-<img alt="Villa Living Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A spacious villa living room featuring high ceilings and a sophisticated velvet blue ottoman. The walls are finished in a muted grey-blue tone, complemented by gold-accented furniture and high-end decor pieces. The lighting is soft and layered, highlighting the premium architectural details and textures of the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_VlMcU_jrSkyJ_Rl2fBVxi_NS-pWLvlVzwqcpfOVp4iXdBmhKA_IodBCzUTLbMLe1ci-GGaPyUz6KgjN5-GBrZaqdwzEUDTIPvUq0n9rsmQ9Wqu7B25dG2qGDNnjQ-1ykZtiB8BZXBJvMr90NE_jsrVcvwrCr6THVdY2ETbzenfwI-pr_ahYADB5xLA6sdJmk5bSgj0pBbn6lOqciEeUsItw_msNz4rhPCR8c9K7Q6khPhn6WUZlXPhU6BQxeDPYkFqWniE4d1E8"/>
-<div class="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full text-label-sm text-primary flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">photo_camera</span>
-                        15 Photos
-                    </div>
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Kitchen5.png"/>
 </div>
 <div class="p-6">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm text-primary">Sri Kamadhenu, Bengaluru</h3>
-<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-label-sm">Villa</span>
-</div>
-<p class="text-on-surface-variant font-label-md mb-4">Contemporary Villa Design with Island Kitchen</p>
+<p class="text-on-surface-variant font-label-md mb-4"><strong>
+L-Shaped Rose Pink Glossy Modular Kitchen With Black Sink And Warm Ceiling Lighting</strong></p>
 <div class="space-y-3 mb-6">
 <div class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
-<span class="text-body-md truncate">Full Home, Island Kitchen, 3 Bedrooms</span>
-</div>
-<div class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
-<span class="text-body-md font-semibold text-primary">₹15 - 20 Lakhs</span>
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Kitchen</span>
 </div>
 </div>
-<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95 duration-150">
-                        Get This Design
-                    </button>
+
 </div>
 </div>
+
 <!-- Card 4 -->
 <div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
-<div class="relative h-64 overflow-hidden">
-<img alt="Dining Room Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stylish modern dining room with a large wooden table and elegant chairs. The background features a textured accent wall and subtle gold light fixtures. The mood is sophisticated and warm, designed with a focus on high-end residential aesthetics and professional staging." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg6FEn6oF2hpxBW2Yse7MI_6yZWTq4d47gfB2RjgNMUO3b-vrKClAGAybUG0GO9e3GdZWY9b4-EpE-cP8Snf9WFgEmqlYN6vjgTsfVnAj4PULTO5MtAj_HmNmxfZ7lyBWP-fJ6KPaJVkejtj9scmm5j0AhRFgb5D3e3aLxc130vHGEME_PmkppF0isfY2qub1whUL31fkhauCfbk_vBWFBjwxcqvgJHqa6snTcccUNTBE958-oykiOUh8p2RgW-bTMfSl7uoi8jDw"/>
-<div class="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full text-label-sm text-primary flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">photo_camera</span>
-                        24 Photos
-                    </div>
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Wardrobe2.png"/>
 </div>
 <div class="p-6">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm text-primary">Hallmark Skyrena, Hyderabad</h3>
-<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-label-sm">4-BHK</span>
-</div>
-<p class="text-on-surface-variant font-label-md mb-4">Modern Style Design with Beige Sofa &amp; Foyer</p>
+<p class="text-on-surface-variant font-label-md mb-4"><strong>Full Wall Grey Wardrobe With LED Spotlights Glass Canopy And Full Length Mirror Door</strong></p>
 <div class="space-y-3 mb-6">
 <div class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
-<span class="text-body-md truncate">Dining Room, Foyer, 4 Bedrooms</span>
-</div>
-<div class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
-<span class="text-body-md font-semibold text-primary">₹25 - 30 Lakhs</span>
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Wardrobe</span>
 </div>
 </div>
-<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95 duration-150">
-                        Get This Design
-                    </button>
+
 </div>
 </div>
+
 <!-- Card 5 -->
 <div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
-<div class="relative h-64 overflow-hidden">
-<img alt="Bedroom Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A serene master bedroom interior with a high-end upholstered headboard and premium bed linen in soft neutral tones. Large floor-to-ceiling windows offer soft daylight, highlighting the clean lines and professional architectural finish. The mood is calm and upscale, reflecting a modern corporate luxury style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr7iy6_lQ-Jg4LnX8sdJT9QQ93v9MGTrBH99xNsiDLjp2cd2aJWvHBlKMWtH6COnx8gcXTBGfCx19uMdOQVaOzdD8xtvV0SpqMGVowWY2Du5lPrmbT92RiIM7yHf2NQhq-USv0u39Lg7GGgjDeZenrVmuP137tOw3etu7tFlFCeDbDXxAggxpaAPUk6xpuZNW8PII-Hm2v1ClQrgfLWF5KzzaAlF026v0jeKWhijOZfsxiZew5_AfLX6SXT6lzr1BUM0AhFBQwGeQ"/>
-<div class="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full text-label-sm text-primary flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">photo_camera</span>
-                        10 Photos
-                    </div>
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Wardrobe3.png"/>
 </div>
 <div class="p-6">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm text-primary">Park View Spa, Gurugram</h3>
-<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-label-sm">3-BHK</span>
-</div>
-<p class="text-on-surface-variant font-label-md mb-4">L-Shaped Layout with Modern Accents</p>
+<p class="text-on-surface-variant font-label-md mb-4"><strong>White And Oak Wooden Wardrobe With Dressing Nook Oval Mirror And Loft Storage</strong></p>
 <div class="space-y-3 mb-6">
 <div class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
-<span class="text-body-md truncate">Master Suite, Wardrobes, Living Room</span>
-</div>
-<div class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
-<span class="text-body-md font-semibold text-primary">₹25 - 30 Lakhs</span>
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Wardrobe</span>
 </div>
 </div>
-<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95 duration-150">
-                        Get This Design
-                    </button>
+
 </div>
 </div>
+
 <!-- Card 6 -->
 <div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
-<div class="relative h-64 overflow-hidden">
-<img alt="Living Room Luxury" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated contemporary living room featuring a mix of textures—velvet, marble, and polished metal. The furniture is arranged for conversational comfort, and a large statement artwork anchors the space. Lighting is a mix of natural light and warm spotlights, creating a premium professional ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYYPmyi0FPYOH0dC9F6ZIE5BSiDm3lP2EoZsxjTzIrmLncpKqhwAzAxS6f0-Mek2BsrRiHliRcsCuCb8RWOR1_WwoBHod3SBBq77QJe8XnIzFTBjfEBIaZEzkzN1T0zytMJMYVWAEvz2UYu3_bl2zb3PRMQTtzVqxQHrGisHZ4fgYfHT0b0UP7zGpgVtsV4wjpm3HXhPGn9v3izDUQcnGvO5MfvUx-vlAsQYY12v8n-sJgeZBkKF2H6Q59eBLL642wNObH27JghiA"/>
-<div class="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full text-label-sm text-primary flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">photo_camera</span>
-                        18 Photos
-                    </div>
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Wardrobe1.png"/>
 </div>
 <div class="p-6">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline-sm text-headline-sm text-primary">Emerald Estate, Mumbai</h3>
-<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-label-sm">3-BHK</span>
-</div>
-<p class="text-on-surface-variant font-label-md mb-4">Modern Minimalist Design with Full Home detailing</p>
+<p class="text-on-surface-variant font-label-md mb-4"><strong>
+Floor-To-Ceiling Wardrobe Walnut Wood And Duck Blue Panels With Dressing Unit Mirror</strong></p>
 <div class="space-y-3 mb-6">
 <div class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
-<span class="text-body-md truncate">Full Home, Kitchen, Kids Room</span>
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Wardrobe</span>
 </div>
+</div>
+
+</div>
+</div>
+
+<!-- Card 7-->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Kitchen7.png"/>
+</div>
+<div class="p-6">
+<p class="text-on-surface-variant font-label-md mb-4"><strong>Compact Straight Kitchen Grey And Cream Two-Tone Cabinets With Granite Countertop</strong></p>
+<div class="space-y-3 mb-6">
 <div class="flex items-center gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
-<span class="text-body-md font-semibold text-primary">₹30+ Lakhs</span>
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Kitchen</span>
 </div>
 </div>
-<button class="w-full py-3 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95 duration-150">
-                        Get This Design
-                    </button>
+
 </div>
 </div>
+
+<!-- Card 8-->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/project_Kitchen9.png"/>
+</div>
+<div class="p-6">
+<p class="text-on-surface-variant font-label-md mb-4"><strong>L-Shaped Base Kitchen With Marble Finish Laminate Doors And White Countertop</strong></p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Wall Cabinates</span>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Card 9-->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Kitchen8.png"/>
+</div>
+<div class="p-6">
+<p class="text-on-surface-variant font-label-md mb-4"><strong>
+Mint Green Wall Cabinets With Smoked Glass Shutters And Faber Chimney Installation</strong></p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Wall Cabinates</span>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Card 10-->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Wardrobe4.png"/>
+</div>
+<div class="p-6">
+<p class="text-on-surface-variant font-label-md mb-4"><strong>Dark Grey Sliding Door Wardrobe With Gold Geometric Line Inlay And Loft Unit</strong></p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Wardrobe</span>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Card 11-->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Wardrobe5.png"/>
+</div>
+<div class="p-6">
+<p class="text-on-surface-variant font-label-md mb-4"><strong>Rose Pink Sliding Door Wardrobe With Gold Line Design And Wooden Side Panel</strong></p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Wardrobe</span>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Card 12-->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Wardrobe6.png"/>
+</div>
+<div class="p-6">
+<p class="text-on-surface-variant font-label-md mb-4"><strong>Teal Blue Sliding Door Wardrobe With Gold Geometric Inlay And Wooden Glass Panel</strong></p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Wardrobe</span>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Card 13-->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Kitchen2.png"/>
+</div>
+<div class="p-6">
+<p class="text-on-surface-variant font-label-md mb-4"><strong>U-Shaped Modular Kitchen Glossy Purple Cabinets With White Quartz Countertop</strong></p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Kitchen</span>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Card 14-->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Kitchen3.png"/>
+</div>
+<div class="p-6">
+<p class="text-on-surface-variant font-label-md mb-4"><strong>U-Shaped Mint Green Kitchen With Gold Sink Marble Flooring And False Ceiling Lights</strong></p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Kitchen</span>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Card 15-->
+<div class="group bg-surface-white rounded-lg shadow-sm border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative h-[500px] overflow-hidden">
+<img alt="Modern Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious modern villa interior featuring a minimalist living room with clean lines, high-end furniture, and soft ambient lighting. The palette consists of slate blues, pristine whites, and warm wood textures, creating a serene and professional atmosphere. The composition is wide-angle, capturing the architectural precision of the space." src="./images/projects_Kitchen6.png"/>
+</div>
+<div class="p-6">
+<p class="text-on-surface-variant font-label-md mb-4"><strong>Straight Line Beige Glossy Modular Kitchen With Black Granite Countertop And Chimney</strong></p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#C9A227] text-[20px]">architecture</span>
+<span class="text-body-md truncate">Kitchen</span>
+</div>
+</div>
+
+</div>
+</div>
+
 </section>
 </main>
 
-<!-- Footer -->+
-<footer class="bg-surface-container w-full border-t border-outline-variant mt-section-gap">
+
+    <!-- Main Services -->
+    <section id="services-grid" class="py-section-gap bg-surface-container-low border-t border-b border-[#C9A227]  px-margin-desktop mx-auto">
+
+        <div class="py-8 justify-center flex flex-col text-center">
+            <h2 class="font-headline-md text-headline-md text-[#0D0D0D] mb-2">Our Services</h2>
+            <p class="text-[#0D0D0D]/70">personalized interiors, showcasing stunning transformations </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+
+            <!-- Full Home Interiors  -->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Full-Home-Interiors">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Full home Interiors" src="./images/ourServices_fullHomeInteriors.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Full Home Interiors</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Complete home design, 3D floor planning, turnkey renovation, space optimization, and interior styling.</p>
+            </div>
+            <!-- Modular Kitchen -->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Modular-Kitchen">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Modular Kitchen" src="./images/ourServices_modularKitchen.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Modular Kitchens</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">L-shaped, U-shaped, and parallel kitchens, acrylic/laminate shutters, tandem boxes, cutlery organizers, and pantry units.</p>
+            </div>
+            <!-- BESPOKE WARDROBE -->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Bespoke-Wardrobe-Solutions">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Bespoke Wardrobe" src="./images/ourServices_BespokeWardrobe.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Bespoke Wardrobe Solutions</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Sliding door wardrobes, swing-door closets, loft storage, walk-in closets, and internal shelving accessories.</p>
+            </div>
+            <!-- furniture And Carpentary -->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Furniture-and-Carpentry">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="furnitureAndCarpentary" src="./images/ourServices_furnitureAndCarpentary.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Furniture & Carpentry</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Custom-made beds, dining tables, sofa sets, TV units, bedside tables, and coffee tables tailored to your dimensions.</p>
+            </div>
+
+            <!-- False ceilling and Lightning-->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="False-Ceiling-and-Lighting">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="False Ceiling & Lighting" src="./images/ourServices_FalseCeilingAndLighting.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">False Ceiling & Lighting</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">POP and gypsum ceiling designs, cove lighting, pendant lights, spotlighting, and recessed lighting schemes.</p>
+            </div>
+
+                        <!-- Flooring & Tiling-->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Flooring-and-Tiling">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Flooring & Tiling" src="./images/ourServices_Flooring&Tiling.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Flooring & Tiling</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Vitrified tile installation, premium wooden flooring, stone polishing, wall cladding, and high-quality grout finishes.</p>
+            </div>
+
+                        <!-- Wall Paneling & Decor-->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Wall-Paneling-and-Decor">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Wall Paneling & Decor" src="./images/ourServices_WallPaneling&Decor.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Wall Paneling & Decor</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Decorative MDF panels, wood-veneer paneling, textured wall painting, wallpaper application, and accent wall treatments.</p>
+            </div>
+
+            <!--Project Consultancy-->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Project-Consultancy">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Project Consultancy" src="./images/ourServices_Project Consultancy.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Project Consultancy</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Professional site supervision, vendor management, material quality assurance, electrical/plumbing planning, and timeline tracking.</p>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Price Estimator Section -->
+    <section class="py-section-gap bg-white border-b border-[#C9A227]" id="price-estimator">
+      <div class="max-w-container-max mx-auto px-margin-desktop p-8 border border-[#C9A22733]/60 rounded-lg hover:shadow-lg hover:border-[#C9A227]/50 transition-all duration-300 ">
+        <div class="text-center mb-16 ">
+          <h2 class="font-headline-md text-headline-md text-[#0D0D0D] mb-2">Hanswal Interiors Price Estimator</h2>
+          <p class="text-[#0D0D0D]/70 font-body-md">Calculate the approximate cost of doing up your home interiors.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          <!-- Estimator 1 -->
+          <div
+            class="group bg-white p-8 text-center">
+            <div
+              class="w-16 h-16 bg-[#C9A227]/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#0D0D0D] transition-colors">
+              <span
+                class="material-symbols-outlined text-[32px] text-[#C9A227] group-hover:text-white transition-colors">home</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-4">Full Home Interior</h3>
+            <p class="text-[#0D0D0D]/70 font-body-md mb-8">Know the estimate price for your full home interiors</p>
+          </div>
+          <!-- Estimator 2 -->
+          <div
+            class="group bg-white p-8 text-center">
+            <div
+              class="w-16 h-16 bg-[#C9A227]/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#0D0D0D] transition-colors">
+              <span
+                class="material-symbols-outlined text-[32px] text-[#C9A227] group-hover:text-white transition-colors">countertops</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-4">Kitchen</h3>
+            <p class="text-[#0D0D0D]/70 font-body-md mb-8">Get an approximate costing for your kitchen interior.</p>
+            <a class="text-[#0D0D0D] font-label-md inline-flex items-center gap-1 hover:border-b-2 hover:border-[#C9A227] pb-1 transition-all"
+              href="a_priceEstimator.html">
+              Calculate <span class="material-symbols-outlined text-[#C9A227] text-[18px]">arrow_forward</span>
+            </a>
+          </div>
+          <!-- Estimator 3 -->
+          <div
+            class="group bg-white p-8 text-center">
+            <div
+              class="w-16 h-16 bg-[#C9A227]/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#0D0D0D] transition-colors">
+              <span
+                class="material-symbols-outlined text-[32px] text-[#C9A227] group-hover:text-white transition-colors">checkroom</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-4">Wardrobe</h3>
+            <p class="text-[#0D0D0D]/70 font-body-md mb-8">Our rough math for your wardrobe</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- FAQ Section -->
+    <section class="py-section-gap bg-white border-b border-[#C9A227]">
+        <div class="px-margin-desktop max-w-[800px] mx-auto">
+            <h2 class="font-headline-md text-headline-md text-center text-[#0D0D0D] mb-12">FAQs About Home Interior Design</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item group border border-[#C9A22733]/60 rounded-xl bg-white/30 hover:bg-[#C9A227]/10/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">1. Can you replicate a project I see in your portfolio for my own home?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#0D0D0D] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">Our portfolio serves as a showcase of our design capabilities and aesthetic range. We use these projects as a foundation to understand your style preferences. We will customize every element—from spatial layout to material finishes—to ensure your home is uniquely tailored to your lifestyle rather than a direct replication of another project.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item group border border-[#C9A22733]/60 rounded-xl bg-white/30 hover:bg-[#C9A227]/10/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">2. Are the prices displayed on your website fixed for all projects?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#0D0D0D] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">No, project costs are highly dependent on the floor plan size, chosen materials, and scope of customizations. The portfolio images represent bespoke projects with varying budgets. We provide a tailored, itemized estimate based on your specific requirements during the initial consultation to ensure your investment is clearly defined.                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item group border border-[#C9A22733]/60 rounded-xl bg-white/30 hover:bg-[#C9A227]/10/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">3. If I choose a complex design from your gallery, will it take longer to build?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#0D0D0D] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">Design complexity can influence the timeline, specifically regarding material lead times and intricate installation requirements. We provide a project-specific timeline during the design approval stage, which accounts for the complexity of your chosen finishes. We focus on phased planning to keep the workflow steady and efficient.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item group border border-[#C9A22733]/60 rounded-xl bg-white/30 hover:bg-[#C9A227]/10/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">4. How do I choose the right design style for my layout?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#0D0D0D] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">Our designers conduct a detailed site analysis to understand your home’s architecture and your personal functional needs. Whether you prefer a minimalist, modern, or classic style, we guide you through material and color selections that complement your space, ensuring the final look is both visually appealing and highly functional.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item group border border-[#C9A22733]/60 rounded-xl bg-white/30 hover:bg-[#C9A227]/10/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">5. How do you guarantee the quality of the furniture and cabinetry shown?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#0D0D0D] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">We use a standardized approach for all modular systems, utilizing premium materials and high-durability hardware across every project. The quality you see in our delivered projects is maintained through rigorous quality control processes, from raw material procurement to final onsite installation by our experienced interior teams.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item group border border-[#C9A22733]/60 rounded-xl bg-white/30 hover:bg-[#C9A227]/10/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">6. What happens if I want to make changes after the project has started?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#0D0D0D] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">We aim to finalize all design decisions before the execution begins to ensure a smooth project flow. However, should you request modifications mid-project, we will assess the feasibility, impact on the timeline, and cost implications. We communicate any necessary adjustments transparently to ensure you remain fully informed throughout the process.
+                        </p>
+                    </div>
+                </div>
+
+                
+                <!-- FAQ Item 7 -->
+                <div class="faq-item group border border-[#C9A22733]/60 rounded-xl bg-white/30 hover:bg-[#C9A227]/10/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">7. How can I verify the quality of a project similar to what I want?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#0D0D0D] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">Beyond our portfolio, we invite you to visit our Experience Centre. Seeing our modular systems and materials firsthand is the best way to understand the quality of our craftsmanship. Our designers can also walk you through technical details of past projects to show how we manage specific space challenges.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="py-section-gap bg-[#0D0D0D]" id="cta-section">
+      <div class="max-w-xl mx-auto px-margin-desktop text-center">
+        <h2 class="font-headline-md text-headline-md text-white mb-4">Your dream home is just a click away</h2>
+        <p class="text-white/70 font-body-lg mb-10">Book a free consultation with our design experts today.</p>
+        <button
+          class="bg-[#C9A227] border-2 border-white/30 text-[#0D0D0D] px-10 py-4 rounded-lg font-label-md text-title-lg shadow-lg hover:bg-white hover:translate-y-[-2px] transition-all active:scale-95 duration-150" onclick="window.open('a_consultancyPage.html','_self')">
+          Get Started With Just One Click
+        </button>
+      </div>
+    </section>
+
+
+
+<!-- Footer -->
+<footer class="bg-surface-container w-full border-t border-outline-variant">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-section-gap py-section-gap px-margin-desktop max-w-container-max mx-auto">
 
 <!-- hanswal Interiors footer -->
 
 <div>
-    <a class="font-title-lg text-title-lg font-bold text-[#0D0D0D] mb-6 block" href="/">
-        Hanswal <span class="text-[#405B73]">Interiors</span>
-    </a>
-    <p class="text-[#0D0D0D]/70 font-body-md mb-8">End-to-end home interior solutions for your home. Design, execution and delivery.</p>
+    <div class="flex items-center gap-3 mb-6">
+        <img src="./images/faviconImage.png" alt="Hanswal Interior Studio Logo" class="w-13 h-12 object-contain rounded-md">
+        <button class="font-title-lg text-title-lg font-bold text-[#0D0D0D] block text-left" onclick="document.getElementById('back-to-frontpage').scrollIntoView({behavior:'smooth'})" style="outline: none;">
+            Hanswal <br><span style="color:#C9A227;">Interiors</span>
+        </button>
+    </div>
+    <p class="text-[#0D0D0D]/70 font-body-md mb-8">Complete home interior design services: modular kitchens, wardrobes, design to delivery.</p>
 <div class="flex gap-5" style="display: flex; justify-content:left;">
-    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-    <a class="text-[#7B92A6] hover:text-[#405B73] transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
+    <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+    <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+    <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
 </div>
 </div>
 
-
-<!-- Offerings -->
+<!-- Our Services -->
 
 <div class="space-y-4">
-<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Offerings</h4>
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Our Services</h4>
 <ul class="space-y-2">
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Modular Interiors</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Full Home Interiors</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Luxury Vinciago</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Price Calculators</a></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Full-Home-Interiors').scrollIntoView({behavior:'smooth'})" style="outline: none;">Full Home Interiors </button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Modular-Kitchen').scrollIntoView({behavior:'smooth'})" style="outline: none;">Modular Kitchen</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Bespoke-Wardrobe-Solutions').scrollIntoView({behavior:'smooth'})" style="outline: none;">Bespoke Wardrobe Solutions</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Furniture-and-Carpentry').scrollIntoView({behavior:'smooth'})" style="outline: none;">Furniture & Carpentry</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('False-Ceiling-and-Lighting').scrollIntoView({behavior:'smooth'})" style="outline: none;">False Ceiling & Lighting</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Flooring-and-Tiling').scrollIntoView({behavior:'smooth'})" style="outline: none;">Flooring & Tiling</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Wall-Paneling-and-Decor').scrollIntoView({behavior:'smooth'})" style="outline: none;">Wall Paneling & Decor</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Project-Consultancy').scrollIntoView({behavior:'smooth'})" style="outline: none;">Project Consultancy</button></li>
 </ul>
 </div>
-
-
-<!-- Get Inspired -->
-
-<div class="space-y-4">
-<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Get Inspired</h4>
-<ul class="space-y-2">
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Design Ideas</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Kitchen Designs</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Living Room Ideas</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Magazine</a></li>
-</ul>
-</div>
-
 
 <!-- Company -->
 
 <div class="space-y-4">
-<h4 class="font-label-md text-label-100 text-primary font-bold uppercase tracking-wider">Company</h4>
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Company</h4>
 <ul class="space-y-2">
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">About Us</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Careers</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Contact</a></li>
-<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_aboutUs.html">About Us</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_projects.html">Projects</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_priceEstimator.html">Price Estimator</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_storeLocator.html">Store Locator</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_contactUs.html">Contact Us</a></li>
 </ul>
 </div>
+
+<!-- Company Information-->
+<div class="space-y-4 justify-self-end">
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Contact Info</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-black">location_on</span>
+<span>Vadodara, Gujarat, India</span>
+</li>
+<li class="flex items-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-black">mail</span>
+<span>gopinathjiinterio1980@gmail.com</span>
+</li>
+<li class="flex items-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-black">call</span>
+<span>+91 99248 13074</span>
+</li>
+</ul>
+</div>
+
 </div>
 
 
 <div class="border-t border-outline-variant py-8 px-margin-desktop max-w-container-max mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant font-label-sm">
 <span>© 2026 Hanswal Interiors. All rights reserved.</span>
-<div class="flex gap-6">
-<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
-</div>
 </div>
 </div>
 </footer>
+
 <!-- FAB (Suppressed based on prompt logic for Details/Transactional, but enabled here for Home/Portfolio Context) -->
 <button class="fixed bottom-8 right-8 bg-primary text-on-primary w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform active:scale-95 z-40">
 <span class="material-symbols-outlined">forum</span>
 </button>
 <script>
+    
+// FAQ Accordion logic (same as index.html)
+    function toggleFaq(button) {
+      const currentItem = button.closest('.faq-item');
+      const answer = currentItem.querySelector('.faq-answer');
+      const allItems = document.querySelectorAll('.faq-item');
+
+      // Close other items if opened
+      allItems.forEach(item => {
+        if (item !== currentItem && item.classList.contains('active')) {
+          item.classList.remove('active');
+          const otherAnswer = item.querySelector('.faq-answer');
+          otherAnswer.style.maxHeight = null;
+        }
+      });
+
+      // Toggle current item
+      const isActive = currentItem.classList.toggle('active');
+      if (isActive) {
+        answer.style.maxHeight = answer.scrollHeight + "10px";
+      } else {
+        answer.style.maxHeight = null;
+      }
+    }
+
+
         // Simple micro-interaction for filter buttons
         document.querySelectorAll('button').forEach(btn => {
             btn.addEventListener('click', () => {
@@ -559,6 +957,8 @@
                 observer.observe(section);
             });
         });
+
+
 
         // Mobile nav drawer
         const menuToggle = document.getElementById('menuToggle');
@@ -601,4 +1001,6 @@
             const nav = document.querySelector('nav');
             if (nav) nav.classList.toggle('shadow-md', window.scrollY > 20);
         });
+
+        
     </script>
