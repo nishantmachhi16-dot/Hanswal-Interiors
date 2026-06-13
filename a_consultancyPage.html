@@ -24,6 +24,26 @@
             backdrop-filter: blur(8px);
         }
 
+        
+      /* FAQ Accordion Transitions */
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .faq-item.active .faq-answer {
+        padding-top: 1rem;
+        padding-bottom: 1.25rem;
+      }
+      .faq-icon {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .faq-item.active .faq-icon {
+        transform: rotate(45deg);
+      }
+
+
+
     @media (max-width: 899px) {
         *, *::before, *::after { box-sizing: border-box; }
         html, body { width: 100%; overflow-x: hidden; }
@@ -44,7 +64,7 @@
             justify-content: center;
             width: 40px;
             height: 40px;
-            border: 1.5px solid #C5D0D9;
+            border: 1.5px solid #C9A227;
             border-radius: 6px;
             background: #fff;
             cursor: pointer;
@@ -107,57 +127,57 @@
           theme: {
             extend: {
               "colors": {
-                      "primary": "#28445a",
-                      "primary-fixed": "#cde5ff",
-                      "on-primary": "#ffffff",
-                      "error": "#ba1a1a",
-                      "surface-container-high": "#e8e8e8",
-                      "on-secondary-fixed": "#041e2e",
+                      "primary": "#C9A227",
+                      "primary-fixed": "#C9A22733",
+                      "on-primary": "#0D0D0D",
+                      "error": "#C9A227",
+                      "surface-container-high": "#C9A22733",
+                      "on-secondary-fixed": "#0D0D0D",
                       "text-primary": "#0D0D0D",
                       "overlay-dark": "rgba(0,0,0,0.8)",
-                      "on-primary-fixed": "#001d31",
-                      "on-tertiary-fixed-variant": "#3e4850",
-                      "surface-container-lowest": "#ffffff",
-                      "secondary-fixed": "#cee5fb",
-                      "tertiary-fixed-dim": "#bdc8d1",
-                      "error-container": "#ffdad6",
-                      "on-primary-fixed-variant": "#2e4961",
-                      "on-secondary": "#ffffff",
-                      "primary-container": "#405b73",
+                      "on-primary-fixed": "#0D0D0D",
+                      "on-tertiary-fixed-variant": "#0D0D0D",
+                      "surface-container-lowest": "#FFFFFF",
+                      "secondary-fixed": "#C9A22733",
+                      "tertiary-fixed-dim": "#C9A227",
+                      "error-container": "#C9A22733",
+                      "on-primary-fixed-variant": "#0D0D0D",
+                      "on-secondary": "#0D0D0D",
+                      "primary-container": "#C9A22733",
                       "surface-white": "#FFFFFF",
-                      "tertiary": "#38434a",
-                      "outline": "#73777d",
-                      "on-tertiary-container": "#c6d1da",
-                      "surface-container-low": "#f3f3f3",
-                      "outline-variant": "#c3c7cd",
-                      "surface-dim": "#dadada",
-                      "on-tertiary": "#ffffff",
-                      "background": "#f9f9f9",
-                      "secondary-container": "#cbe3f9",
-                      "primary-fixed-dim": "#aecae6",
-                      "inverse-surface": "#2f3131",
-                      "secondary": "#4a6173",
-                      "surface-bright": "#f9f9f9",
-                      "surface-variant": "#e2e2e2",
-                      "secondary-fixed-dim": "#b2c9df",
-                      "on-background": "#1a1c1c",
-                      "surface-tint": "#466179",
+                      "tertiary": "#C9A227",
+                      "outline": "#C9A227",
+                      "on-tertiary-container": "#0D0D0D",
+                      "surface-container-low": "#FFFFFF",
+                      "outline-variant": "#C9A22733",
+                      "surface-dim": "#C9A22733",
+                      "on-tertiary": "#0D0D0D",
+                      "background": "#FFFFFF",
+                      "secondary-container": "#C9A22733",
+                      "primary-fixed-dim": "#C9A22733",
+                      "inverse-surface": "#0D0D0D",
+                      "secondary": "#C9A227",
+                      "surface-bright": "#FFFFFF",
+                      "surface-variant": "#C9A22733",
+                      "secondary-fixed-dim": "#C9A22733",
+                      "on-background": "#0D0D0D",
+                      "surface-tint": "#C9A227",
                       "overlay-light": "rgba(255,255,255,0.8)",
-                      "on-secondary-container": "#4f6578",
-                      "tertiary-container": "#4f5a62",
-                      "on-error": "#ffffff",
-                      "surface-container-highest": "#e2e2e2",
-                      "on-secondary-fixed-variant": "#33495b",
-                      "surface-container": "#eeeeee",
-                      "on-primary-container": "#b6d2ef",
-                      "inverse-on-surface": "#f1f1f1",
-                      "on-surface-variant": "#43474d",
-                      "on-surface": "#1a1c1c",
-                      "tertiary-fixed": "#d9e4ed",
-                      "inverse-primary": "#aecae6",
-                      "on-tertiary-fixed": "#121d23",
-                      "on-error-container": "#93000a",
-                      "surface": "#f9f9f9"
+                      "on-secondary-container": "#0D0D0D",
+                      "tertiary-container": "#C9A22733",
+                      "on-error": "#0D0D0D",
+                      "surface-container-highest": "#C9A22733",
+                      "on-secondary-fixed-variant": "#0D0D0D",
+                      "surface-container": "#FFFFFF",
+                      "on-primary-container": "#0D0D0D",
+                      "inverse-on-surface": "#FFFFFF",
+                      "on-surface-variant": "#0D0D0D",
+                      "on-surface": "#0D0D0D",
+                      "tertiary-fixed": "#C9A22733",
+                      "inverse-primary": "#C9A22733",
+                      "on-tertiary-fixed": "#0D0D0D",
+                      "on-error-container": "#0D0D0D",
+                      "surface": "#FFFFFF"
               },
               "borderRadius": {
                       "DEFAULT": "0.25rem",
@@ -200,7 +220,7 @@
         }
       </script>
 </head>
-<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed" id="back-to-frontpage">
     <!-- TopNavBar -->
     <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-white shadow-sm">
         <div class="flex items-center gap-10">
@@ -248,40 +268,28 @@
 
 <main>
 <!-- Hero Section -->
-<section class="relative min-h-[600px] flex items-center py-section-gap overflow-hidden bg-surface-white">
+<section class="relative min-h-[600px] flex items-center mt-8 py-section-gap overflow-hidden bg-surface-white">
 <div class="absolute inset-0 z-0 pointer-events-none opacity-10">
 <div class="organic-blob bg-primary-fixed absolute -top-20 -right-20 w-[600px] h-[600px]"></div>
 <div class="organic-blob bg-secondary-fixed absolute bottom-0 -left-20 w-[400px] h-[400px]"></div>
 </div>
 <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter relative z-10">
 <div class="lg:col-span-7 flex flex-col justify-center">
-<span class="font-label-md text-label-md text-primary-container uppercase tracking-widest mb-4">Architecture &amp; Interiors</span>
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-4">Architecture &amp; Interiors</span>
 <h1 class="font-display-lg text-display-lg text-text-primary leading-[1.1] mb-6">
                         Let's get started with your <span class="text-primary italic">dream interiors</span>
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-8">
                         Experience architectural precision and bespoke craftsmanship. We turn your vision into a living masterpiece with curated designs and seamless execution.
                     </p>
-<div class="flex items-center gap-6">
-<div class="flex -space-x-3">
-<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-sm">
-<img class="w-full h-full object-cover" data-alt="A professional female interior designer with a warm, confident expression, dressed in smart business casual attire. She is standing in a bright, modern office with architectural sketches and material samples visible in the background, lit by soft, natural window light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNYlS8q8SaEPC_hs9gsIiI8vpCHtC6AaO1RLUGhKcGzvjo6UunozlLt4VzSZJk9PLCrvIB9LMUxDT4Jh8BCRiSYXvm_ZLOEB3Fksp1MgIDhBN6uhysPYEfedLjKqCF-z4ZMoIk_gva6d87OtgNFmxbSdeZzA2YotUM9q1vxDQS5rR3w8tRG6TZuydu7sCEJ2lbZxftm85HomPv8ZeqcsQgZhteB5ImEQKrtVvMxw6sFMiLmM655IO6MwISYxKk7re5ifalvzSViDQ"/>
-</div>
-<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-sm">
-<img class="w-full h-full object-cover" data-alt="A male professional architect looking towards the camera with a focused and reliable demeanor. He is wearing a minimalist dark shirt, standing in a contemporary studio with subtle shadows and clean lines, emphasizing a high-end corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxz85aQnHPuf9OAeDbMkdJ6-6eHGVFj-eMTdoBYS3nRXQJ2f-aP69js6f5O6F9SUhbOQ-ltJ7YKRmekf0cEv5wRG0lLTMy63GBIYDZMkT65yUaEX-23Ug9imejD0q3wGHbyWyH9tCmeWpnAZVwGWapQe0OgOsAnuB6Gg_wIXyXssELVrQqCic-WCqHf7T1DvYtfc6uvWW_Fn5X3__wCI8iz0cRotZxib6ATuFNdaqgW79fyJyHp77BoTGxu_guFz-lT_5O4MiJKcA"/>
-</div>
-</div>
-<p class="font-label-md text-label-md text-on-surface-variant">
-                            Joined by <span class="text-primary font-bold">1,00,000+</span> happy homeowners
-                        </p>
-</div>
 </div>
 <div class="lg:col-span-5">
 <div class="bg-white rounded-xl shadow-lg border border-outline-variant p-8 relative overflow-hidden">
 <div class="absolute top-0 left-0 w-full h-1.5 bg-primary"></div>
-<h3 class="font-headline-sm text-headline-sm text-text-primary mb-2">Talk to a Designer</h3>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-2">Book a Free Consultation</h3>
 <p class="font-label-md text-label-md text-on-surface-variant mb-6">Start your journey with a free 3D design consultation.</p>
-<form class="space-y-4">
+
+<form class="space-y-4" method="post" target="">
 <div>
 <label class="block font-label-sm text-label-sm text-on-surface mb-1">Full Name</label>
 <input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-3 focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Enter your name" type="text"/>
@@ -302,7 +310,7 @@
 <label class="font-label-sm text-label-sm text-on-surface-variant" for="whatsapp">Send me updates on WhatsApp</label>
 </div>
 <button class="w-full bg-primary-container text-on-primary font-title-lg text-title-lg py-4 rounded-lg shadow-sm hover:shadow-md hover:bg-primary transition-all active:scale-95" type="submit">
-                                GET FREE QUOTE
+                                Click Here To Book Consultation
                             </button>
 </form>
 <p class="text-center font-label-sm text-[10px] text-outline mt-4 leading-relaxed">
@@ -320,7 +328,7 @@
 <h2 class="font-headline-md text-headline-md text-text-primary mb-2">Homes for every budget</h2>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-lg">Our interior designers work with you keeping in mind your requirements and budget.</p>
 </div>
-<button class="hidden md:block bg-surface-white text-primary border border-primary px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-primary-fixed transition-colors">
+<button class="hidden md:block bg-surface-white text-primary border border-primary px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-primary-fixed transition-colors" onclick="window.open('a_priceEstimator.html','_self')">
                         VIEW ALL PRICING
                     </button>
 </div>
@@ -336,7 +344,6 @@
 <div class="p-6">
 <div class="flex justify-between items-center mb-4">
 <h3 class="font-title-lg text-title-lg text-text-primary">2BHK Package</h3>
-<span class="material-symbols-outlined text-primary scale-90">arrow_forward</span>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant mb-4">Essential modular interiors for a compact and stylish urban home.</p>
 </div>
@@ -352,7 +359,6 @@
 <div class="p-6">
 <div class="flex justify-between items-center mb-4">
 <h3 class="font-title-lg text-title-lg text-text-primary">3BHK Package</h3>
-<span class="material-symbols-outlined text-primary scale-90">arrow_forward</span>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant mb-4">Complete home solutions with premium finishes and smart storage.</p>
 </div>
@@ -362,13 +368,12 @@
 <div class="relative h-64 overflow-hidden">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxury 4BHK dining and living open-concept area featuring high-end architectural details. Polished floors, designer lighting fixtures, and custom modular cabinetry showcase the top-tier interior design capabilities, lit by dramatic accent lighting and soft ambient fill." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhEqFJlSn2-gviCVRngmPW88jptFUci9Q4zCNReDwJPRznmEi8N0hWHr1Xr5JT2h-OSwjQ7vmZqczWTp8kEWtVOIC5L0_fBW7JpaX2POl40j2eQceUuQAk7gxl7dqIKHz-5MqqCbSndggWgxRnM7ftDnsZ_IGRiBP8AOTrUN4vpye6vPRxkOZg4MtJY3rAQaXQkr8c3RT7ZpMXNO06LobtD2Odc83mySXzxB3dBHIVIEVA9XNdMpO3_CITPBh9t1IMFFn_TDKwbIU"/>
 <div class="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full text-label-sm text-primary font-bold">
-                                Starting at 4.81L*
+                                Explore More Services
                             </div>
 </div>
 <div class="p-6">
 <div class="flex justify-between items-center mb-4">
-<h3 class="font-title-lg text-title-lg text-text-primary">4BHK Luxury</h3>
-<span class="material-symbols-outlined text-primary scale-90">arrow_forward</span>
+<h3 class="font-title-lg text-title-lg text-text-primary">Explore More Services</h3>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant mb-4">Bespoke luxury interiors with full customization and premium materials.</p>
 </div>
@@ -377,12 +382,13 @@
 <p class="mt-8 font-label-sm text-label-sm text-outline">*The prices include only modular interiors for new homes.</p>
 </div>
 </section>
+
 <!-- Value Prop Section -->
-<section class="py-section-gap bg-surface-white overflow-hidden">
+<section class="py-section-gap bg-surface-white overflow-hidden border-t border-b border-primary">
 <div class="max-w-container-max mx-auto px-margin-desktop">
 <div class="text-center mb-16">
-<h2 class="font-headline-md text-headline-md text-text-primary mb-4">The Hanswal Edge</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Your dream home interiors should be a happy experience, not a stressful one. From design to execution, we'll handle it all for you.</p>
+<h2 class="font-headline-md text-headline-md text-text-primary mb-4">Expert Interior Design & Guaranteed Quality</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Elevate your lifestyle with Hanswal Interiors. Benefit from our personalized design approach, high-grade materials, and professional installation. Your unique vision is our blueprint, delivered with the professional expertise your home deserves.</p>
 </div>
 <div class="bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant shadow-sm">
 <div class="grid grid-cols-1 md:grid-cols-3 border-b border-outline-variant bg-primary-container text-on-primary">
@@ -398,12 +404,13 @@
 <div class="p-6 border-l border-outline-variant/30">
 <ul class="space-y-2">
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> No hidden costs</li>
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Easy EMIs</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Informed Budget Planning</li>
 </ul>
 </div>
 <div class="p-6 border-l border-outline-variant/30 text-on-surface-variant/70">
 <ul class="space-y-2">
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-outline text-[18px]">cancel</span> 45% hike between quote &amp; final</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-outline text-[18px]">cancel</span>Lack of clarity on how resources are actually being utilized.</li>
 </ul>
 </div>
 </div>
@@ -412,13 +419,13 @@
 <div class="p-6 font-label-md text-label-md text-primary bg-primary-fixed/20 md:bg-transparent">DESIGN</div>
 <div class="p-6 border-l border-outline-variant/30">
 <ul class="space-y-2">
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Personalized 3D visuals</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Personalized Design Journeys</li>
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Expert architect collaboration</li>
 </ul>
 </div>
 <div class="p-6 border-l border-outline-variant/30 text-on-surface-variant/70">
 <ul class="space-y-2">
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-outline text-[18px]">cancel</span> Cookie-cutter 2D designs</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-outline text-[18px]">cancel</span>Designs often feel generic and detached from your personal lifestyle.</li>
 </ul>
 </div>
 </div>
@@ -427,14 +434,14 @@
 <div class="p-6 font-label-md text-label-md text-primary bg-primary-fixed/20 md:bg-transparent">QUALITY</div>
 <div class="p-6 border-l border-outline-variant/30">
 <ul class="space-y-2">
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Branded materials</li>
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> 146 stringent quality checks</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Premium Component Selection</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Selected for Durability</li>
 </ul>
 </div>
 <div class="p-6 border-l border-outline-variant/30 text-on-surface-variant/70">
 <ul class="space-y-2">
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-outline text-[18px]">cancel</span> Inferior materials to cut costs</li>
-</ul>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-outline text-[18px]">cancel</span> Cabinets or hardware that begin breaking shortly after installation.  </li></ul>
 </div>
 </div>
 <!-- Row 4 -->
@@ -442,26 +449,27 @@
 <div class="p-6 font-label-md text-label-md text-primary bg-primary-fixed/20 md:bg-transparent">TIMELINE</div>
 <div class="p-6 border-l border-outline-variant/30">
 <ul class="space-y-2">
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Guaranteed 45-day installation</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Systematic Project Management</li>
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Real-time project tracking</li>
 </ul>
 </div>
 <div class="p-6 border-l border-outline-variant/30 text-on-surface-variant/70">
 <ul class="space-y-2">
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-outline text-[18px]">cancel</span> Unreliable, delayed timelines</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-outline text-[18px]">cancel</span>Lack of clear communication on project status.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="mt-12 text-center">
-<button class="bg-primary-container text-on-primary font-title-lg text-title-lg px-12 py-4 rounded-lg shadow-sm hover:bg-primary transition-all active:scale-95">
-                        GET FREE CONSULTATION
+<button class="bg-primary-container text-on-primary font-title-lg text-title-lg px-12 py-4 rounded-lg shadow-sm hover:bg-primary transition-all active:scale-95"  onclick="document.getElementById('back-to-frontpage').scrollIntoView({behavior:'smooth'})" style="outline: none;">
+                        SCROLL BACK TO CONSULTATION FORM
                     </button>
 </div>
 </div>
 </section>
 <!-- Steps Section -->
-<section class="py-section-gap bg-surface-container-low overflow-hidden">
+<section class="py-section-gap border-b border-primary bg-surface-container-low overflow-hidden">
 <div class="max-w-container-max mx-auto px-margin-desktop">
 <div class="text-center mb-16">
 <h2 class="font-headline-md text-headline-md text-text-primary mb-4">Home interiors in 5 easy steps</h2>
@@ -473,7 +481,7 @@
 <div class="grid grid-cols-1 md:grid-cols-5 gap-gutter relative z-10">
 <!-- Step 1 -->
 <div class="flex flex-col items-center text-center group">
-<div class="w-24 h-24 rounded-full bg-surface-white border-2 border-primary-fixed flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-all duration-300">
+<div class="w-24 h-24 rounded-full bg-surface-white border-2 border-primary-fixed flex items-center justify-center mb-6 shadow-sm group-hover:bg-on-primary group-hover:text-white transition-all duration-300">
 <span class="material-symbols-outlined scale-150">person_search</span>
 </div>
 <div class="w-8 h-8 rounded-full bg-primary text-white text-label-sm flex items-center justify-center mb-4 border-4 border-surface-container-low">1</div>
@@ -482,7 +490,7 @@
 </div>
 <!-- Step 2 -->
 <div class="flex flex-col items-center text-center group">
-<div class="w-24 h-24 rounded-full bg-surface-white border-2 border-primary-fixed flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-all duration-300">
+<div class="w-24 h-24 rounded-full bg-surface-white border-2 border-primary-fixed flex items-center justify-center mb-6 shadow-sm group-hover:bg-on-primary group-hover:text-white transition-all duration-300">
 <span class="material-symbols-outlined scale-150">contract</span>
 </div>
 <div class="w-8 h-8 rounded-full bg-primary text-white text-label-sm flex items-center justify-center mb-4 border-4 border-surface-container-low">2</div>
@@ -491,7 +499,7 @@
 </div>
 <!-- Step 3 -->
 <div class="flex flex-col items-center text-center group">
-<div class="w-24 h-24 rounded-full bg-surface-white border-2 border-primary-fixed flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-all duration-300">
+<div class="w-24 h-24 rounded-full bg-surface-white border-2 border-primary-fixed flex items-center justify-center mb-6 shadow-sm group-hover:bg-on-primary group-hover:text-white transition-all duration-300">
 <span class="material-symbols-outlined scale-150">shopping_cart_checkout</span>
 </div>
 <div class="w-8 h-8 rounded-full bg-primary text-white text-label-sm flex items-center justify-center mb-4 border-4 border-surface-container-low">3</div>
@@ -500,7 +508,7 @@
 </div>
 <!-- Step 4 -->
 <div class="flex flex-col items-center text-center group">
-<div class="w-24 h-24 rounded-full bg-surface-white border-2 border-primary-fixed flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-all duration-300">
+<div class="w-24 h-24 rounded-full bg-surface-white border-2 border-primary-fixed flex items-center justify-center mb-6 shadow-sm group-hover:bg-on-primary group-hover:text-white transition-all duration-300">
 <span class="material-symbols-outlined scale-150">construction</span>
 </div>
 <div class="w-8 h-8 rounded-full bg-primary text-white text-label-sm flex items-center justify-center mb-4 border-4 border-surface-container-low">4</div>
@@ -509,7 +517,7 @@
 </div>
 <!-- Step 5 -->
 <div class="flex flex-col items-center text-center group">
-<div class="w-24 h-24 rounded-full bg-surface-white border-2 border-primary-fixed flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-all duration-300">
+<div class="w-24 h-24 rounded-full bg-surface-white border-2 border-primary-fixed flex items-center justify-center mb-6 shadow-sm group-hover:bg-on-primary group-hover:text-white transition-all duration-300">
 <span class="material-symbols-outlined scale-150">key</span>
 </div>
 <div class="w-8 h-8 rounded-full bg-primary text-white text-label-sm flex items-center justify-center mb-4 border-4 border-surface-container-low">5</div>
@@ -525,9 +533,6 @@
 <div class="max-w-container-max mx-auto px-margin-desktop">
 <div class="flex justify-between items-center mb-12">
 <h2 class="font-headline-md text-headline-md text-text-primary">Ideas to inspire</h2>
-<a class="text-primary font-label-md text-label-md hover:underline flex items-center gap-2" href="#">
-                        PEEK INTO MORE HOMES <span class="material-symbols-outlined text-[16px]">open_in_new</span>
-</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter h-[600px]">
 <div class="md:col-span-2 relative rounded-2xl overflow-hidden group">
@@ -566,16 +571,16 @@
 </div>
 </section>
 <!-- Trust Section -->
-<section class="py-section-gap bg-surface-container-low">
+<section class="py-section-gap bg-surface-container-low border-t border-b border-primary ">
 <div class="max-w-container-max mx-auto px-margin-desktop">
 <div class="text-center mb-16">
-<h2 class="font-headline-md text-headline-md text-text-primary mb-4">1,00,000+ happy customers!</h2>
+<h2 class="font-headline-md text-headline-md text-text-primary mb-4">100+ happy customers!</h2>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">See why homeowners across India trust Hanswal Interiors for their dream homes.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- Testimonial 1 -->
 <div class="bg-surface-white p-8 rounded-xl shadow-sm border border-outline-variant hover:-translate-y-1 transition-all">
-<div class="flex gap-1 text-[#FFD700] mb-6">
+<div class="flex gap-1 text-[#C9A227] mb-6">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
@@ -595,7 +600,7 @@
 </div>
 <!-- Testimonial 2 -->
 <div class="bg-surface-white p-8 rounded-xl shadow-sm border border-outline-variant hover:-translate-y-1 transition-all">
-<div class="flex gap-1 text-[#FFD700] mb-6">
+<div class="flex gap-1 text-[#C9A227] mb-6">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
@@ -613,84 +618,129 @@
 </div>
 </div>
 </div>
-<!-- Testimonial 3 -->
-<div class="bg-surface-white p-8 rounded-xl shadow-sm border border-outline-variant hover:-translate-y-1 transition-all">
-<div class="flex gap-1 text-[#FFD700] mb-6">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface italic mb-8">“This house is a part of me. We reached out to Hanswal and they designed the house that we really wanted. Every detail reflects our personality perfectly.”</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full overflow-hidden bg-primary-fixed">
-<img class="w-full h-full object-cover" data-alt="A portrait of a satisfied female client in her elegantly designed living room. The warm, soft lighting and sophisticated decor in the background emphasize the premium professional quality of the project." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9rrEFKK4Q-sZ8HTA1QYFzvehHdEbvEa3ZtoN0ZJ3v3I15WEiIstTf091saTp0xbyLaaBW7L34ylJ6omTHxzcKFlfMZQyE1rlL3GDxV3ajoDLwrEbYockvGvUfRgbC2f_R4vknoKtEDOKjfqa-BS3R64rqXO9dI33t3-rdsCfCs6MYW8dCJz0S4JHtcCk-OHQDnEEVHW1dpu4VbP6cenHPgTH9F4AEYf6yVGRY79ifK_WO1spRYJNQZ54FKQI4wEcmDy-enXyqtCA"/>
-</div>
-<div>
-<h4 class="font-label-md text-label-md text-text-primary">Puja Bhatia</h4>
-<p class="font-label-sm text-label-sm text-outline">2 BHK, Gurugram</p>
-</div>
-</div>
-</div>
-</div>
-</div>
 </section>
-<!-- FAQ Section -->
-<section class="py-section-gap bg-surface-white">
-<div class="max-w-3xl mx-auto px-margin-desktop">
-<div class="text-center mb-12">
-<h2 class="font-headline-md text-headline-md text-text-primary mb-4">FAQs</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Common questions about starting your interior journey with us.</p>
-</div>
-<div class="space-y-4">
-<!-- FAQ Item 1 -->
-<details class="group bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden" open="">
-<summary class="flex justify-between items-center p-6 cursor-pointer font-title-lg text-title-lg text-text-primary list-none">
-                            Is this the right time to do my home interiors?
-                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant pt-4">
-                            Yes, it is. From meetings at our Experience Centres to installing your home interiors at the site, we have a strict no-contact safety policy. Since the process of co-creating a design typically takes 4-6 weeks, you can get started with online consultation immediately.
+
+    <!-- FAQ Section -->
+    <section class="py-section-gap bg-white border-b border-[#C9A227]">
+        <div class="px-margin-desktop max-w-[800px] mx-auto">
+            <h2 class="font-headline-md text-headline-md text-center text-[#0D0D0D] mb-12">FAQs About Consultation</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item group border border-[#C9A227]/60 rounded-xl bg-white/30 hover:bg-white/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">1. What happens during a free consultation?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#C9A227] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
                         </div>
-</details>
-<!-- FAQ Item 2 -->
-<details class="group bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden">
-<summary class="flex justify-between items-center p-6 cursor-pointer font-title-lg text-title-lg text-text-primary list-none">
-                            Can I meet my interior designer?
-                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant pt-4">
-                            Yes, certainly. We offer both online consultations and contactless in-person meetings at our Experience Centres to suit your convenience and safety needs.
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">It is a simple conversation to understand what you want for your home. We look at your space, listen to your ideas, and share professional tips on how to make your home look beautiful and work exactly the way you need it to.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item group border border-[#C9A227]/60 rounded-xl bg-white/30 hover:bg-white/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">2. How do you keep the pricing fair and clear?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#C9A227] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
                         </div>
-</details>
-<!-- FAQ Item 3 -->
-<details class="group bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden">
-<summary class="flex justify-between items-center p-6 cursor-pointer font-title-lg text-title-lg text-text-primary list-none">
-                            What will be the timelines for my project completion?
-                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant pt-4">
-                            We pride ourselves on our 45-day installation guarantee. Your specific project timeline will be shared with you during the design finalization phase, and you can track real-time progress through our client portal.
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">We believe in being open about money from the start. We provide a detailed list of what everything costs before we begin, so you know exactly where your budget is going and can avoid any unexpected surprises later on.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item group border border-[#C9A227]/60 rounded-xl bg-white/30 hover:bg-white/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">3. What makes Hanswal Interiors different?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#C9A227] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
                         </div>
-</details>
-</div>
-</div>
-</section>
-<!-- CTA Footer Section -->
-<section class="py-section-gap relative overflow-hidden">
-<div class="absolute inset-0 bg-primary-container z-0">
-<img class="w-full h-full object-cover opacity-20" data-alt="A breathtaking, wide-angle shot of a luxurious, architecturally designed modern home interior at dusk. High-key lighting highlights the clean geometric lines, premium furniture, and vast open space. The mood is aspirational, serene, and ultra-professional, representing the peak of Hanswal Interiors' design capabilities." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAByleVdG-KE9Mt2gqTQ1q3nC9BilRmRbsXMIGLBy_EyiC8dT0kwsl13DSyTbCS2L04e1GZUZqIiuafnRhaXdUWB-R4Borc_3eqZTJO4fcupeWLtQ0iVuVdR61_Ajg7tsrDQ0KI64bRk8jzWZLEvHscSgTmX-szXIQTn2If4ud32IDIHzwguozw48v60s9skCDAdHrtY6mP9rE4o2NewJDGaI_ja_x-nNe5tHk6HFqT-xoaBC8OTAdk99VF7ExWmXjinw6BbfKwMPk"/>
-</div>
-<div class="max-w-container-max mx-auto px-margin-desktop relative z-10 text-center">
-<h2 class="font-display-lg text-display-lg text-on-primary mb-6">Your dream home is just a click away</h2>
-<p class="font-body-lg text-body-lg text-on-primary/80 max-w-2xl mx-auto mb-10">Join over 1,00,000 happy homeowners and experience the Hanswal Interiors difference today.</p>
-<button class="bg-surface-white text-primary font-title-lg text-title-lg px-12 py-5 rounded-xl shadow-lg hover:bg-primary-fixed transition-all active:scale-95">
-                    GET FREE CONSULTATION
-                </button>
-</div>
-</section>
-</main>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">We focus on a smooth, friendly experience rather than a "one-size-fits-all" approach. We listen to your personal style and combine it with our technical expertise, ensuring your home is built to last and looks exactly the way you imagined.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item group border border-[#C9A227]/60 rounded-xl bg-white/30 hover:bg-white/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">4. How do you ensure the quality of materials?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#C9A227] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">We only pick materials that are strong, durable, and built for daily life. Our goal is to make sure your cabinets, surfaces, and finishes stay looking fresh and perform perfectly, even after years of use.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item group border border-[#C9A227]/60 rounded-xl bg-white/30 hover:bg-white/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">5. How will I know if my project is on schedule?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#C9A227] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">We manage projects in clear, simple steps. We keep you informed about what is happening at every stage so that there is no confusion. We work to keep everything moving steadily from the first design to the final day of installation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item group border border-[#C9A227]/60 rounded-xl bg-white/30 hover:bg-white/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">6. Do I have to commit to a big project right away?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#C9A227] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">Not at all. The consultation is just a way for you to explore ideas and see if we are a good fit for you. There is no pressure; we want you to feel completely comfortable and confident before you take any next steps.
+                        </p>
+                    </div>
+                </div>
+
+                
+                <!-- FAQ Item 7 -->
+                <div class="faq-item group border border-[#C9A227]/60 rounded-xl bg-white/30 hover:bg-white/50 hover:border-[#C9A227]/50 transition-all duration-300">
+                    <button class="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-title-lg text-[18px] text-[#0D0D0D] font-semibold">7. Is the design custom-made for my home?</span>
+                        <div class="faq-icon w-8 h-8 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] group-hover:bg-[#C9A227] group-hover:text-white transition-all">
+                            <span class="material-symbols-outlined text-[20px] font-bold">add</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#0D0D0D]/80 font-body-md leading-relaxed">Yes, every design is created just for your space. We treat your home as a blank canvas and build your interior around how you actually live, making sure it is not just a copy of a standard design.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+        <!-- CTA Section -->
+    <section class="py-section-gap bg-[#0D0D0D]" id="cta-section">
+      <div class="max-w-xl mx-auto px-margin-desktop text-center">
+        <h2 class="font-headline-md text-headline-md text-white mb-4">Your dream home is just a click away</h2>
+        <p class="text-white/70 font-body-lg mb-10">Book a free consultation with our design experts today.</p>
+        <button
+          class="bg-[#C9A227] border-2 border-white/30 text-[#0D0D0D] px-10 py-4 rounded-lg font-label-md text-title-lg shadow-lg hover:bg-white hover:translate-y-[-2px] transition-all active:scale-95 duration-150" onclick="window.open('a_consultancyPage.html','_self')">
+          Get Started With Just One Click
+        </button>
+      </div>
+    </section>
 
 <!-- Footer -->
 <footer class="bg-surface-container w-full border-t border-outline-variant">
@@ -834,4 +884,31 @@
             const nav = document.querySelector('nav');
             if (nav) nav.classList.toggle('shadow-md', window.scrollY > 20);
         });
+
+        
+        // FAQ Accordion logic
+        function toggleFaq(button) {
+            const currentItem = button.closest('.faq-item');
+            const answer = currentItem.querySelector('.faq-answer');
+            const allItems = document.querySelectorAll('.faq-item');
+            
+            // Close other items if opened
+            allItems.forEach(item => {
+                if (item !== currentItem && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    const otherAnswer = item.querySelector('.faq-answer');
+                    otherAnswer.style.maxHeight = null;
+                }
+            });
+
+            // Toggle current item
+            const isActive = currentItem.classList.toggle('active');
+            if (isActive) {
+                answer.style.maxHeight = answer.scrollHeight + "10px";
+            } else {
+                answer.style.maxHeight = null;
+            }
+        }
+
+
     </script>
