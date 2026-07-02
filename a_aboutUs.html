@@ -46,7 +46,7 @@
                 justify-content: center;
                 width: 40px;
                 height: 40px;
-                border: 1.5px solid #C5D0D9;
+                border: 1.5px solid #C9A227;
                 border-radius: 6px;
                 background: #fff;
                 cursor: pointer;
@@ -80,63 +80,65 @@
             theme: {
                 extend: {
                     "colors": {
-                        "surface-variant": "#e2e2e2",
-                        "error": "#ba1a1a",
-                        "primary": "#28445a",
-                        "on-error": "#ffffff",
-                        "error-container": "#ffdad6",
-                        "background": "#f9f9f9",
-                        "on-secondary": "#ffffff",
-                        "on-primary": "#ffffff",
-                        "surface-tint": "#466179",
-                        "tertiary": "#38434a",
-                        "surface-container-high": "#e8e8e8",
+                        "surface-variant": "#C9A22733",
+                        "error": "#C9A227",
+                        "primary": "#C9A227",
+                        "on-error": "#0D0D0D",
+                        "error-container": "#C9A22733",
+                        "background": "#FFFFFF",
+                        "on-secondary": "#0D0D0D",
+                        "on-primary": "#0D0D0D",
+                        "surface-tint": "#C9A227",
+                        "tertiary": "#C9A227",
+                        "surface-container-high": "#C9A22733",
                         "overlay-light": "rgba(255,255,255,0.8)",
-                        "surface-dim": "#dadada",
-                        "on-primary-fixed": "#001d31",
-                        "inverse-primary": "#aecae6",
-                        "secondary": "#4a6173",
+                        "surface-dim": "#C9A22733",
+                        "on-primary-fixed": "#0D0D0D",
+                        "inverse-primary": "#C9A22733",
+                        "secondary": "#C9A227",
                         "overlay-dark": "rgba(0,0,0,0.8)",
-                        "on-background": "#1a1c1c",
-                        "surface-container-low": "#f3f3f3",
-                        "secondary-container": "#cbe3f9",
-                        "surface-container-lowest": "#ffffff",
-                        "primary-container": "#405b73",
-                        "on-tertiary-fixed": "#121d23",
-                        "surface-bright": "#f9f9f9",
-                        "outline-variant": "#c3c7cd",
-                        "on-tertiary-fixed-variant": "#3e4850",
-                        "on-secondary-fixed": "#041e2e",
-                        "surface": "#f9f9f9",
-                        "inverse-surface": "#2f3131",
-                        "tertiary-fixed": "#d9e4ed",
-                        "secondary-fixed": "#cee5fb",
-                        "on-error-container": "#93000a",
-                        "surface-container-highest": "#e2e2e2",
-                        "primary-fixed": "#cde5ff",
-                        "secondary-fixed-dim": "#b2c9df",
-                        "on-primary-container": "#b6d2ef",
-                        "surface-container": "#eeeeee",
+                        "on-background": "#0D0D0D",
+                        "surface-container-low": "#FFFFFF",
+                        "secondary-container": "#C9A22733",
+                        "surface-container-lowest": "#FFFFFF",
+                        "primary-container": "#C9A22733",
+                        "on-tertiary-fixed": "#0D0D0D",
+                        "surface-bright": "#FFFFFF",
+                        "outline-variant": "#C9A22733",
+                        "on-tertiary-fixed-variant": "#0D0D0D",
+                        "on-secondary-fixed": "#0D0D0D",
+                        "surface": "#FFFFFF",
+                        "inverse-surface": "#0D0D0D",
+                        "tertiary-fixed": "#C9A22733",
+                        "secondary-fixed": "#C9A22733",
+                        "on-error-container": "#0D0D0D",
+                        "surface-container-highest": "#C9A22733",
+                        "primary-fixed": "#C9A22733",
+                        "secondary-fixed-dim": "#C9A22733",
+                        "on-primary-container": "#0D0D0D",
+                        "surface-container": "#FFFFFF",
                         "text-primary": "#0D0D0D",
-                        "primary-fixed-dim": "#aecae6",
-                        "on-primary-fixed-variant": "#2e4961",
+                        "primary-fixed-dim": "#C9A22733",
+                        "on-primary-fixed-variant": "#0D0D0D",
                         "surface-white": "#FFFFFF",
-                        "on-surface-variant": "#43474d",
-                        "outline": "#73777d",
-                        "on-tertiary-container": "#c6d1da",
-                        "on-surface": "#1a1c1c",
-                        "on-secondary-container": "#4f6578",
-                        "on-tertiary": "#ffffff",
-                        "tertiary-fixed-dim": "#bdc8d1",
-                        "tertiary-container": "#4f5a62",
-                        "on-secondary-fixed-variant": "#33495b",
-                        "inverse-on-surface": "#f1f1f1"
+                        "on-surface-variant": "#0D0D0D",
+                        "outline": "#C9A227",
+                        "on-tertiary-container": "#0D0D0D",
+                        "on-surface": "#0D0D0D",
+                        "on-secondary-container": "#0D0D0D",
+                        "on-tertiary": "#0D0D0D",
+                        "tertiary-fixed-dim": "#C9A227",
+                        "tertiary-container": "#C9A22733",
+                        "on-secondary-fixed-variant": "#0D0D0D",
+                        "inverse-on-surface": "#FFFFFF",
+                        "text-secondary": "#0D0D0D",
+                        "border-light": "#C9A22733"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
                     },
                     "spacing": {
                         "margin-mobile": "16px",
@@ -173,7 +175,7 @@
         }
     </script>
 </head>
-<body class="bg-background font-body-md text-on-background antialiased selection:bg-primary-container selection:text-white">
+<body class="bg-background font-body-md text-on-background antialiased selection:bg-primary-container selection:text-on-primary">
 
     <!-- TopNavBar -->
     <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-white shadow-sm">
@@ -191,14 +193,13 @@
                 <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_priceEstimator.html">Price Estimator</a>
                 <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_storeLocator.html">Store Locator</a>
                 <a class="font-label-md text-label-md text-[#0D0D0D] border-b-2 border-[#C9A227] pb-1 font-semibold" href="a_aboutUs.html">About Us</a>
-                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_contactUs.html">Contact Us</a>
             </div>
         </div>
         <div class="nav-actions flex items-center gap-4">
             <button id="menuToggle" type="button" aria-label="Toggle navigation menu" class="menu-toggle hidden rounded-lg border border-[#C9A227] bg-white p-3 text-[#0D0D0D] shadow-sm hover:bg-[#C9A227]/10 lg:hidden">
                 <span class="material-symbols-outlined text-[24px]">menu</span>
             </button>
-            <button class="bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#C9A227]/40 hover:border-[#C9A227] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html', '_self')">
+            <button class="bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#C9A227]/40 hover:border-[#C9A227] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_contactUs.html', '_self')">
                 Book free consultation
             </button>
         </div>
@@ -211,9 +212,8 @@
         <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_priceEstimator.html">Price Estimator</a>
         <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_storeLocator.html">Store Locator</a>
         <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_aboutUs.html">About Us</a>
-        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_contactUs.html">Contact Us</a>
 
-        <button class="bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#C9A227]/40 hover:border-[#C9A227] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_consultancyPage.html', '_self')">
+        <button class="bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#C9A227]/40 hover:border-[#C9A227] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_contactUs.html', '_self')">
                 Book free consultation
         </button>
 
@@ -227,7 +227,7 @@
 <section class="relative overflow-hidden pt-16 pb-section-gap mt-section-gap">
 <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
 <div class="z-10 order-2 md:order-1">
-<span class="inline-block py-1 px-3 mb-6 bg-secondary-container text-on-secondary-container rounded-full font-label-sm text-label-sm">OUR ORIGIN STORY</span>
+<span class="inline-block py-1 px-3 mb-6 bg-primary-container text-on-primary-container rounded-full font-label-sm text-label-sm">OUR ORIGIN STORY</span>
 <h1 class="font-display-lg text-display-lg mb-6 text-text-primary">How it started</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
                         It all started when college friends, Anuj Srivastava and Ramakant Sharma, set upon their journeys to design their dream homes. It didn’t take them long to realise how fragmented the industry was and how factors like identifying the right professionals, coordination of tasks, and ensuring fair price and quality were pain points faced by many.
@@ -235,7 +235,7 @@
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
                         Determined to fix this and offer a happier experience to homeowners, they built a much needed bridge for the industry. Founded in 2014, Hanswal Interiors is now the trusted brand for complete home design.
                     </p>
-<div class="h-1 w-24 bg-primary-container rounded-full"></div>
+<div class="h-1 w-24 bg-primary rounded-full"></div>
 </div>
 <div class="relative order-1 md:order-2">
 <div class="absolute -top-12 -right-12 w-64 h-64 bg-surface-container-high architectural-blob opacity-50 z-0"></div>
@@ -257,11 +257,11 @@
 <div class="group relative bg-white border border-outline-variant p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300">
 <div class="flex flex-col md:flex-row gap-8 items-start">
 <div class="w-48 h-48 flex-shrink-0 rounded-full overflow-hidden border-4 border-surface-container-high group-hover:border-primary-container transition-colors duration-300">
-<img alt="Anuj Srivastava" class="w-full h-full object-cover" data-alt="A professional, high-end portrait of a South Asian male executive with a confident and warm expression, wearing a tailored navy blazer and white shirt. The background is a blurred high-end architectural office interior with soft slate blue and gray tones. The lighting is flattering and professional, capturing a mood of corporate leadership and reliable expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB7wa9O9NHEYA1Hy0vgg9P8dfEllLXltppQVgPWZSmjHfM08n-jexOyVlP0GxhPKE6pcv-IA9crgPdgMsGHLd2-6OXb6N8HhalEYDi_mCl1jO_UHEsX80amF8-bBschzdV28ZFManzysmjhsmBKFD7tfehaQQi2gjOytviGn4J3DuE-oWm1Zxs7kV3c58-GyV-LQwGZJ7F3Xu-fDvnPJ7L6ZRg8MiCiKkrI0SnDMquEXZ5YuJbtr2lAAlRQO1oAMD811s74_CSZKI"/>
+<img alt="Anuj Srivastava" class="w-full h-full object-cover" data-alt="A professional, high-end portrait of a South Asian male executive with a confident and warm expression, wearing a tailored navy blazer and white shirt. The background is a blurred high-end architectural office interior with soft slate blue and gray tones. The lighting is flattering and professional, capturing a mood of corporate leadership and reliable expertise." src="./images/AboutUs_Founders_Image.png"/>
 </div>
 <div>
 <h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">Anuj Srivastava</h3>
-<p class="font-label-md text-label-md text-primary font-bold mb-4">Co-founder and Chairman of the Board</p>
+<p class="font-label-md text-label-md text-primary font-bold mb-4">Founder and Chief Executive Officer (CEO)</p>
 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
 <strong>A dreamer and a chess master of the startup world,</strong> Anuj always keeps you guessing about his next move. With years of experience leading worldwide product marketing functions, he uses his expertise to lead Hanswal Interiors. Previously Global Head of Product Marketing for e-commerce at Google.
                                 </p>
@@ -272,13 +272,13 @@
 <div class="group relative bg-white border border-outline-variant p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300">
 <div class="flex flex-col md:flex-row gap-8 items-start">
 <div class="w-48 h-48 flex-shrink-0 rounded-full overflow-hidden border-4 border-surface-container-high group-hover:border-primary-container transition-colors duration-300">
-<img alt="Ramakant Sharma" class="w-full h-full object-cover" data-alt="A studio portrait of a sophisticated South Asian male CEO in professional attire, leaning forward slightly to convey engagement. The lighting is sharp and detailed, emphasizing a professional and analytical personality. The backdrop consists of subtle gray textures, aligning with a corporate modern aesthetic of precision and visionary leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAArvqk3JuK0Ukf27mDgWEV0h-tVTP4gUVFNnbbR6d9yMUfiYY_O9C-D0iiOjY7Y9r9Ty-1s3DZTDbpIw61zCX-30Xu5SZ_hblGFZX103sbAUlNKUkZdhvuMsqcQu1-SU8dHtSCS-dusYqbmQ8pB5vdJ_J7McL-jFPaCzDomsDh7guO29lboiDfbKK5x7sSwlPUbAp3HaNhBiGHNIhPLq5YvfMiy90yaaRVRj0HrRZRbWoUNT5xJYkeUF1Msl_8M-TCb57dS8ESuGA"/>
+<img alt="Prachi Sharma" class="w-full h-full object-cover" data-alt="A studio portrait of a sophisticated South Asian female CEO in professional attire, leaning forward slightly to convey engagement. The lighting is sharp and detailed, emphasizing a professional and analytical personality. The backdrop consists of subtle gray textures, aligning with a corporate modern aesthetic of precision and visionary leadership." src="./images/AboutUs_Co_Founders_Image.png"/>
 </div>
 <div>
-<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">Ramakant Sharma</h3>
-<p class="font-label-md text-label-md text-primary font-bold mb-4">Co-founder and Chief Executive Officer (CEO)</p>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">Prachi Sharma</h3>
+<p class="font-label-md text-label-md text-primary font-bold mb-4">Co-founder</p>
 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-<strong>With a mind that runs on logic and data,</strong> Ramakant is the most inimitable problem solver. He brings 12 years of experience in e-commerce and internet technologies to innovate our platform. Previously core team member and VP of Engineering at Myntra.
+<strong>With a mind that runs on logic and data,</strong> Prachi is the most inimitable problem solver. She brings 12 years of experience in e-commerce and internet technologies to innovate our platform. Previously core team member and VP of Engineering at Myntra.
                                 </p>
 </div>
 </div>
@@ -287,7 +287,7 @@
 </div>
 </section>
 <!-- Stats Section -->
-<section class="py-24 bg-primary text-white overflow-hidden relative">
+<section class="py-24 bg-primary text-on-primary overflow-hidden relative">
 <div class="absolute inset-0 opacity-10 pointer-events-none">
 <svg height="100%" preserveaspectratio="none" viewbox="0 0 100 100" width="100%">
 <path d="M0 100 Q 50 0 100 100" fill="none" stroke="white" stroke-width="0.5"></path>
@@ -359,11 +359,11 @@
 </div>
 <!-- 2022 -->
 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary text-white bg-primary font-bold shadow-lg z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary text-on-primary bg-primary font-bold shadow-lg z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                             22
                         </div>
-<div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border-2 border-primary bg-primary-container text-white shadow-lg">
-<h4 class="font-title-lg text-title-lg text-white mb-2">2022: Unicorn Status</h4>
+<div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border-2 border-primary bg-primary-container text-on-primary shadow-lg">
+<h4 class="font-title-lg text-title-lg text-on-primary mb-2">2022: Unicorn Status</h4>
 <p class="font-body-md text-body-md text-on-primary-container">Hanswal Interiors became a unicorn, solidifying its place as the market leader in organized home design solutions.</p>
 </div>
 </div>
@@ -374,15 +374,15 @@
 <!-- CTA Section -->
 <section class="py-section-gap">
 <div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="relative rounded-2xl overflow-hidden bg-primary text-white p-12 md:p-24 text-center">
+<div class="relative rounded-2xl overflow-hidden bg-primary text-on-primary p-12 md:p-24 text-center">
 <div class="absolute inset-0 z-0">
 <img alt="Luxury interior" class="w-full h-full object-cover opacity-30" data-alt="A luxurious, high-end living room interior with a perfect mix of contemporary furniture and classic architectural details. The room features a soft palette of slate blue textiles, neutral gray walls, and warm walnut wood accents. Atmospheric evening lighting creates long, soft shadows and a cozy, premium feel, illustrating the level of sophistication Hanswal Interiors brings to a home." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfYK3HMo0HG2uTaaSgI3XwKdPaIL6kLnqf7p0nSG_Pk1UtK9VVyCtMPf88WfNr3XmrYiJZmfQyGHhVGbsWSnzy0R_MxJdsn3ICAEM113ow108QUHLVCKSQUzO7_RQw-v1ROfdHSfQUDiUXkaoXmJwyiWnoo1ewxAtGtg7TCoqD5DC_1UO8PQlLfR7ehGhXhF3jX3pnlGQNdSKrp0K5XmRxJfSPtr51r4wPrByWN4OvBQBA9sTvgcLwGsOc82DBh-fLGrKi-Xwt3Bs"/>
 </div>
 <div class="relative z-10">
 <h2 class="font-display-lg text-display-lg mb-6">Your dream home is just a click away</h2>
 <p class="font-body-lg text-body-lg mb-10 max-w-2xl mx-auto opacity-90">Start your design journey today with India's most trusted interior brand.</p>
-<button class="bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-secondary-fixed transition-colors shadow-lg active:scale-95 duration-200">
-                            GET STARTED
+<button class="bg-white text-on-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-container transition-colors shadow-lg active:scale-95 duration-200" onclick="window.open('a_contactUs.html', '_self')">
+                            GET STARTED With Just A Click
                         </button>
 </div>
 </div>
@@ -392,7 +392,7 @@
 
 
 <!-- Footer -->
-<footer class="bg-surface-container w-full border-t border-outline-variant">
+<footer class="bg-surface-container-low w-full border-t border-[#C9A227]">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-section-gap py-section-gap px-margin-desktop max-w-container-max mx-auto">
 
 <!-- hanswal Interiors footer -->
@@ -463,7 +463,7 @@
 </div>
 
 
-<div class="border-t border-outline-variant py-8 px-margin-desktop max-w-container-max mx-auto">
+<div class="border-t border-[#C9A22733] py-8 px-margin-desktop max-w-container-max mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant font-label-sm">
 <span>© 2026 Hanswal Interiors. All rights reserved.</span>
 </div>
