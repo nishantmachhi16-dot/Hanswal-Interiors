@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bedroom | Hanswal Interiors - Find an Experience Centre Near You</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+
+<link rel="icon" type="image/png" href="./images/faviconImage.png">
+
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-badge {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .organic-blob {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+
+
+      @media (max-width: 899px) {
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { width: 100%; overflow-x: hidden; }
+
+        nav {
+          padding-left: 16px;
+          padding-right: 16px;
+          height: 64px;
+          min-height: 64px;
+        }
+        nav .desktop-nav { display: none !important; }
+        nav .menu-toggle { display: inline-flex !important; }
+        nav .nav-actions > button:not(#menuToggle) { display: none !important; }
+
+        #menuToggle {
+          display: inline-flex !important;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border: 1.5px solid #C9A227;
+          border-radius: 6px;
+          background: #fff;
+          cursor: pointer;
+          padding: 0;
+        }
+
+        #mobileMenu {
+          top: 64px;
+          left: 0;
+          right: 0;
+          width: 100%;
+          max-height: calc(100vh - 64px);
+          overflow-y: auto;
+          transform: translateX(100%);
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #mobileMenu.open {
+          transform: translateX(0);
+          display: flex !important;
+        }
+        #mobileMenuOverlay {
+          display: none;
+        }
+        #mobileMenuOverlay.open { display: block !important; }
+        body.menu-open { overflow: hidden; }
+
+              /* Main content top padding for fixed nav */
+        main { padding-top: 80px !important; }
+
+        /* Breadcrumb + title */
+        section.mb-12 { margin-bottom: 32px !important; }
+        h1 { font-size: 2rem !important; line-height: 2.4rem !important; }
+
+        /* Filter bar */
+        section.mb-gutter { margin-bottom: 16px !important; }
+
+        /* Project cards grid → single col */
+        section.grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+
+        /* Card image height */
+        .relative.h-64 { height: 200px !important; }
+
+        /* Section padding */
+        section { overflow-x: hidden; }
+        .px-margin-desktop, .px-margin-mobile { padding-left: 16px !important; padding-right: 16px !important; }
+
+        /* Footer */
+        footer .grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+        footer { padding-left: 16px !important; padding-right: 16px !important; }
+
+        /* FAB - reposition on mobile */
+        .fixed.bottom-8.right-8 { bottom: 20px !important; right: 16px !important; width: 50px !important; height: 50px !important; }
+
+    }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#C9A22733",
+                      "inverse-on-surface": "#FFFFFF",
+                      "tertiary-fixed": "#C9A22733",
+                      "tertiary-fixed-dim": "#C9A227",
+                      "on-background": "#0D0D0D",
+                      "on-tertiary": "#0D0D0D",
+                      "on-secondary-fixed-variant": "#0D0D0D",
+                      "outline-variant": "#C9A22733",
+                      "on-tertiary-fixed": "#0D0D0D",
+                      "text-primary": "#0D0D0D",
+                      "on-secondary": "#0D0D0D",
+                      "surface-variant": "#C9A22733",
+                      "on-surface-variant": "#0D0D0D",
+                      "background": "#FFFFFF",
+                      "surface-white": "#FFFFFF",
+                      "on-primary-container": "#0D0D0D",
+                      "on-surface": "#0D0D0D",
+                      "surface-dim": "#C9A22733",
+                      "primary": "#C9A227",
+                      "on-secondary-fixed": "#0D0D0D",
+                      "surface-container": "#FFFFFF",
+                      "on-tertiary-container": "#0D0D0D",
+                      "surface": "#FFFFFF",
+                      "overlay-dark": "rgba(0,0,0,0.8)",
+                      "on-primary-fixed-variant": "#0D0D0D",
+                      "tertiary": "#C9A227",
+                      "inverse-primary": "#C9A22733",
+                      "error-container": "#C9A22733",
+                      "inverse-surface": "#0D0D0D",
+                      "surface-container-highest": "#C9A22733",
+                      "secondary-container": "#C9A22733",
+                      "tertiary-container": "#C9A22733",
+                      "on-error": "#0D0D0D",
+                      "on-tertiary-fixed-variant": "#0D0D0D",
+                      "surface-bright": "#FFFFFF",
+                      "primary-container": "#C9A22733",
+                      "surface-container-high": "#C9A22733",
+                      "on-error-container": "#0D0D0D",
+                      "surface-tint": "#C9A227",
+                      "error": "#C9A227",
+                      "overlay-light": "rgba(255,255,255,0.8)",
+                      "on-secondary-container": "#0D0D0D",
+                      "surface-container-low": "#FFFFFF",
+                      "primary-fixed-dim": "#C9A22733",
+                      "surface-container-lowest": "#FFFFFF",
+                      "primary-fixed": "#C9A22733",
+                      "outline": "#C9A227",
+                      "on-primary-fixed": "#0D0D0D",
+                      "secondary": "#C9A227",
+                      "secondary-fixed-dim": "#C9A22733",
+                      "on-primary": "#0D0D0D"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "section-gap": "80px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-desktop": "48px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Work Sans"],
+                      "display-lg": ["Work Sans"],
+                      "title-lg": ["Work Sans"],
+                      "display-lg-mobile": ["Work Sans"],
+                      "label-md": ["Work Sans"],
+                      "headline-md": ["Work Sans"],
+                      "body-lg": ["Work Sans"],
+                      "body-md": ["Work Sans"],
+                      "headline-sm": ["Work Sans"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-surface-white shadow-sm">
+        <div class="flex items-center gap-10">
+    <div class="flex items-center gap-3">
+        <img src="./images/faviconImage.png" alt="Hanswal Interior Studio Logo" class="w-13 h-12 object-contain rounded-md">
+        <button class="font-title-lg text-title-lg font-bold text-[#0D0D0D] block text-left" onclick="window.open('index.html','_self')" style="outline: none;">
+            Hanswal <br><span style="color:#C9A227;">Interiors</span>
+        </button>
+    </div>  
+            <!-- responsive menu bar solved the desktop mode error  we must add this one to all the nav bar at end-->
+            <div class="desktop-nav hidden md:flex gap-6 items-center"> 
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_projects.html" href="index.html">Home</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D] border-b-2 border-[#C9A227] pb-1 font-semibold" href="a_projects.html">Projects</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_priceEstimator.html">Price Estimator</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_storeLocator.html">Store Locator</a>
+                <a class="font-label-md text-label-md text-[#0D0D0D]/80 hover:text-[#0D0D0D] hover:border-b-2 hover:border-[#C9A227]/50 pb-1 transition-all" href="a_aboutUs.html">About Us</a>
+            </div>
+        </div>
+        <div class="nav-actions flex items-center gap-4">
+            <button id="menuToggle" type="button" aria-label="Toggle navigation menu" class="menu-toggle hidden rounded-lg border border-[#C9A227] bg-white p-3 text-[#0D0D0D] shadow-sm hover:bg-[#C9A227]/10 lg:hidden">
+                <span class="material-symbols-outlined text-[24px]">menu</span>
+            </button>
+            <button class="bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#C9A227]/40 hover:border-[#C9A227] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_contactUs.html', '_self')">
+                Book free consultation
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobileMenu" class="fixed left-0 right-0 top-20 z-40 hidden flex-col gap-2 border-b border-[#C9A227] bg-white/95 px-4 py-4 shadow-md backdrop-blur lg:hidden">
+
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D] hover:bg-[#C9A227]/10 font-label-md" href="index.html">Home</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_projects.html">Projects</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_priceEstimator.html">Price Estimator</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_storeLocator.html">Store Locator</a>
+        <a class="rounded-lg px-3 py-3 text-[#0D0D0D]/80 hover:bg-[#C9A227]/10 font-label-md" href="a_aboutUs.html">About Us</a>
+
+        <button class="bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#C9A227]/40 hover:border-[#C9A227] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_contactUs.html', '_self')">
+                Book free consultation
+        </button>
+
+    </div>
+    <div id="mobileMenuOverlay" class="fixed inset-0 z-30 hidden bg-black/30 backdrop-blur-[1px] lg:hidden"></div>
+
+<!-- Main Grid -->
+
+    <!-- Kitchen Projects -->
+    <section id="bedroom-projects" class="py-section-gap bg-[#0D0D0D] border-b border-[#C9A227]/30 px-margin-desktop mx-auto">
+
+        <div class="py-8 justify-center flex flex-col text-center">
+            <h2 class="font-headline-md text-headline-md text-white mb-2">Delivered Bedroom Spaces</h2>
+            <p class="text-white/50 text-label-md tracking-widest uppercase">Personalized interiors · Stunning transformations</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+
+            <!-- Full Home Interiors  -->
+            <div class="group cursor-pointer relative overflow-hidden rounded-xl" id="Full-Home-Interiors">
+                <div class="relative overflow-hidden h-[380px]">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" alt="Full home Interiors" src="./images/ourServices_fullHomeInteriors.png"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[#C9A227]/0 transition-colors duration-400"></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                    <div class="w-6 h-[2px] bg-[#C9A227] mb-2 group-hover:w-12 transition-all duration-300"></div>
+                    <h3 class="font-title-lg text-white text-[16px] font-semibold leading-tight">Full Home Interiors</h3>
+                </div>
+            </div>
+
+            <!-- Modular Kitchen -->
+            <div class="group cursor-pointer relative overflow-hidden rounded-xl" id="Modular-Kitchen">
+                <div class="relative overflow-hidden h-[380px]">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" alt="Modular Kitchen" src="./images/ourServices_modularKitchen.png"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[#C9A227]/0 transition-colors duration-400"></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                    <div class="w-6 h-[2px] bg-[#C9A227] mb-2 group-hover:w-12 transition-all duration-300"></div>
+                    <h3 class="font-title-lg text-white text-[16px] font-semibold leading-tight">Modular Kitchens</h3>
+                </div>
+            </div>
+
+            <!-- BESPOKE WARDROBE -->
+            <div class="group cursor-pointer relative overflow-hidden rounded-xl" id="Bespoke-Wardrobe-Solutions">
+                <div class="relative overflow-hidden h-[380px]">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" alt="Bespoke Wardrobe" src="./images/ourServices_BespokeWardrobe.png"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[#C9A227]/0 transition-colors duration-400"></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                    <div class="w-6 h-[2px] bg-[#C9A227] mb-2 group-hover:w-12 transition-all duration-300"></div>
+                    <h3 class="font-title-lg text-white text-[16px] font-semibold leading-tight">Bespoke Wardrobe Solutions</h3>
+                </div>
+            </div>
+
+            <!-- Furniture And Carpentary -->
+            <div class="group cursor-pointer relative overflow-hidden rounded-xl" id="Furniture-and-Carpentry">
+                <div class="relative overflow-hidden h-[380px]">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" alt="furnitureAndCarpentary" src="./images/ourServices_furnitureAndCarpentary.png"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[#C9A227]/0 transition-colors duration-400"></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                    <div class="w-6 h-[2px] bg-[#C9A227] mb-2 group-hover:w-12 transition-all duration-300"></div>
+                    <h3 class="font-title-lg text-white text-[16px] font-semibold leading-tight">Furniture &amp; Carpentry</h3>
+                </div>
+            </div>
+
+            <!-- False Ceiling and Lighting -->
+            <div class="group cursor-pointer relative overflow-hidden rounded-xl" id="False-Ceiling-and-Lighting">
+                <div class="relative overflow-hidden h-[380px]">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" alt="False Ceiling &amp; Lighting" src="./images/ourServices_FalseCeilingAndLighting.png"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[#C9A227]/0 transition-colors duration-400"></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                    <div class="w-6 h-[2px] bg-[#C9A227] mb-2 group-hover:w-12 transition-all duration-300"></div>
+                    <h3 class="font-title-lg text-white text-[16px] font-semibold leading-tight">False Ceiling &amp; Lighting</h3>
+                </div>
+            </div>
+
+            <!-- Flooring & Tiling -->
+            <div class="group cursor-pointer relative overflow-hidden rounded-xl" id="Flooring-and-Tiling">
+                <div class="relative overflow-hidden h-[380px]">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" alt="Flooring &amp; Tiling" src="./images/ourServices_Flooring&amp;Tiling.png"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[#C9A227]/0 transition-colors duration-400"></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                    <div class="w-6 h-[2px] bg-[#C9A227] mb-2 group-hover:w-12 transition-all duration-300"></div>
+                    <h3 class="font-title-lg text-white text-[16px] font-semibold leading-tight">Flooring &amp; Tiling</h3>
+                </div>
+            </div>
+
+            <!-- Wall Paneling & Decor -->
+            <div class="group cursor-pointer relative overflow-hidden rounded-xl" id="Wall-Paneling-and-Decor">
+                <div class="relative overflow-hidden h-[380px]">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" alt="Wall Paneling &amp; Decor" src="./images/ourServices_WallPaneling&amp;Decor.png"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[#C9A227]/0 transition-colors duration-400"></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                    <div class="w-6 h-[2px] bg-[#C9A227] mb-2 group-hover:w-12 transition-all duration-300"></div>
+                    <h3 class="font-title-lg text-white text-[16px] font-semibold leading-tight">Wall Paneling &amp; Decor</h3>
+                </div>
+            </div>
+
+            <!-- Project Consultancy -->
+            <div class="group cursor-pointer relative overflow-hidden rounded-xl" id="Project-Consultancy">
+                <div class="relative overflow-hidden h-[380px]">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" alt="Project Consultancy" src="./images/ourServices_Project Consultancy.png"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[#C9A227]/0 transition-colors duration-400"></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                    <div class="w-6 h-[2px] bg-[#C9A227] mb-2 group-hover:w-12 transition-all duration-300"></div>
+                    <h3 class="font-title-lg text-white text-[16px] font-semibold leading-tight">Project Consultancy</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Main Services -->
+    <section id="services-grid" class="py-section-gap bg-surface-container-low border-b border-[#C9A227]  px-margin-desktop mx-auto">
+
+        <div class="py-8 justify-center flex flex-col text-center">
+            <h2 class="font-headline-md text-headline-md text-[#0D0D0D] mb-2">Our Services</h2>
+            <p class="text-[#0D0D0D]/70">personalized interiors, showcasing stunning transformations </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+
+            <!-- Full Home Interiors  -->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Full-Home-Interiors">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Full home Interiors" src="./images/ourServices_fullHomeInteriors.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Full Home Interiors</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Complete home design, 3D floor planning, turnkey renovation, space optimization, and interior styling.</p>
+            </div>
+            <!-- Modular Kitchen -->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Modular-Kitchen">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Modular Kitchen" src="./images/ourServices_modularKitchen.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Modular Kitchens</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">L-shaped, U-shaped, and parallel kitchens, acrylic/laminate shutters, tandem boxes, cutlery organizers, and pantry units.</p>
+            </div>
+            <!-- BESPOKE WARDROBE -->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Bespoke-Wardrobe-Solutions">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Bespoke Wardrobe" src="./images/ourServices_BespokeWardrobe.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Bespoke Wardrobe Solutions</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Sliding door wardrobes, swing-door closets, loft storage, walk-in closets, and internal shelving accessories.</p>
+            </div>
+            <!-- furniture And Carpentary -->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Furniture-and-Carpentry">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="furnitureAndCarpentary" src="./images/ourServices_furnitureAndCarpentary.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Furniture & Carpentry</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Custom-made beds, dining tables, sofa sets, TV units, bedside tables, and coffee tables tailored to your dimensions.</p>
+            </div>
+
+            <!-- False ceilling and Lightning-->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="False-Ceiling-and-Lighting">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="False Ceiling & Lighting" src="./images/ourServices_FalseCeilingAndLighting.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">False Ceiling & Lighting</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">POP and gypsum ceiling designs, cove lighting, pendant lights, spotlighting, and recessed lighting schemes.</p>
+            </div>
+
+                        <!-- Flooring & Tiling-->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Flooring-and-Tiling">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Flooring & Tiling" src="./images/ourServices_Flooring&Tiling.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Flooring & Tiling</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Vitrified tile installation, premium wooden flooring, stone polishing, wall cladding, and high-quality grout finishes.</p>
+            </div>
+
+                        <!-- Wall Paneling & Decor-->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Wall-Paneling-and-Decor">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Wall Paneling & Decor" src="./images/ourServices_WallPaneling&Decor.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Wall Paneling & Decor</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Decorative MDF panels, wood-veneer paneling, textured wall painting, wallpaper application, and accent wall treatments.</p>
+            </div>
+
+            <!--Project Consultancy-->
+            <div class="group cursor-pointer bg-white p-4 rounded-2xl border border-transparent hover:border-[#C9A227] hover:shadow-lg transition-all duration-300" id="Project-Consultancy">
+                <div class="relative overflow-hidden rounded-xl h-[400px] mb-4">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Project Consultancy" src="./images/ourServices_Project Consultancy.png"/>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-2">Project Consultancy</h3>
+                <p class="text-[#0D0D0D]/70 font-body-md">Professional site supervision, vendor management, material quality assurance, electrical/plumbing planning, and timeline tracking.</p>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Price Estimator Section -->
+    <section class="py-section-gap bg-white border-b border-[#C9A227]" id="price-estimator">
+      <div class="max-w-container-max mx-auto px-margin-desktop p-8 border border-[#C9A22733]/60 rounded-lg hover:shadow-lg hover:border-[#C9A227]/50 transition-all duration-300 ">
+        <div class="text-center mb-16 ">
+          <h2 class="font-headline-md text-headline-md text-[#0D0D0D] mb-2">Hanswal Interiors Price Estimator</h2>
+          <p class="text-[#0D0D0D]/70 font-body-md">Calculate the approximate cost of doing up your home interiors.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          <!-- Estimator 1 -->
+          <div
+            class="group bg-white p-8 text-center">
+            <div
+              class="w-16 h-16 bg-[#C9A227]/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#0D0D0D] transition-colors">
+              <span
+                class="material-symbols-outlined text-[32px] text-[#C9A227] group-hover:text-white transition-colors">home</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-4">Full Home Interior</h3>
+            <p class="text-[#0D0D0D]/70 font-body-md mb-8">Know the estimate price for your full home interiors</p>
+          </div>
+          <!-- Estimator 2 -->
+          <div
+            class="group bg-white p-8 text-center">
+            <div
+              class="w-16 h-16 bg-[#C9A227]/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#0D0D0D] transition-colors">
+              <span
+                class="material-symbols-outlined text-[32px] text-[#C9A227] group-hover:text-white transition-colors">countertops</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-4">Kitchen</h3>
+            <p class="text-[#0D0D0D]/70 font-body-md mb-8">Get an approximate costing for your kitchen interior.</p>
+            <a class="text-[#0D0D0D] font-label-md inline-flex items-center gap-1 hover:border-b-2 hover:border-[#C9A227] pb-1 transition-all"
+              href="a_priceEstimator.html">
+              Calculate <span class="material-symbols-outlined text-[#C9A227] text-[18px]">arrow_forward</span>
+            </a>
+          </div>
+          <!-- Estimator 3 -->
+          <div
+            class="group bg-white p-8 text-center">
+            <div
+              class="w-16 h-16 bg-[#C9A227]/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#0D0D0D] transition-colors">
+              <span
+                class="material-symbols-outlined text-[32px] text-[#C9A227] group-hover:text-white transition-colors">checkroom</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-[#0D0D0D] mb-4">Wardrobe</h3>
+            <p class="text-[#0D0D0D]/70 font-body-md mb-8">Our rough math for your wardrobe</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- CTA Section -->
+    <section class="py-section-gap bg-[#0D0D0D]" id="cta-section">
+      <div class="max-w-xl mx-auto px-margin-desktop text-center">
+        <h2 class="font-headline-md text-headline-md text-white mb-4">Your dream home is just a click away</h2>
+        <p class="text-white/70 font-body-lg mb-10">Book a free consultation with our design experts today.</p>
+        <button
+          class="bg-[#C9A227] border-2 border-white/30 text-[#0D0D0D] px-10 py-4 rounded-lg font-label-md text-title-lg shadow-lg hover:bg-white hover:translate-y-[-2px] transition-all active:scale-95 duration-150" onclick="window.open('a_contactUs.html','_self')">
+          Get Started With Just One Click
+        </button>
+      </div>
+    </section>
+
+
+
+<!-- Footer -->
+<footer class="bg-surface-container w-full border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-section-gap py-section-gap px-margin-desktop max-w-container-max mx-auto">
+
+<!-- hanswal Interiors footer -->
+
+<div>
+    <div class="flex items-center gap-3 mb-6">
+        <img src="./images/faviconImage.png" alt="Hanswal Interior Studio Logo" class="w-13 h-12 object-contain rounded-md">
+        <button class="font-title-lg text-title-lg font-bold text-[#0D0D0D] block text-left" onclick="document.getElementById('back-to-frontpage').scrollIntoView({behavior:'smooth'})" style="outline: none;">
+            Hanswal <br><span style="color:#C9A227;">Interiors</span>
+        </button>
+    </div>
+    <p class="text-[#0D0D0D]/70 font-body-md mb-8">Complete home interior design services: modular kitchens, wardrobes, design to delivery.</p>
+<div class="flex gap-5" style="display: flex; justify-content:left;">
+    <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+    <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+    <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
+</div>
+</div>
+
+<!-- Our Services -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Our Services</h4>
+<ul class="space-y-2">
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Full-Home-Interiors').scrollIntoView({behavior:'smooth'})" style="outline: none;">Full Home Interiors </button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Modular-Kitchen').scrollIntoView({behavior:'smooth'})" style="outline: none;">Modular Kitchen</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Bespoke-Wardrobe-Solutions').scrollIntoView({behavior:'smooth'})" style="outline: none;">Bespoke Wardrobe Solutions</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Furniture-and-Carpentry').scrollIntoView({behavior:'smooth'})" style="outline: none;">Furniture & Carpentry</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('False-Ceiling-and-Lighting').scrollIntoView({behavior:'smooth'})" style="outline: none;">False Ceiling & Lighting</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Flooring-and-Tiling').scrollIntoView({behavior:'smooth'})" style="outline: none;">Flooring & Tiling</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Wall-Paneling-and-Decor').scrollIntoView({behavior:'smooth'})" style="outline: none;">Wall Paneling & Decor</button></li>
+<li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Project-Consultancy').scrollIntoView({behavior:'smooth'})" style="outline: none;">Project Consultancy</button></li>
+</ul>
+</div>
+
+<!-- Company -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_aboutUs.html">About Us</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_projects.html">Projects</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_priceEstimator.html">Price Estimator</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_storeLocator.html">Store Locator</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./a_contactUs.html">Contact Us</a></li>
+</ul>
+</div>
+
+<!-- Company Information-->
+<div class="space-y-4 justify-self-end">
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Contact Info</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-black">location_on</span>
+<span>Vadodara, Gujarat, India</span>
+</li>
+<li class="flex items-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-black">mail</span>
+<span>gopinathjiinterio1980@gmail.com</span>
+</li>
+<li class="flex items-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-black">call</span>
+<span>+91 99248 13074</span>
+</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="border-t border-outline-variant py-8 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant font-label-sm">
+<span>© 2026 Hanswal Interiors. All rights reserved.</span>
+</div>
+</div>
+</footer>
+
+<!-- FAB -->
+<button class="fixed bottom-8 right-8 bg-primary text-on-primary w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform active:scale-95 z-40">
+<span class="material-symbols-outlined">forum</span>
+</button>
+
+<script>
+    
+
+        // Simple micro-interaction for filter buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.add('scale-95');
+                setTimeout(() => btn.classList.remove('scale-95'), 150);
+            });
+        });
+
+        // Smooth reveal on scroll interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+
+
+
+       // Mobile nav drawer
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('hidden');
+            requestAnimationFrame(() => mobileMenu.classList.add('open'));
+            if (mobileMenuOverlay) mobileMenuOverlay.classList.add('open');
+            document.body.classList.add('menu-open');
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('open');
+            document.body.classList.remove('menu-open');
+            setTimeout(() => {
+                if (!mobileMenu.classList.contains('open')) mobileMenu.classList.add('hidden');
+            }, 300);
+        }
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('open')) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            });
+        }
+        
+        // Sticky Nav logic - slight shadow on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+        
+    </script>
+</body></html>
