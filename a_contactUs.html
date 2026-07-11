@@ -214,8 +214,9 @@
             </div>
         </div>
         <div class="nav-actions flex items-center gap-4">
-            <button id="menuToggle" type="button" aria-label="Toggle navigation menu" class="menu-toggle hidden rounded-lg border border-[#C9A227] bg-white p-3 text-[#0D0D0D] shadow-sm hover:bg-[#C9A227]/10 lg:hidden">
-                <span class="material-symbols-outlined text-[24px]">menu</span>
+            <button id="menuToggle" type="button" aria-label="Toggle navigation menu" class="menu-toggle hidden flex-col items-center justify-center gap-0.1 rounded-lg border border-[#C9A227] bg-white px-5 py-3 text-[#0D0D0D] shadow-sm hover:bg-[#C9A227]/10 lg:hidden">
+                <span class="material-symbols-outlined text-[24px] leading-none">menu</span>
+                <span class="text-[12px] leading-none tracking-wide">menu</span>
             </button>
             <button class="bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-6 py-3 rounded-lg hover:bg-[#C9A227]/40 hover:border-[#C9A227] transition-all font-semibold active:scale-95 duration-150 shadow-sm" onclick="window.open('a_contactUs.html', '_self')">
                 Book free consultation
@@ -279,7 +280,7 @@
 </div>
 <h3 class="font-headline-sm text-headline-sm mb-2">Email Us</h3>
 <p class="text-on-surface-variant mb-6">For detailed inquiries and project support, drop us a line anytime.</p>
-<p class="font-title-lg text-title-sm text-black">gopinathjiinterio1980@gmail.com</p>
+<p class="font-title-lg text-title-lg text-black break-all ">gopinathjiinterio1980@gmail.com</p>
 
 <a href="mailto:gopinathjiinterio1980@gmail.com?subject=Inquiry%20about%20Interior%20Design%20Services&body=Hi%20Hanswal%20Interiors%20team%2C%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20services.%0A%0AThanks!" target="_blank">
 <button class="hero-cta-btn bg-[#C9A227]/20 border-2 border-[#C9A227] text-[#0D0D0D] px-8 py-4 mt-7 rounded-lg font-label-md text-title-lg shadow-lg hover:bg-[#C9A227]/40 hover:translate-y-[-2px] transition-all active:scale-95 duration-150">
@@ -797,9 +798,10 @@
       </div>
     </section>
 
+
 <!-- Footer -->
 <footer class="bg-surface-container w-full border-t border-outline-variant">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-section-gap py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center gap-section-gap py-section-gap px-margin-desktop max-w-container-max mx-auto">
 
 <!-- hanswal Interiors footer -->
 
@@ -807,10 +809,10 @@
     <div class="flex items-center gap-3 mb-6">
         <img src="./images/faviconImage.png" alt="Hanswal Interior Studio Logo" class="w-13 h-12 object-contain rounded-md">
         <button class="font-title-lg text-title-lg font-bold text-[#0D0D0D] block text-left" onclick="document.getElementById('back-to-frontpage').scrollIntoView({behavior:'smooth'})" style="outline: none;">
-            Hanswal <br><span style="color:#C9A227;">Interiors</span>
+            Hanswal <br><span style="color:#C9A227;">Interior Studio</span>
         </button>
     </div>
-    <p class="text-[#0D0D0D]/70 font-body-md mb-8">End-to-end home interior solutions for your home. Design, execution and delivery.</p>
+    <p class="text-[#0D0D0D]/70 font-body-md mb-8 text-left">Complete home interior design services: modular kitchens, wardrobes, design to delivery.</p>
 <div class="flex gap-5" style="display: flex; justify-content:left;">
     <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
     <a class="text-black hover:text-[#C9A227] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
@@ -820,7 +822,7 @@
 
 <!-- Our Services -->
 
-<div class="space-y-4">
+<div class="space-y-4 text-center">
 <h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Our Services</h4>
 <ul class="space-y-2">
 <li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Full-Home-Interiors').scrollIntoView({behavior:'smooth'})" style="outline: none;">Full Home Interiors </button></li>
@@ -833,6 +835,26 @@
 <li><button class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" onclick="document.getElementById('Project-Consultancy').scrollIntoView({behavior:'smooth'})" style="outline: none;">Project Consultancy</button></li>
 </ul>
 </div>
+
+<!-- Company Information-->
+<div class="space-y-4 text-center">
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Contact Info</h4>
+<ul class="space-y-4">
+<li class="flex justify-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-black">location_on</span>
+<span>Vadodara, Gujarat, India</span>
+</li>
+<li class="flex justify-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-black">mail</span>
+<span>gopinathjiinterio1980@gmail.com</span>
+</li>
+<li class="flex justify-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-right text-black">call</span>
+<span>+91 99248 13074</span>
+</li>
+</ul>
+</div>
+
 
 <!-- Company -->
 
@@ -847,24 +869,24 @@
 </ul>
 </div>
 
-<!-- Company Information-->
-<div class="space-y-4 justify-self-end">
-<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Contact Info</h4>
-<ul class="space-y-4">
-<li class="flex items-start gap-2 text-text-secondary">
-<span class="material-symbols-outlined text-black">location_on</span>
-<span>Vadodara, Gujarat, India</span>
-</li>
-<li class="flex items-center gap-2 text-text-secondary">
-<span class="material-symbols-outlined text-black">mail</span>
-<span>gopinathjiinterio1980@gmail.com</span>
-</li>
-<li class="flex items-center gap-2 text-text-secondary">
-<span class="material-symbols-outlined text-black">call</span>
-<span>+91 99248 13074</span>
-</li>
+
+<!-- this div is for positioning the above and below divs-->
+<div> </div>
+
+<!-- Our Projects -->
+
+<div class="space-y-4">
+<h4 class="font-label-md text-label-100 text-black font-bold uppercase tracking-wider">Our Projects</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./b_projects_LivingRooms.html">Living Rooms</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./b_projects_Kitchen.html">Kitchens</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./b_projects_Bedroom.html">Bedrooms</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./b_projects_SmartWardrobes.html">Wardrobes</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./b_projects_BespokeCarpentry.html">Furniture And Carpentary</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="./b_projects_FeatureWalls.html">Wall Paneling and Decor</a></li>
 </ul>
 </div>
+
 
 </div>
 
@@ -875,6 +897,7 @@
 </div>
 </div>
 </footer>
+
 
 <script>
         // Simple scroll reveal interaction
