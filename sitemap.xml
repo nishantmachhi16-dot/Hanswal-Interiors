@@ -1,46 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/download/3d5e72b2e-242adb725/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="/download/3d5e72b2e-b42d495e2/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
        <loc>https://hanswalinteriorstudio.com/</loc>
-       <lastmod>2026-07-10T16:59:15+00:00</lastmod>
+       <lastmod>2026-07-11T13:24:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>1.0000</priority>
   </url>
   <url>
        <loc>https://hanswalinteriorstudio.com/index.html</loc>
-       <lastmod>2026-07-10T16:59:15+00:00</lastmod>
+       <lastmod>2026-07-11T13:24:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://hanswalinteriorstudio.com/a_projects.html</loc>
-       <lastmod>2026-07-10T16:59:15+00:00</lastmod>
+       <lastmod>2026-07-11T13:24:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://hanswalinteriorstudio.com/a_priceEstimator.html</loc>
-       <lastmod>2026-07-10T16:59:15+00:00</lastmod>
+       <lastmod>2026-07-11T13:24:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://hanswalinteriorstudio.com/a_storeLocator.html</loc>
-       <lastmod>2026-07-10T16:59:15+00:00</lastmod>
+       <lastmod>2026-07-11T13:24:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://hanswalinteriorstudio.com/a_aboutUs.html</loc>
-       <lastmod>2026-07-10T16:59:15+00:00</lastmod>
+       <lastmod>2026-07-11T13:24:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://hanswalinteriorstudio.com/a_contactUs.html</loc>
-       <lastmod>2026-07-10T16:59:15+00:00</lastmod>
+       <lastmod>2026-07-11T13:24:44+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://hanswalinteriorstudio.com/b_projects_LivingRooms.html</loc>
+       <lastmod>2026-07-11T13:24:44+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://hanswalinteriorstudio.com/b_projects_Kitchen.html</loc>
+       <lastmod>2026-07-11T13:24:44+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://hanswalinteriorstudio.com/b_projects_Bedroom.html</loc>
+       <lastmod>2026-07-11T13:24:44+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://hanswalinteriorstudio.com/b_projects_SmartWardrobes.html</loc>
+       <lastmod>2026-07-11T13:24:44+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://hanswalinteriorstudio.com/b_projects_BespokeCarpentry.html</loc>
+       <lastmod>2026-07-11T13:24:44+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://hanswalinteriorstudio.com/b_projects_FeatureWalls.html</loc>
+       <lastmod>2026-07-11T13:24:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
